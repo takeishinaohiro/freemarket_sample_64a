@@ -30,11 +30,12 @@
           position: absolute;
           top: 13px;
           right: 0;
-          
+
         }
       }
     }
     &__menu {
+      position: relative;
       margin-top: 8px;
       display: flex;
       justify-content: space-between;
@@ -66,8 +67,64 @@
         &__mypage {
           display: block;
           margin-left: 30px;
+          cursor: pointer;
         }
       }
+    }
+  }
+}
+.my-menu {
+  position: absolute;
+  top: 2rem;
+  right: 0;
+  display: none;
+  font-weight: normal;
+  height: 540px;
+  width: 270px;
+  background: #fff;
+  box-shadow: 0 0 10px black;
+  &__name {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  &__status {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  &__img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background: red;
+    margin: 3rem auto 0;
+  }
+  &__money {
+    border: .5px solid #333;
+    width: 95%;
+    margin: 1rem auto 0;
+    background: #F5F5F5;
+    .money-list {
+      padding: .6rem .2rem;
+      &:last-of-type {
+        border-top: 1px solid #333!important;
+      }
+    }
+  }
+  &__list {
+    width: 100%;
+    margin-top: 1.4rem;
+  }
+  &__list--item {
+    padding: .8rem .5rem;
+    list-style: none;
+  }
+  &__list > .my-menu__list--item {
+    border-top: .5px solid #333;
+    cursor: pointer;
+    transition: .1s;
+    &:hover {
+      background: gray;
+      transition: .1s;
     }
   }
 }
