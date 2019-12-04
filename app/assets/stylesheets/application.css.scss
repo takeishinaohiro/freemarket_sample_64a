@@ -14,5 +14,8 @@
  *= require_self
  */
 
+@import "font-awesome-sprockets";
+@import "font-awesome";
 @import "./foundation/reset.css";
+@import "./component/variables.scss";
 @import "./layout/items/index.scss";

@@ -1,1 +1,57 @@
+.footer-img
+  .container
+    .footer-img__heading
+      スマホでかんたんフリマアプリ
+    .footer-img__heading
+      今すぐ無料ダウンロード！
+    .footer-img__icon-box
+      = image_tag "logo_white.svg", width: "60px", height: "auto";
+      = link_to "", "#", class: "footer-img__icon-box--apple", style: "display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/en-gb/badge-lrg.svg?releaseDate=2012-05-31&kind=iossoftware&bubble=ios_apps) no-repeat;width:135px;height:40px;"
+      = link_to '#', class: "footer-img__icon-box--google" do
+        = image_tag 'https://play.google.com/intl/ja/badges/static/images/badges/en_badge_web_generic.png', alt: 'Google Play で手に入れよう', width: "auto", height: "60px"
+
 %footer
+  .container.footer
+    %nav.footer-nav
+      %ul.footer-nav__list
+        %li.footer-nav__list--item メルカリについて
+        %li.footer-nav__list--item 会社概要（運営会社）
+        %li.footer-nav__list--item 採用情報
+        %li.footer-nav__list--item プレスリリース
+        %li.footer-nav__list--item 公式ブログ
+        %li.footer-nav__list--item メルカリロゴ利用ガイドライン
+        %li.footer-nav__list--item
+          = icon 'fab', 'twitter', class: "sns-link"
+          = icon 'fab', 'facebook', class: "sns-link"
+
+      %ul.footer-nav__list
+        %li.footer-nav__list--item ヘルプ＆ガイド
+        %li.footer-nav__list--item メルカリガイド
+        %li.footer-nav__list--item らくらくメルカリ便
+        %li.footer-nav__list--item ゆうゆうメルカリ便
+        %li.footer-nav__list--item 大型メルカリ便
+        %li.footer-nav__list--item 車体取引ガイド
+        %li.footer-nav__list--item メルカリあんしん・あんぜん宣言！
+        %li.footer-nav__list--item 偽ブランド品撲滅への取り組み
+        %li.footer-nav__list--item メルカリボックス
+
+      %ul.footer-nav__list
+        %li.footer-nav__list--item プライバシーと利用規約
+        %li.footer-nav__list--item プライバシーポリシー
+        %li.footer-nav__list--item メルカリ利用規約
+        %li.footer-nav__list--item あんしんスマホサポート制度に関する利用特約
+        %li.footer-nav__list--item コンプライアンスポリシー
+      %ul.footer-nav__list.divid
+        %li.footer-nav__list--item 個人データの安全管理に係る基本方針
+        %li.footer-nav__list--item 特定商取引に関する表記
+        %li.footer-nav__list--item 資金決済法に基づく表示
+        %li.footer-nav__list--item 法令順守と犯罪抑止のために
+
+
+      %ul.footer-nav__list
+        %li.footer-nav__list--item 国
+        %li.footer-nav__list--item 日本
+        %li.footer-nav__list--item United States
+
+    = image_tag "fmarket_logo_white.png", class: "footer__logo", width: "130px", height: "auto"
+    .footer__copyright © 2019 Mercari
