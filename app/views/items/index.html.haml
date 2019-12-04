@@ -1,0 +1,30 @@
+-# カルーセルスライダー
+#slider
+  .carousel
+    .image1
+      %img{src:"/完璧.png", width:"1440" ,height:"390"}
+      .carousel__left-btn
+        %i.fa.fa-angle-left
+      .carousel__contents
+        .carousel__contents__text-top
+          %li スマホで かんたん
+          %li フリマアプリ
+        .carousel__contents__text-bottom
+          %li メルカリはスマホアプリからすぐに出品できる
+          %li 購入時も安心な安心な独自システムのアプリです
+        .carousel__contents__appli
+          .carousel__contents__appli-apple
+            = link_to "", "#", class: "", style: "display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/en-gb/badge-lrg.svg?releaseDate=2012-05-31&kind=iossoftware&bubble=ios_apps) no-repeat;width:170px;height:500px;"
+          .carousel__contents__appli-google
+            = link_to '#', class: "" do
+              = image_tag 'https://play.google.com/intl/ja/badges/static/images/badges/en_badge_web_generic.png',alt: 'Google Play で手に入れよう', width: "auto", height: "70px"
+      .carousel__right-btn
+        %i.fa.fa-angle-right
+    .image2.none
+      %img{src:"/キャンプ.png"}
+        .image2__left-btn
+          %i.fa.fa-angle-left
+        = link_to '#', class: "" do
+          .image2__contents
+        .image2__right-btn
+          %i.fa.fa-angle-right
