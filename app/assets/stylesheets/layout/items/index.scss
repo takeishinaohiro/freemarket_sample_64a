@@ -6,58 +6,7 @@
   margin-top: 40px;
   list-style: none;
   background-color: #F5F5F5;
-  .mypage {
-    width: 70%;
-    &__top {
-      background-color: greenyellow;
-      width: 100%;
-      height: 200px;
-      &--myitems{
-        display: flex;
-        .mypage__top--myitem{
-          display: block;
-        }
-      }
-      .fa-user-circle {
-        font-size: 3.5rem;
-        opacity: 0.4;
-        text-align: center;
-        width: 100%;
-        height: 50px;
-        margin-top: 30px;
-      }
-      &--name {
-        text-align: center;
-        margin-top: 10px;
-        width: 100%;
-        height: 20px;
-      }
-      &--myitems {
-        display: flex;
-        justify-content: space-between;
-        list-style: none;
-        margin: 0 41%;
-        .mypage__top--myitem {
-          display: block;
-        }
-      }
-    }
-    &__middle {
-      width: 100%;
-      height: 250px;
-      display: flex;
-      text-align: center;
-      line-height: 75px;
-      &--news {
-        width: 50%;
-        height: 75px;
-      }
-      &--todo {
-        width: 50%;
-        height: 75px
-      }
-    }
-  }
+
   .sidebar {
     background-color:#FFFFFF;
     width: 25%;
