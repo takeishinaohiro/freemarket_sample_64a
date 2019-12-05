@@ -14,6 +14,9 @@
  *= require_self
  */
 
-@import "./layout/items/index.scss";
+@import "./foundation/reset.css";
+@import "./foundation/slick-theme.scss";
+@import "./foundation/slick.scss";
 @import 'font-awesome-sprockets';
 @import "font-awesome";
+@import "./layout/items/index.scss";
