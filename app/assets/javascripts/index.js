@@ -1,13 +1,11 @@
 $(function() {
     console.log('ausv');
-  $('.header__menu-right--mypage').hover(
+  $('.sidebar__top--item').hover(
     function() {
-        //マウスカーソルが重なった時の処理
-        $('.my-menu').css('display', 'block');
+      $(this).find('.fa-chevron-right').css({'color':'gray', 'transform':'translateX(5px)'});
     },
     function() {
-        //マウスカーソルが離れた時の処理
-        $('.my-menu').css('display', 'none');
+      $(this).find('.fa-chevron-right').css({'color':'lightgray', 'transform':'translateX(0)'});
     }
     );
 });
