@@ -41,11 +41,7 @@ Things you may want to cover:
 
 <!-- 外部キー -->
 
-| address_id | int | null: false, foreign_key: true |
-| card_id | int | null: false, foreign_key: true |
-| buyer_id | int | null: false, foreign_key: true |
-| seller_id | int | null: false, foreign_key: true |
-| comment_id | int | null: false, foreign_key: true |
+
 
 ### Association
 
@@ -93,7 +89,7 @@ Things you may want to cover:
 
 ### Association
 
-- belongs_to :users
+- belongs_to :user
 
 ## buyers テーブル
 
