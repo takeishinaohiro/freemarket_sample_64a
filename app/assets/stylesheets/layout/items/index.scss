@@ -57,6 +57,9 @@
         background-color: #eeeeee;
         width: 50%;
         cursor:pointer;
+          &:hover {
+            opacity: 0.6;
+          }
         }
         .mypage-tab.is-active{
           background:#FFFFFF;
@@ -133,6 +136,9 @@
           left: 6%;
           top: 10px;
           line-height: 60px;
+          &:hover {
+            background-color: #f5f5f5;
+          }
         }
       }
     }
@@ -156,6 +162,9 @@
         background-color: #eeeeee;
         width: 50%;
         cursor:pointer;
+          &:hover {
+            opacity: 0.6;
+          }
         }
         .mypage-tab.is-active{
           background:#FFFFFF;
