@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  root "items#show"
+  root "cards#record"
 end
