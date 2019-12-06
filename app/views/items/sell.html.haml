@@ -9,11 +9,21 @@
             出品画像
             %span 必須
           %p 最大10枚までアップロードできます
-          .sell-box__img--input
-            %p
-              ドラッグアンドドロップ
-              %br
-              またはクリックしてファイルをアップロード
+          .drop-zone
+            .preview-box
+              .preview-box__img-box
+                = image_tag "/assets/footer.jpg"
+              .preview-box__select
+                .preview-box__select--edit
+                  %p 編集
+                .preview-box__select--delete
+                  %p 削除
+            %label.sell-box__img--input
+              %p
+                ドラッグアンドドロップ
+                %br
+                またはクリックしてファイルをアップロード
+              %input{type: "file", multiple: true, name: "image0[]", id: "sell-img"}
 
         .sell-box__info.sell-box__section
           %h3

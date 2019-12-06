@@ -85,6 +85,7 @@
       font-size: .9rem;
     }
     &--input {
+      display: block;
       text-align: center;
       border: 1px dashed lightgray;
       width: 100%;
@@ -189,4 +190,48 @@
   font-size: .8rem;
   text-align: center;
   margin-top: 1rem;
+}
+
+.preview-box {
+  width: 120px;
+  height: auto;
+  margin: 0 .5rem .5rem 0;
+  padding: 1rem 0 0;
+  display: inline-block;
+  border: 1px solid lightgray;
+  background: $lightgray;
+  &__img-box {
+    width: 100%;
+    height: 70px;
+    > img {
+      width: 100%;
+      max-height: 70px;
+      object-fit: cover;
+    }
+  }
+  &__select {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    &--edit, &--delete {
+      cursor: pointer;
+      text-align: center;
+      width: 50%;
+      line-height: 2rem;
+      height: 2rem;
+      &:hover {
+        opacity: .6;
+      }
+      > p {
+        display: inline-block;
+        color: $linkblue;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    &--edit {
+      border-right: 1px solid lightgray;
+    }
+  }
 }
