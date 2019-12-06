@@ -1,0 +1,226 @@
+.wapper1{
+  height: auto;
+  width: 100%;
+  background-color: #F5F5F5;
+  font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+
+
+  .log{
+    width: 100%;
+    background-color: #F5F5F5;
+    height: 128px;
+    line-height: 160px;
+
+    &__main{
+      margin-left: 43%;
+      display: block;
+    }
+  }
+  .buy-page{
+    width: 700px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding-bottom: 48px;
+
+    &__top{
+      height: 97px;
+      font-size: 22px;
+      line-height: 97px;
+      text-align: center;
+      color: #333333;
+      border: 1px solid #f5f5f5;
+
+    }
+    &__center{
+      height: 97px;
+      padding: 32px 16px;
+      margin: 0 auto;
+      border: 1px solid #f5f5f5;
+
+
+      &--into{
+        margin-left: 23%;
+        display: flex;
+
+        .right{
+          margin-left: 16px;
+          font-size: 14px;
+          color: #333333;
+
+          .name{
+            padding-bottom: 8px;
+            text-align: left;
+            line-height: 1.5;
+          }
+        }
+      }
+    }
+    &__bottom{
+      height: 519px;
+      margin: 0 auto;
+      padding-bottom: 48px;
+      padding-top: 32px;
+
+      &--into{
+        margin: 0 auto;
+        height: 510px;
+        width: 343px;
+
+        .top{
+          border-style: solid;
+
+          .plice{
+            display: flex;
+            justify-content: space-between;
+            color: #333333;
+
+            .left{
+              font-size: 18px;
+              text-align: left;
+              line-height: 18px;
+            }
+            .right{
+              font-size: 30px;
+            }
+          }
+          .buy-page__bottom--point{
+            margin: 24px 0 32px;
+            color:#888888;
+            font-size: 14px;
+          }
+          .check{
+            width: 20px;
+            height: 20px;
+            transform: scale(1.5,1.5);
+          }
+        }
+        .middol{
+          padding: 32px 0 32px 0;
+          border-top: 1px solid #f5f5f5;
+          color: #333333;
+          height: 114px;
+        
+          .card{
+            display: flex;
+            justify-content: space-between;
+
+            &__left{
+              font-weight: 700;
+            }
+
+            &__right{
+              color: #0099e8;
+              text-decoration: none;
+              line-height: 20px;
+              font-weight: 400;
+
+            }
+          }
+          .center{
+            line-height: 1.5;
+            list-style: none;
+            padding-top: 8px;
+            font-weight: 400;
+
+          }
+        }
+        .bottom{
+          border-top: 1px solid #f5f5f5;
+          padding: 32px 0 32px 0;
+          color: #333333;
+          height: 87px;
+          border-bottom: 1px solid #f5f5f5;
+
+
+          .addres{
+            display: flex;
+            justify-content: space-between;
+
+            &__left{
+              font-weight: 700;
+            }
+
+            &__right{
+              color: #0099e8;
+              text-decoration: none;
+              line-height: 20px;
+              font-weight: 400;
+            }
+          }
+          .news{
+            line-height: 1.5;
+            list-style: none;
+            padding-top: 8px;
+            font-weight: 400;
+
+          }
+        }
+      }
+    }
+    .buy-btn{
+      width: 343px;
+      background-color: #EA3732;
+      margin: 0 auto;
+      display: block;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+    }
+  }
+  .buy-fooder{
+    width: 456px;
+    height: 130px;
+    margin: 0 auto;
+    padding: 45px;
+
+    &__top{
+      font-size: 12px;
+      color: #333333;
+      text-decoration: none;
+      margin-left: 10%;
+
+      &--1{
+        color: #333333;
+        text-decoration: none;
+
+        &:hover{
+          opacity: 0.8;
+          border-bottom: 1px solid rgb(102, 100, 100);
+        }
+      }
+      &--2{
+        color: #333333;
+        text-decoration: none;
+        margin-left: 16px;
+
+        &:hover{
+          opacity: 0.8;
+          border-bottom: 1px solid rgb(102, 100, 100);
+        }
+      }
+      &--3{
+        color: #333333;
+        text-decoration: none;
+        margin-left: 16px;
+
+        &:hover{
+          opacity: 0.8;
+          border-bottom: 1px solid rgb(102, 100, 100);
+        }
+      }
+    }
+    .buy-fooder__img{
+      margin: 40px auto 0;
+      margin-left: 40%;
+    }
+    &__fin{
+      width: 456px;
+      margin: 8 auto;
+      margin-left: 40%;
+      font-size: 13px;
+      color: #333333;
+    }
+  }
+}
