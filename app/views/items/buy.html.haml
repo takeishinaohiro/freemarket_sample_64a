@@ -1,14 +1,14 @@
 .wapper1
   .log
     .log__main
-      %img{src:"assets/fmarket_logo_red.svg" ,width:"185" ,hight:"49"}
+      = image_tag '/assets/fmarket_logo_red.svg', height: '49', width: '185'
   .buy-page
     .buy-page__top
       購入内容の確認
     .buy-page__center
       .buy-page__center--into
         .left
-          %img{src:"assets/購入確認image.jpg" ,width:"80" ,hight:"80"}
+          = image_tag '/assets/購入確認image.jpg', height: '80', width: '80'
         .right
           .name
             ボーナム Tシャツ
@@ -57,7 +57,8 @@
       =link_to "",class:"buy-fooder__top--3" do
         特定商取引に関する表記
     .buy-fooder__img
-      %img{src:"assets/logo_gray.svg" ,width:"80" ,hight:"65"}
+      = image_tag '/assets/logo_gray.svg', height: '65', width: '80'
+
     .buy-fooder__fin
       © Mercari, Inc.
 
