@@ -15,4 +15,9 @@
  */
 
 @import "./foundation/reset.css";
+@import "./foundation/slick-theme.scss";
+@import "./foundation/slick.scss";
+@import 'font-awesome-sprockets';
+@import "font-awesome";
+@import "./component/variables.scss";
 @import "./layout/items/index.scss";
