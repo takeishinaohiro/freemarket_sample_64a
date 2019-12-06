@@ -14,6 +14,10 @@
     &__main{
       margin-left: 43%;
       display: block;
+
+      &:hover{
+        opacity: 0.6;
+      }
     }
   }
   .buy-page{
@@ -114,6 +118,11 @@
               line-height: 20px;
               font-weight: 400;
 
+              &:hover{
+                opacity: 0.7;
+                border-bottom: 1px solid #0099e8;
+              }
+
             }
           }
           .center{
@@ -145,6 +154,12 @@
               text-decoration: none;
               line-height: 20px;
               font-weight: 400;
+
+
+              &:hover{
+                opacity: 0.7;
+                border-bottom: 1px solid #0099e8;
+              }
             }
           }
           .news{
@@ -214,6 +229,10 @@
     .buy-fooder__img{
       margin: 40px auto 0;
       margin-left: 40%;
+
+      &:hover{
+        opacity: 0.6;
+      }
     }
     &__fin{
       width: 456px;
