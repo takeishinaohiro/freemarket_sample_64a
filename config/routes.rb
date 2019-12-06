@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  root "cards#record"
+  root "items#buy"
 end
