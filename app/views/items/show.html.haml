@@ -1,4 +1,5 @@
 .wrapper
+  = render 'shared/header'
   .showpage
     .pp
     .top
@@ -15,9 +16,58 @@
             .c
             .d
         .top__explain--status
-          %tr.ccc
-            %th 出品者
-            %td すタップ
+          .a
+            .l
+              出品者
+            =link_to"",class:"r" do
+              すタップ
+              .face
+                %i.fas.fa-smile-beam
+                19
+                %i.fas.fa-meh
+                0
+                %i.fas.fa-tired
+                0
+          .b
+            .l
+              カテゴリー
+            =link_to"",class:"r" do
+              メンズ
+          .c
+            .l
+              ブランド
+            .r
+              
+          .d
+            .l
+              商品のサイズ
+            .r
+              M
+          .e
+            .l
+              商品の状態
+            .r
+              未使用に近い
+          .f
+            .l
+              配送料の負担
+            .r
+              着払い(購入者負担)
+          .g
+            .l
+              配送の方法
+            .r
+              未定
+          .h
+            .l
+              配送元地域
+            =link_to"",class:"r" do
+              東京都
+          .i
+            .l
+              発送日の目安
+            .r
+              2~3日で発送
       .top__plice
         .top__plice--nmuber
           ¥1,999
@@ -53,10 +103,12 @@
     .aa
     .show-messages
       .messages-left
-        %i.fas.fa-user-circle
+        =link_to "", class: "" do
+          %i.fas.fa-user-circle
       .messages-right
         .message-name
-          Hayama328
+          =link_to "", class: "message-name__link" do
+            Hayama328
         .message
           .message__top
             はじめまして。送料込みですといくらでしょうか？お安くしていただけると助かります！
@@ -67,15 +119,104 @@
                 227 日前
             .message__bottom--right
               %i.fa.fa-flag
+    .message-send
+      .message-send__caution
+        相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+      %input{class:"message-form", type: "text"}
+      =link_to "",class:"send-btn" do
+        コメントする
     .bb
+      .left
+        %i.fas.fa-chevron-left
+        =link_to "",class: "left__link" do
+          スズキスポーツ ヘッドキャップ L
+      .right
+        =link_to "",class: "right__link" do
+          【秋田木工】コートハンガー 中古
+        %i.fas.fa-chevron-right
+
     .show-ad
       .show-ad__line
         %i.fab.fa-facebook-square
         %i.fab.fa-twitter-square
         %i.fab.fa-pinterest-square
-  .fin
-              
+    .cc
+      Tシャツ/カットソー(半袖/袖なし) （メンズ） その他の商品
+    .bottom
+      .bottom__item-contents
+        .bottom__item-contents--image
+          = image_tag src="https://o.imgz.jp/fashionnews/105709/cwhi5n7qwwrabxq.jpg", size: "220x220"
+        .bottom__item-contents--name
+          .name
+            チャンピオン Tシャツ champion
+          .menu
+            .price
+              ¥2200
+            .iine
+              %i.far.fa-heart
+              6
+      .bottom__item-contents
+        .bottom__item-contents--image
+          = image_tag src="https://o.imgz.jp/fashionnews/105709/cwhi5n7qwwrabxq.jpg", size: "220x220"
+        .bottom__item-contents--name
+          .name
+            チャンピオン Tシャツ champion
+          .menu
+            .price
+              ¥2200
+            .iine
+              %i.far.fa-heart
+              6
+      .bottom__item-contents
+        .bottom__item-contents--image
+          = image_tag src="https://o.imgz.jp/fashionnews/105709/cwhi5n7qwwrabxq.jpg", size: "220x220"
+        .bottom__item-contents--name
+          .name
+            チャンピオン Tシャツ champion
+          .menu
+            .price
+              ¥2200
+            .iine
+              %i.far.fa-heart
+              6
+      .bottom__item-contents
+        .bottom__item-contents--image
+          = image_tag src="https://o.imgz.jp/fashionnews/105709/cwhi5n7qwwrabxq.jpg", size: "220x220"
+        .bottom__item-contents--name
+          .name
+            チャンピオン Tシャツ champion
+          .menu
+            .price
+              ¥2200
+            .iine
+              %i.far.fa-heart
+              6
+      .bottom__item-contents
+        .bottom__item-contents--image
+          = image_tag src="https://o.imgz.jp/fashionnews/105709/cwhi5n7qwwrabxq.jpg", size: "220x220"
+        .bottom__item-contents--name
+          .name
+            チャンピオン Tシャツ champion
+          .menu
+            .price
+              ¥2200
+            .iine
+              %i.far.fa-heart
+              6
+      .bottom__item-contents
+        .bottom__item-contents--image
+          = image_tag src="https://o.imgz.jp/fashionnews/105709/cwhi5n7qwwrabxq.jpg", size: "220x220"
+        .bottom__item-contents--name
+          .name
+            チャンピオン Tシャツ champion
+          .menu
+            .price
+              ¥2200
+            .iine
+              %i.far.fa-heart
+              6
+    .dd
 
 
-      
-    
+        
+= render 'shared/fooder'
