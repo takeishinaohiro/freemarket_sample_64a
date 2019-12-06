@@ -50,6 +50,5 @@ test:
 production:
   <<: *default
   database: mercari_production
-  username: root
-  password: <%= ENV['DATABASE_PASSWORD'] %>
-  socket: /var/lib/mysql/mysql.sock
+  username: mercari
+  password: <%= ENV['MERCARI_DATABASE_PASSWORD'] %>

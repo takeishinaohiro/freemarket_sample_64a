@@ -62,7 +62,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
-
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'rails-i18n'
@@ -71,7 +70,3 @@ gem 'mini_magick'
 gem 'pry-rails'
 gem 'kaminari', '~> 0.17.0'
 gem 'font-awesome-sass', '~> 5.4.1'
-
-group :production do
-  gem 'unicorn', '5.4.1'
-end
