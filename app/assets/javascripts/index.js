@@ -10,13 +10,49 @@ $(function() {
     );
 });
 $(function($){
-  $('.mypage-tab').click(function(){
-      $('.is-active').removeClass('is-active');
+  $('.a').click(function(){
+      $('.b').removeClass('is-active');
       $(this).addClass('is-active');
-      $('.is-show').removeClass('is-show');
+      $('.f').removeClass('is-show');
       // クリックしたタブからインデックス番号を取得
       const index = $(this).index();
       // クリックしたタブと同じインデックス番号をもつコンテンツを表示
-      $('.mypage__middle--content').eq(index).addClass('is-show');
+      $('.e').addClass('is-show');
+  });
+});
+
+$(function($){
+  $('.b').click(function(){
+      $('.a').removeClass('is-active');
+      $(this).addClass('is-active');
+      $('.e').removeClass('is-show');
+      // クリックしたタブからインデックス番号を取得
+      const index = $(this).index();
+      // クリックしたタブと同じインデックス番号をもつコンテンツを表示
+      $('.f').addClass('is-show');
+  });
+});
+
+$(function($){
+  $('.c').click(function(){
+      $('.d').removeClass('is-active');
+      $(this).addClass('is-active');
+      $('.h').removeClass('is-show');
+      // クリックしたタブからインデックス番号を取得
+      const index = $(this).index();
+      // クリックしたタブと同じインデックス番号をもつコンテンツを表示
+      $('.g').addClass('is-show');
+  });
+});
+
+$(function($){
+  $('.d').click(function(){
+      $('.c').removeClass('is-active');
+      $(this).addClass('is-active');
+      $('.g').removeClass('is-show');
+      // クリックしたタブからインデックス番号を取得
+      const index = $(this).index();
+      // クリックしたタブと同じインデックス番号をもつコンテンツを表示
+      $('.h').addClass('is-show');
   });
 });
