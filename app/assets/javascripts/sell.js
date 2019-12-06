@@ -1,6 +1,5 @@
 $(function() {
   let images = [];
-  let num = 0;
 
   function buildHTML(imgSrc) {
     let html = `<div class="preview-box">
@@ -19,14 +18,7 @@ $(function() {
     $('.drop-zone').prepend(html);
   };
 
-  // $('#sell-img').change(function() {
-  //   // num += 1
-  //   // $(this).attr('name', `image${num}`);
-  //   // images.push($(this).val());
-  //   // console.log(images);
-  //   // console.log($('#sell-img').val());
-  // });
-
+  // 画像のドロップ時、ドロップした画像の数だけプレビューを追加する
   $('.sell-box__img--input').on('drop', function(e) {
     e.preventDefault();
     e.stopPropagation();
@@ -34,16 +26,12 @@ $(function() {
       for(var i = 0; i < dropImages.length; i++ ) {
         var imgSrc = URL.createObjectURL(dropImages[i]);
         buildHTML(imgSrc);
-        console.log(imgSrc);
+        images.push(dropImages[i].name);
+        console.log(images);
       }
-
   });
 
-    // $.each(dropImages, function(index, dropImage){
-    //   images.push(dropImage.name);
-    // });
-
-
+  // ドロップゾーン以外でドロップできないようにする
   $(document).on('drop', function(e) {
     e.stopPropagation();
     e.preventDefault();
@@ -59,6 +47,7 @@ $(function() {
 
 
 
+  // 削除ボタンクリック時、プレビューを削除する
   $(document).on('click', '.preview-box__select--delete p', function(){
     $(this).closest('.preview-box').remove();
   });
