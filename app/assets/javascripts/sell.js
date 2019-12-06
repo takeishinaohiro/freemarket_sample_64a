@@ -17,33 +17,32 @@ $(function() {
                   </div>
                 </div>`
     $('.drop-zone').prepend(html);
-  }
+  };
 
-  $('#sell-img').change(function() {
-    // num += 1
-    // $(this).attr('name', `image${num}`);
-    // images.push($(this).val());
-    // console.log(images);
-    // console.log($('#sell-img').val());
-  });
+  // $('#sell-img').change(function() {
+  //   // num += 1
+  //   // $(this).attr('name', `image${num}`);
+  //   // images.push($(this).val());
+  //   // console.log(images);
+  //   // console.log($('#sell-img').val());
+  // });
+
   $('.sell-box__img--input').on('drop', function(e) {
     e.preventDefault();
     e.stopPropagation();
     let dropImages = e.originalEvent.dataTransfer.files;
-    const reader = new FileReader();
-    reader.onload = function() {
-      console.log(reader.result);
+      for(var i = 0; i < dropImages.length; i++ ) {
+        var imgSrc = URL.createObjectURL(dropImages[i]);
+        buildHTML(imgSrc);
+        console.log(imgSrc);
+      }
 
-      let imgSrc = reader.result;
-      buildHTML(imgSrc);
-    };
-    reader.readAsDataURL(dropImages[0]);
-
-    $.each(dropImages, function(index, dropImage){
-      // console.log(dropImage);
-      images.push(dropImage.name);
-    });
   });
+
+    // $.each(dropImages, function(index, dropImage){
+    //   images.push(dropImage.name);
+    // });
+
 
   $(document).on('drop', function(e) {
     e.stopPropagation();
@@ -59,7 +58,8 @@ $(function() {
   });
 
 
-  $('.preview-box__select--delete').children('p').on('click', )(function() {
+
+  $(document).on('click', '.preview-box__select--delete p', function(){
     $(this).closest('.preview-box').remove();
   });
 
