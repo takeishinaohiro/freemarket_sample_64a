@@ -12,14 +12,10 @@
           .imagemain
             = image_tag src= @id.image, size: "300x300" 
           .imagesab
-            .imagesab-a
-              = image_tag src= @id.image, size: "60x60" 
-            .imagesab-b
-              = image_tag src= @id.image, size: "60x60"
-            .imagesab-c
-              = image_tag src= @id.image, size: "60x60"
-            .imagesab-d
-              = image_tag src= @id.image, size: "60x60"
+            = image_tag src= @id.image, class:"imagesab-a"
+            = image_tag src= @id.image, class:"imagesab-b"
+            = image_tag src= @id.image, class:"imagesab-c"
+            = image_tag src= @id.image, class:"imagesab-d"
         .top__explain--status
           .status-a
             .left
