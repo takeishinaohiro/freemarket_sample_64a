@@ -1,4 +1,4 @@
 class CardsController < ApplicationController
-  def record
+  def new
   end
 end
