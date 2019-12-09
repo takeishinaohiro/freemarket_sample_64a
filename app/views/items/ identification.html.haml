@@ -23,7 +23,7 @@
       .content__middle--postal-code
         %li 郵便番号
         %li.any 任意
-        %input.postal-code{placeholder: "例) 1234567", :value => ""}/
+        %input.postal-code{placeholder: "例) 1234567", value: ""}/
       .content__middle--prefectures
         %li 都道府県
         %li.any 任意
@@ -31,19 +31,19 @@
       .content__middle--city
         %li 市区町村
         %li.any 任意
-        %input.city{placeholder: "例) 横浜市緑区", :value => ""}/
+        %input.city{placeholder: "例) 横浜市緑区", value: ""}/
       .content__middle--address
         %li 番地
         %li.any 任意
-        %input.address{placeholder: "例) 青山1-1-1", :value => ""}/
+        %input.address{placeholder: "例) 青山1-1-1", value: ""}/
       .content__middle--building-name
         %li 建物名
         %li.any 任意
-        %input.building-name{placeholder: "例) 柳ビル103", :value => ""}/
+        %input.building-name{placeholder: "例) 柳ビル103", value: ""}/
       .content__middle--registration
         %li 登録する
       .upload
         本人情報の登録について
         %i.fas.fa-chevron-right
 
-= render 'shared/fooder'
+= render 'shared/footer'
