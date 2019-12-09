@@ -314,7 +314,7 @@
                 }
               }
               .item-1__name{
-                height: 44px;
+                height: 64px;
                 background-color: white;
                 list-style: none;
                 display: block;
@@ -361,8 +361,9 @@
 }
 
 footer {
-  width: 1440px;
-  background: #212121;
+  z-index: 10;
+  width: 100%;
+  background: #212121!important;
 }
 
 .footer {
