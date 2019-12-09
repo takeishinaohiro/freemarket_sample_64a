@@ -599,35 +599,62 @@
     }
     .show-ad{
       width: 700px;
-      height: 114px;
+      height: 80px;
 
       &__line{
-        line-height: 114px;
-        margin: 16px auto;
+        width: 160px;
+        height: 50px;
+        margin: 50px auto;
         text-align: center;
+        display: flex;
 
-        .fa-facebook-square{
-          font-size: 44px;
+
+        .facebook{
+          width: 44px;
+          height: 44px;
           background: #385185;
-          color: #fff;
-          margin: 0 8px 8px 0;
-
-        }
-        .fa-twitter-square{
-          font-size: 44px;
-          background: #5d9dc9;
-          color: #fff;
-          margin: 0 8px 8px 0;
-
-        }
-        .fa-pinterest-square{
-          font-size: 44px;
-          background: #aa262a;
-          color: #fff;
+          line-height: 50px;
+          border-radius: 4px;
           margin: 0 8px 8px 0;
 
 
+          .fa-facebook-square{
+            font-size: 26px;
+            background: #385185;
+            color: #fff;
+            margin: 0 auto;
+
+          }
         }
+        .twitter{
+          width: 44px;
+          height: 44px;
+          background-color: #5d9dc9;
+          border-radius: 4px;
+          margin: 0 8px 8px 0;
+
+
+          .fa-twitter{
+            font-size: 24px;
+            color: #fff;
+            line-height: 45px;
+          }
+      }
+      .pinterest{
+        width: 44px;
+        height: 44px;
+        background-color: #aa262a;
+        border-radius: 4px;
+
+        .fa-pinterest{
+          font-size: 18px;
+          color: #fff;
+          line-height: 44px;
+
+
+
+        }
+      }
       }
     }
     .cc{
