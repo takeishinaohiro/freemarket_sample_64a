@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  root 'items#show'
+  root 'items#index'
+
+  resouces :items do
+    collection
+  end
 end
