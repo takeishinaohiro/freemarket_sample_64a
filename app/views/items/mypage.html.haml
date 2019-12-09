@@ -1,0 +1,44 @@
+-# # ---------------ログインページ---------------
+.content
+  =render '/shared/side-bar'
+  .mypage
+    .mypage__top
+      %i.fas.fa-user-circle
+      %li.mypage__top--name ウッディー
+      %ul.mypage__top--my-items
+        %li.mypage__top--my-item 評価  ０
+        %li.mypage__top--my-item 出品数  ０
+    .mypage__middle
+      .mypage__middle--tabs
+        %li.mypage-tab.a.is-active お知らせ
+        %li.mypage-tab.b やることリスト
+      .mypage__middle--contents
+        .mypage__middle--content.e.is-show 
+          = image_tag '/assets/logo_red.svg', height: '35px', width: '35px', class: 'logo_red'
+          %li.mypage__middle--content-topic 事務局から個別メッセージ
+          %i.fas.fa-chevron-right
+          %i.far.fa-clock
+          %li.mypage__middle--content-agetime 15時間前
+        .mypage__middle--content.f
+          = image_tag '/assets/logo_red.svg', height: '35px', width: '35px', class: 'logo_red'
+          %li.mypage__middle--content-topic 事務局から個別メッセージ
+          %i.fas.fa-chevron-right
+          %i.far.fa-clock
+          %li.mypage__middle--content-agetime 15時間前
+      .mypage__middle--all
+        %li.mypage__middle--text 
+          一覧を見る
+
+    .mypage__bottom
+      %li.mypage__bottom-text 購入した商品
+      .mypage__bottom--tabs
+        %li.mypage-tab.c.is-active 取引中
+        %li.mypage-tab.d 過去の取引
+      .mypage__bottom--contents
+        .mypage__bottom--content.g.is-show 
+          = image_tag '/assets/logo_gray.svg',height: '200', width: '200', class: 'logo_gray.svg'
+          %li.mypage__bottom--content-text 取引中の商品はありません
+        .mypage__bottom--content.h
+          = image_tag '/assets/logo_gray.svg',height: '200', width: '200', class: 'logo_gray.svg'
+          %li.mypage__bottom--content-text 過去に取引した商品がありません
+      
