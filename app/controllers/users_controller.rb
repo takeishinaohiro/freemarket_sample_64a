@@ -5,4 +5,7 @@ class UsersController < ApplicationController
 
   def destroy
   end
+
+  def adress
+  end
 end
