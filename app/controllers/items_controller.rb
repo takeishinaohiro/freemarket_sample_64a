@@ -6,8 +6,9 @@ class ItemsController < ApplicationController
   
   def buy
   end
-
   def show
+    @items = Item.all
+    @id    = Item.find(params[:id])
   end
 
   def sell
