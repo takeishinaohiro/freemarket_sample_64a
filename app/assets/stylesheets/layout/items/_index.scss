@@ -286,6 +286,7 @@
               display: block;
               width: 187px;
               height: 252px;
+              text-decoration: none;
               &:hover{
                 outline: 1px solid skyblue;
               }
@@ -299,13 +300,12 @@
                 .item-1__image__price{
                 position: absolute;
                 bottom : 8px;
-                width: 78.05px;
                 height: 28px;
                 background-color: gray;
                 opacity: 0.8;
                 text-align: center;
                 padding: 0px 12px;
-                font-size: 17px;
+                font-size: 16px;
                 color: white;
                 font-weight: 400;
                 border-top-right-radius: 14px;
@@ -317,9 +317,7 @@
                 height: 64px;
                 background-color: white;
                 list-style: none;
-                display: block;
                 padding: 10px;
-
               }
             }
           }
