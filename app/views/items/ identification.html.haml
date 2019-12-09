@@ -1,48 +1,49 @@
 = render 'shared/header'
-.content
-  .content__top
-    %li 本人情報の登録
-  .content__top-titles
-    %li.content__top-title お客さまの本人情報をご登録ください。
-    %li.content__top-title 登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
-    .upload
-      本人確認書類のアップロードアップロードについて
-      %i.fas.fa-chevron-right
-  .content__middle
-    .content__middle--name
-      %li.a お名前
-      %li.a 藤倉 幸広
-    .content__middle--name-kana
-      %li.a お名前カナ
-      %li.a フジクラ  ユキヒロ
-    .content__middle--birthday
-      %li.a 生年月日
-      %li.a 1993/08/24
-    .content__middle--postal-code
-      %li 郵便番号
-      %li.any 任意
-      %input.postal-code{placeholder: "例) 1234567", :value => ""}/
-    .content__middle--prefectures
-      %li 都道府県
-      %li.any 任意
-      %select.prefectures()
-    .content__middle--city
-      %li 市区町村
-      %li.any 任意
-      %input.city{placeholder: "例) 横浜市緑区", :value => ""}/
-    .content__middle--address
-      %li 番地
-      %li.any 任意
-      %input.address{placeholder: "例) 青山1-1-1", :value => ""}/
-    .content__middle--building-name
-      %li 建物名
-      %li.any 任意
-      %input.building-name{placeholder: "例) 柳ビル103", :value => ""}/
-    .conten__middle-registration
-      %li 登録する
+.contents
+  = render 'shared/side-bar'
+  .content
+    .content__top
+      %li 本人情報の登録
+      .content__top-titles
+        %li.content__top-title お客さまの本人情報をご登録ください。
+        %li.content__top-title 登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
+        .upload
+          本人確認書類のアップロードアップロードについて
+          %i.fas.fa-chevron-right
+    .content__middle
+      .content__middle--name
+        %li.a お名前
+        %li.a 藤倉 幸広
+      .content__middle--name-kana
+        %li.a お名前カナ
+        %li.a フジクラ  ユキヒロ
+      .content__middle--birthday
+        %li.a 生年月日
+        %li.a 1993/08/24
+      .content__middle--postal-code
+        %li 郵便番号
+        %li.any 任意
+        %input.postal-code{placeholder: "例) 1234567", :value => ""}/
+      .content__middle--prefectures
+        %li 都道府県
+        %li.any 任意
+        %select.prefectures()
+      .content__middle--city
+        %li 市区町村
+        %li.any 任意
+        %input.city{placeholder: "例) 横浜市緑区", :value => ""}/
+      .content__middle--address
+        %li 番地
+        %li.any 任意
+        %input.address{placeholder: "例) 青山1-1-1", :value => ""}/
+      .content__middle--building-name
+        %li 建物名
+        %li.any 任意
+        %input.building-name{placeholder: "例) 柳ビル103", :value => ""}/
+      .content__middle--registration
+        %li 登録する
       .upload
-      本人情報の登録について
-      %i.fas.fa-chevron-right
-
+        本人情報の登録について
+        %i.fas.fa-chevron-right
 
 = render 'shared/fooder'
