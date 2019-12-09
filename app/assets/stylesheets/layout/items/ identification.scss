@@ -62,7 +62,7 @@
       &--postal-code {
         height: 80px;
         margin-top: 45px;
-        @mixin postal-code {
+        .postal-code {
           width: 90%;
           height: 50px;
           border-radius: 5px;
@@ -77,21 +77,42 @@
         height: 80px;
         margin-top: 45px;
         .prefectures {
-          @include postal-code;
+          width: 90%;
+          height: 50px;
+          border-radius: 5px;
+          border: 1px solid #cccccc;
+          font-size: 1rem;
+          padding-left: 10px;
+          outline: none;
+          margin-top: 20px;
         }
       }
       &--city {
         height: 80px;
         margin-top: 45px;
         .city {
-          @include postal-code;
+          width: 90%;
+          height: 50px;
+          border-radius: 5px;
+          border: 1px solid #cccccc;
+          font-size: 1rem;
+          padding-left: 10px;
+          outline: none;
+          margin-top: 20px;
         }
       }
       &--address {
         height: 80px;
         margin-top: 45px;
         .address {
-          @include postal-code;
+          width: 90%;
+          height: 50px;
+          border-radius: 5px;
+          border: 1px solid #cccccc;
+          font-size: 1rem;
+          padding-left: 10px;
+          outline: none;
+          margin-top: 20px;
         }
       }
       &--building-name {
@@ -99,7 +120,14 @@
         margin-top: 45px;
         margin-bottom: 30px;
         .building-name {
-          @include postal-code;
+          width: 90%;
+          height: 50px;
+          border-radius: 5px;
+          border: 1px solid #cccccc;
+          font-size: 1rem;
+          padding-left: 10px;
+          outline: none;
+          margin-top: 20px;
         }
       }
       &--registration {
