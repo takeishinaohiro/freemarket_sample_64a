@@ -1,0 +1,26 @@
+@import "../../component/variables";
+
+.new-user-top {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__logo {
+    width: 180px;
+    height: auto;
+    margin-right: 3rem;
+  }
+  &__position {
+    ul {
+      display: flex;
+      li {
+        font-size: .8rem;
+        margin-right: 2.5rem;
+        color: gray;
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
