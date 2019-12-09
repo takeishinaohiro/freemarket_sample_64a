@@ -11,9 +11,11 @@
           = image_tag '/assets/購入確認image.jpg', height: '80', width: '80'
         .right
           .name
-            ボーナム Tシャツ
+            =@id.name
           .plice
-            ¥1,999 （税込）着払い
+            ¥
+            =@id.plice
+            (税込）着払い
     .buy-page__bottom
       .buy-page__bottom--into
         .top
@@ -21,7 +23,8 @@
             .left
               支払い金額
             .right
-              ¥1,999
+              ¥
+              =@id.plice
           .buy-page__bottom--point
             %input{checked: "checked", class: "check", type: "checkbox"}
             ポイントを使用 (所持ポイント: P0)
