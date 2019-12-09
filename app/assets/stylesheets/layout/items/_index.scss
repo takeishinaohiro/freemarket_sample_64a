@@ -93,16 +93,18 @@
     }
   }
 }
+
 .my-menu {
   position: absolute;
-  top: 2rem;
-  right: 0;
+  top: 6.3rem;
+  right: 11rem;
   display: none;
   font-weight: normal;
   height: 540px;
   width: 270px;
   background: #fff;
   box-shadow: 0 0 10px black;
+  z-index: 10;
   &__name {
     margin-top: 1rem;
     text-align: center;

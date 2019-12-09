@@ -15,5 +15,5 @@ class ItemsController < ApplicationController
 
   def sell
   end
-  source ~/.zshrc
+  # source ~/.zshrc
 end
