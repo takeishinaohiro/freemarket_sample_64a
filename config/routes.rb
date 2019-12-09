@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
-
-  root "items#index"
+  
+  root 'items#index'
 
   resources :items do
     collection do
       get 'sell'
     end
   end
-
 end
