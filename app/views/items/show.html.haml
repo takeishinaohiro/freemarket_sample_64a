@@ -4,17 +4,18 @@
     .pp
     .top
       .top__tittle
-        ボーナム Tシャツ
+        =@id.name
       .top__news
-        『ボーナム Tシャツ』は、19回の取引実績を持つすタップさんから出品されました。Tシャツ/カットソー(半袖/袖なし)/メンズの商品で、東京都から2~3日で発送されます。
+        「#{@id.name}」 は、19回の取引実績を持つすタップさんから出品されました。Tシャツ/カットソー(半袖/袖なし)/メンズの商品で、東京都から2~3日で発送されます。
       .top__explain
         .top__explain--image
           .imagemain
+            = image_tag src= @id.image, size: "300x300" 
           .imagesab
-            .imagesab-a
-            .imagesab-b
-            .imagesab-c
-            .imagesab-d
+            = image_tag src= @id.image, class:"imagesab-a"
+            = image_tag src= @id.image, class:"imagesab-b"
+            = image_tag src= @id.image, class:"imagesab-c"
+            = image_tag src= @id.image, class:"imagesab-d"
         .top__explain--status
           .status-a
             .left
@@ -70,21 +71,17 @@
               2~3日で発送
       .top__plice
         .top__plice--nmuber
-          ¥1,999
+          ¥
+          =@id.plice
         .top__plice--tax
           (税込) 
         .top__plice--send
           着払い
 
-      =link_to "" ,class:"top__buy" do
+      =link_to buy_item_path ,class:"top__buy" do
         購入画面に進む
       .top__text
-        %li #ボーナム
-        %li #bahnam
-        %li #tシャツ
-        %li 海外のブランドのボーナムです。
-        %li 知らない方は調べてみてください。
-        %li 値下げ交渉はすぐにいたします。
+        =@id.text
       .top__bottom
         .top__bottom--iine
           %i.far.fa-heart
@@ -137,86 +134,29 @@
 
     .show-ad
       .show-ad__line
-        .facebook
+        =link_to"https://www.facebook.com/",class:"facebook" do
           %i.fab.fa-facebook-square
-        .twitter
+        =link_to"https://twitter.com/",class:"twitter" do
           %i.fab.fa-twitter
-        .pinterest
+        =link_to"https://www.pinterest.com",class:"pinterest" do
           %i.fab.fa-pinterest
     .cc
       Tシャツ/カットソー(半袖/袖なし) （メンズ） その他の商品
     .bottom
-      .bottom__item-contents
-        .bottom__item-contents--image
-          = image_tag src="https://o.imgz.jp/fashionnews/105709/cwhi5n7qwwrabxq.jpg", size: "220x220"
-        .bottom__item-contents--name
-          .name
-            チャンピオン Tシャツ champion
-          .menu
-            .price
-              ¥2200
-            .iine
-              %i.far.fa-heart
-              6
-      .bottom__item-contents
-        .bottom__item-contents--image
-          = image_tag src="https://o.imgz.jp/fashionnews/105709/cwhi5n7qwwrabxq.jpg", size: "220x220"
-        .bottom__item-contents--name
-          .name
-            チャンピオン Tシャツ champion
-          .menu
-            .price
-              ¥2200
-            .iine
-              %i.far.fa-heart
-              6
-      .bottom__item-contents
-        .bottom__item-contents--image
-          = image_tag src="https://o.imgz.jp/fashionnews/105709/cwhi5n7qwwrabxq.jpg", size: "220x220"
-        .bottom__item-contents--name
-          .name
-            チャンピオン Tシャツ champion
-          .menu
-            .price
-              ¥2200
-            .iine
-              %i.far.fa-heart
-              6
-      .bottom__item-contents
-        .bottom__item-contents--image
-          = image_tag src="https://o.imgz.jp/fashionnews/105709/cwhi5n7qwwrabxq.jpg", size: "220x220"
-        .bottom__item-contents--name
-          .name
-            チャンピオン Tシャツ champion
-          .menu
-            .price
-              ¥2200
-            .iine
-              %i.far.fa-heart
-              6
-      .bottom__item-contents
-        .bottom__item-contents--image
-          = image_tag src="https://o.imgz.jp/fashionnews/105709/cwhi5n7qwwrabxq.jpg", size: "220x220"
-        .bottom__item-contents--name
-          .name
-            チャンピオン Tシャツ champion
-          .menu
-            .price
-              ¥2200
-            .iine
-              %i.far.fa-heart
-              6
-      .bottom__item-contents
-        .bottom__item-contents--image
-          = image_tag src="https://o.imgz.jp/fashionnews/105709/cwhi5n7qwwrabxq.jpg", size: "220x220"
-        .bottom__item-contents--name
-          .name
-            チャンピオン Tシャツ champion
-          .menu
-            .price
-              ¥2200
-            .iine
-              %i.far.fa-heart
-              6
+      -@items.first(6).each do |item|
+        =link_to item_path([item.id]),class:"bottom__item-contents" do
+          .bottom__item-contents--image
+            = image_tag src=item.image, size: "220x220"
+          .bottom__item-contents--name
+            .name
+              =item.name
+            .menu
+              .price
+                ¥
+                =item.plice
+              .iine
+                %i.far.fa-heart
+                6
+
     .dd
   = render 'shared/footer'

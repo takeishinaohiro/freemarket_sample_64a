@@ -18,7 +18,7 @@
           width: 134px;
           margin-right: 40px;
         }
-        &--text {
+        .header__top--text {
           width: 82%;
           position: relative;
           .search-form__input {
@@ -36,8 +36,8 @@
           }
           .fa-search {
             position: absolute;
-            top: 13px;
-            right: 0;
+            top: 10px;
+            right: 10px;
 
           }
       }
@@ -54,12 +54,14 @@
         &--category {
           display: block;
           margin-right: 30px;
+          cursor: pointer;
         }
         .fa-indent {
           color: #EA352E;
         }
         &--brand {
           display: block;
+          cursor: pointer;
         }
         .fa-tag {
           color: #EA352E;
@@ -70,14 +72,17 @@
         &--like {
           display: block;
           margin-right: 30px;
+          cursor: pointer;
         }
         &--news {
           display: block;
           margin-right: 30px;
+          cursor: pointer;
         }
         &--todo {
           display: block;
           margin-right: 30px;
+          cursor: pointer;
         }
         &--mypage {
           display: block;
@@ -88,16 +93,18 @@
     }
   }
 }
+
 .my-menu {
   position: absolute;
-  top: 2rem;
-  right: 0;
+  top: 6.3rem;
+  right: 11rem;
   display: none;
   font-weight: normal;
   height: 540px;
   width: 270px;
   background: #fff;
   box-shadow: 0 0 10px black;
+  z-index: 10;
   &__name {
     margin-top: 1rem;
     text-align: center;
@@ -286,6 +293,7 @@
               display: block;
               width: 187px;
               height: 252px;
+              text-decoration: none;
               &:hover{
                 outline: 1px solid skyblue;
               }
@@ -299,13 +307,12 @@
                 .item-1__image__price{
                 position: absolute;
                 bottom : 8px;
-                width: 78.05px;
                 height: 28px;
                 background-color: gray;
                 opacity: 0.8;
                 text-align: center;
                 padding: 0px 12px;
-                font-size: 17px;
+                font-size: 16px;
                 color: white;
                 font-weight: 400;
                 border-top-right-radius: 14px;
@@ -317,9 +324,7 @@
                 height: 64px;
                 background-color: white;
                 list-style: none;
-                display: block;
                 padding: 10px;
-
               }
             }
           }
