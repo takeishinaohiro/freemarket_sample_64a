@@ -27,7 +27,6 @@ $(function() {
         var imgSrc = URL.createObjectURL(dropImages[i]);
         buildHTML(imgSrc);
         images.push(dropImages[i].name);
-        console.log(images);
       }
   });
 
