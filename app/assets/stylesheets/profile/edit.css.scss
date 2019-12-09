@@ -7,12 +7,12 @@
     height: 40px;
     background-color: #f5f5f5;
   }
-  .profile__edit{
+  .profile--edit{
     width: 64.81%;
     height: 568px;
     background-color: peachpuff;
     margin-left: 380px;
-    .profile--edit__header{
+    &__header{
       height: 50px;
       background-color: white;
       font-size: 24px;
@@ -20,7 +20,7 @@
       text-align: center;
       line-height: 50px;
     }
-    .profile--edit__setting{
+    &__setting{
       height: 156px;
       // padding: 72px 16px 24px;
       position: relative;
@@ -29,17 +29,18 @@
       .profile-group{
         .profile-icon{
           border-radius: 50%;
-          margin-top: 70px;
-          margin-left: 210px;
+          top: 70px;
+          left: 210px;
           height: 60px;
           width: 60px;
           position: absolute;
         }
         .profile-name{
+          position: absolute;
           width: 31.42%;
           height: 46px;
-          margin-top: 75px;
-          margin-left: 278px;
+          top: 75px;
+          left: 278px;
           border-radius: 4px;
           border: 1px solid #ccc;
           font-size: 16px;
@@ -47,10 +48,10 @@
         }
       }
     }
-    .profile--edit__text{
+    &__text{
       height: 362px;
       background-color: white;
-      .profile--edit__text__area{
+      &__area{
         width: 94.4%;
         height: 216px;
         background-color: white;
@@ -60,7 +61,7 @@
         border: 1px solid #ccc;
         outline: 0;
       }
-      .profile--edit__text__btn{
+      &__btn{
         width: 95.4%;
         height: 50px;
         background-color: #EA352D;
