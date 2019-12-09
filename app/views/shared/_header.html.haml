@@ -2,7 +2,7 @@
   .top-content
     .header
       .header__top
-        .header__top--logo
+        = link_to root_path, class:"header__top--logo" do
           %img{src: "/assets/fmarket_logo_red.svg"}
         .header__top--text
           %input.search-form__input{placeholder: "何をお探しですか？", type: "text", value: ""}
