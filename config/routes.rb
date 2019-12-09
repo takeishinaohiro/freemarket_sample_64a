@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   root "items#index"
 
-  get "/sell", to: 'items#sell', as: 'sell'
+  resources :items do
+    collection do
+      get 'sell'
+    end
+  end
+
+
 end
