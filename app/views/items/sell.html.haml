@@ -1,6 +1,6 @@
 .sell-wrap
   .container
-    = image_tag '/assets/fmarket_logo_red.svg', width: "200px", height: "auto", class: "sell-wrap__logo"
+    = image_tag '/assets/fmarket_logo_red.svg', class: "sell-wrap__logo"
     %form
       .sell-box
         %h2 商品の情報を入力
@@ -15,7 +15,7 @@
                 ドラッグアンドドロップ
                 %br
                 またはクリックしてファイルをアップロード
-              %input{type: "file", multiple: true, name: "image0[]", id: "sell-img", style: "display:none;"}
+              %input{type: "file", multiple: true, name: "image0[]", id: "sell-img"}
 
         .sell-box__info.sell-box__section
           %h3

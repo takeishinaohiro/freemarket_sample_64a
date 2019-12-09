@@ -7,6 +7,8 @@
   &__logo {
     display: block;
     margin: 0 auto;
+    width: "200px";
+    height: "auto";
   }
   &__logo-bottom {
     display: block;
@@ -98,6 +100,9 @@
         font-weight: bold;
         line-height: 1.3rem;
         margin-top: 4rem;
+      }
+      .sell-img {
+        display: none;
       }
     }
   }
