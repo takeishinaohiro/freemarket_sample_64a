@@ -1,0 +1,64 @@
+.wapper1
+  .log
+    .log__main
+      = image_tag '/assets/fmarket_logo_red.svg', height: '49', width: '185'
+  .buy-page
+    .buy-page__top
+      購入内容の確認
+    .buy-page__center
+      .buy-page__center--into
+        .left
+          = image_tag '/assets/購入確認image.jpg', height: '80', width: '80'
+        .right
+          .name
+            ボーナム Tシャツ
+          .plice
+            ¥1,999 （税込）着払い
+    .buy-page__bottom
+      .buy-page__bottom--into
+        .top
+          .plice
+            .left
+              支払い金額
+            .right
+              ¥1,999
+          .buy-page__bottom--point
+            %input{checked: "checked", class: "check", type: "checkbox"}
+            ポイントを使用 (所持ポイント: P0)
+        .middol
+          .card
+            .card__left
+              支払い方法
+            =link_to "",class:"card__right" do
+              変更する
+          .center
+            %li クレジットカード
+            %li ************1934
+            %li 有効期限 06 / 24
+            %li visa
+        .bottom
+          .addres
+            .addres__left
+              支払い方法
+            =link_to "",class:"addres__right" do
+              変更する
+          .news
+            %li 〒930-2242
+            %li 青森県 弘前市 四方北窪2434-6
+            %li 藤倉 幸広
+      =link_to "",class:"buy-btn" do
+        購入する
+  .buy-footer
+    .buy-footer__top
+      =link_to "",class:"buy-footer__top--1" do
+        プライバシーポリシー
+      =link_to "",class:"buy-footer__top--2" do
+        メルカリ利用規約
+      =link_to "",class:"buy-footer__top--3" do
+        特定商取引に関する表記
+    .buy-footer__img
+      = image_tag '/assets/logo_gray.svg', height: '65', width: '80'
+
+    .buy-footer__fin
+      © Mercari, Inc.
+

@@ -149,8 +149,8 @@ Things you may want to cover:
 - has_many :addresss
 - has_many :sellers
 - has_many :buyers
-- has_many :comments
-
+- has_many :comments  ,dependent: :destroy
+- has_many :images ,dependent: :destroy
 - has_many :brands
 - has_many :categorys
 

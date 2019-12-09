@@ -14,10 +14,13 @@
  *= require_self
  */
 
-@import "./foundation/reset.css";
-@import "./foundation/slick-theme.scss";
-@import "./foundation/slick.scss";
-@import 'font-awesome-sprockets';
-@import "font-awesome";
-@import "./component/variables.scss";
-@import "./layout/items/index.scss";
+
+ @import "./foundation/reset";
+ @import "./component/compornent";
+ @import "./component/variables";
+ @import "./layout/items/index";
+ @import "./layout/items/sell";
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
+ @import "./foundation/slick-theme";
+ @import "./foundation/slick";
