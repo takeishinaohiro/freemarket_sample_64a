@@ -1,0 +1,24 @@
+.content
+  .product
+    .product-tag
+      商品一覧
+    .product-list
+      .product-list__list
+        .product-wrapper
+          .product-wrapper__heading
+            .heading-text
+              新着アイテム
+            .heading-option
+              もっと見る
+              %i.fa.fa-angle-right
+              
+          .product-wrapper__item
+            -@items.each do |item|
+              .content
+                .iteme-1
+                  .item-1__image
+                    = image_tag src= item.image, size: "187x188" 
+                    .item-1__image__price
+                      ¥1,000
+                  %li.item-1__name 
+                    = item.name
