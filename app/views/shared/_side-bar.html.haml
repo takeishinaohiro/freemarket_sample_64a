@@ -1,8 +1,9 @@
 .sidebar
   %ul.sidebar__top
-    %li.sidebar__top--item 
-      マイページ
-      %i.fas.fa-chevron-right
+    =link_to "",class:"" do
+      %li.sidebar__top--item 
+        マイページ
+        %i.fas.fa-chevron-right
     %li.sidebar__top--item 
       お知らせ
       %i.fas.fa-chevron-right
@@ -12,9 +13,10 @@
     %li.sidebar__top--item 
       いいね！一覧
       %i.fas.fa-chevron-right
-    %li.sidebar__top--item 
-      出品する
-      %i.fas.fa-chevron-right
+    =link_to "",class:"" do
+      %li.sidebar__top--item 
+        出品する
+        %i.fas.fa-chevron-right
     %li.sidebar__top--item 
       出品した商品-出品中
       %i.fas.fa-chevron-right
@@ -54,24 +56,28 @@
   %ul.sidebar__bottom
     %li.sidebar__bottom--item 
       設定
-    %li.sidebar__top--item  
-      プロフィール
-      %i.fas.fa-chevron-right
+    =link_to "",class:"" do
+      %li.sidebar__top--item  
+        プロフィール
+        %i.fas.fa-chevron-right
     %li.sidebar__top--item 
       発送元・お届け先住所住所変更
       %i.fas.fa-chevron-right
-    %li.sidebar__top--item 
-      支払い方法
-      %i.fas.fa-chevron-right
+    =link_to "",class:"" do
+      %li.sidebar__top--item 
+        支払い方法
+        %i.fas.fa-chevron-right
     %li.sidebar__top--item 
       メール/パスワード
       %i.fas.fa-chevron-right
-    %li.sidebar__top--item 
-      本人情報
-      %i.fas.fa-chevron-right
+    =link_to "",class:"" do
+      %li.sidebar__top--item 
+        本人情報
+        %i.fas.fa-chevron-right
     %li.sidebar__top--item 
       電話番号の確認
       %i.fas.fa-chevron-right
-    %li.sidebar__top--item 
-      ログアウト
-      %i.fas.fa-chevron-right
+    =link_to "/users/:id",method: :delete,class:"" do
+      %li.sidebar__top--item 
+        ログアウト
+        %i.fas.fa-chevron-right

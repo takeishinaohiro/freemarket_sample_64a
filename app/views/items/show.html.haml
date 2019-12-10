@@ -9,13 +9,13 @@
         「#{@id.name}」 は、19回の取引実績を持つすタップさんから出品されました。Tシャツ/カットソー(半袖/袖なし)/メンズの商品で、東京都から2~3日で発送されます。
       .top__explain
         .top__explain--image
-          .imagemain
-            = image_tag src= @id.image, size: "300x300" 
-          .imagesab
-            = image_tag src= @id.image, class:"imagesab-a"
-            = image_tag src= @id.image, class:"imagesab-b"
-            = image_tag src= @id.image, class:"imagesab-c"
-            = image_tag src= @id.image, class:"imagesab-d"
+          %ul.slider-nav
+            %li= image_tag src= @id.image,class:"imagemain",size: "300x300" 
+          %ul.imagesab
+            %li= image_tag src= "商品画像2.jpg", class:"imagesab-a"
+            %li= image_tag src= "商品画像4.jpg", class:"imagesab-b"
+            %li= image_tag src= "商品画像3.jpg", class:"imagesab-c"
+            %li= image_tag src= "購入確認image.jpg", class:"imagesab-d"
         .top__explain--status
           .status-a
             .left
@@ -119,7 +119,7 @@
     .message-send
       .message-send__caution
         相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
-      %input{class:"message-form", type: "text"}
+      %input{class:"message-form", type:"text_area"}
       =link_to "",class:"send-btn" do
         コメントする
     .bb
