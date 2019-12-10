@@ -1,5 +1,8 @@
 -# # ---------------ログインページ---------------
 =render '/shared/header'
+.bereadcrumb-body
+  - breadcrumb :mypage
+  = render "shared/breadcrumb"
 .mypage-wrap
   .contents
     =render '/shared/side-bar'
