@@ -61,14 +61,12 @@
               height: 60px;
               width: 60px;
               background-size: cover;
-              opacity: 0.5;
 
             }
             .imagesab-d{
               height: 60px;
               width: 60px;
               background-size: cover;
-              opacity: 0.5;
             }
           }
         }
@@ -713,4 +711,8 @@
 
     }
   }
+}
+
+.none{
+  opacity: 0.5;
 }
