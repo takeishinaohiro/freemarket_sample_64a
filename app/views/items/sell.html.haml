@@ -1,6 +1,7 @@
 .sell-wrap
   .container
-    = image_tag '/assets/fmarket_logo_red.svg', class: "sell-wrap__logo"
+    = link_to root_path do
+      = image_tag '/assets/fmarket_logo_red.svg', class: "sell-wrap__logo"
     %form
       .sell-box
         %h2 商品の情報を入力
