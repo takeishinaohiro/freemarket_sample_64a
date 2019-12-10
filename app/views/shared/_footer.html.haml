@@ -20,8 +20,10 @@
         %li.footer-nav__list--item 公式ブログ
         %li.footer-nav__list--item メルカリロゴ利用ガイドライン
         %li.footer-nav__list--item
-          = icon 'fab', 'twitter', class: "sns-link"
-          = icon 'fab', 'facebook', class: "sns-link"
+          = link_to "https://twitter.com/" do
+            = icon 'fab', 'twitter', class: "sns-link"
+          = link_to "https://ja-jp.facebook.com/" do
+            = icon 'fab', 'facebook', class: "sns-link"
 
       %ul.footer-nav__list
         %li.footer-nav__list--item ヘルプ＆ガイド
@@ -52,5 +54,6 @@
         %li.footer-nav__list--item 日本
         %li.footer-nav__list--item United States
 
-    = image_tag "fmarket_logo_white.png", class: "footer__logo", width: "130px", height: "auto"
+    = link_to root_path do
+      = image_tag "fmarket_logo_white.png", class: "footer__logo", width: "130px", height: "auto"
     .footer__copyright © 2019 Mercari

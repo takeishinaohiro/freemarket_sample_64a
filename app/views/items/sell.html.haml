@@ -104,8 +104,9 @@
           %p また、出品をもちまして加盟店規約に同意したことになります。
           .sell-box__confirmation--exhibit-btn
             出品する
-          .sell-box__confirmation--back-btn
-            もどる
+          = link_to users_path do
+            .sell-box__confirmation--back-btn
+              もどる
     %ul.sell-other
       %li プライバシーポリシー
       %li メルカリ利用規約
