@@ -1,5 +1,5 @@
 .top-top
-  .top-content
+  .container
     .header
       .header__top
         = link_to root_path, class:"header__top--logo" do
@@ -20,8 +20,10 @@
           %li.header__menu-right--news お知らせ
           %i.fas.fa-check
           %li.header__menu-right--todo やることリスト
-          %i.far.fa-user
-          %li.header__menu-right--mypage マイページ
+          = link_to users_path do
+            %li.header__menu-right--mypage
+              %i.far.fa-user
+              マイページ
 
 
       .my-menu

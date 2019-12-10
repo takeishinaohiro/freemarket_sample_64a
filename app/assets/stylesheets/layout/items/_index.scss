@@ -1,95 +1,91 @@
+@import "../../component/variables.scss";
+//------------------------ Header ---------------------------//
 .top-top{
   position: relative;
   width: 100%;
   height: 100px;
+}
 
-  .top-content {
-    width: 1080px;
-    margin: 0 auto;
-    margin-bottom: 20px;
-
-    .header {
-      &__top {
-        display: flex;
-        height: 40px;
-        padding-top: 14px;
-        &--logo {
-          height: 36px;
-          width: 134px;
-          margin-right: 40px;
-        }
-        .header__top--text {
-          width: 82%;
-          position: relative;
-          .search-form__input {
-            width: 100%;
-            height: 36px;
-            font-size: 1rem;
-            background-color: #f5f5f5;
-            border-width: 1px;
-            border-style: solid;
-            border-color: #CCCCCC;
-            border-radius: 4px;
-            padding-left: 10px;
-            font-weight: 400;
-            outline: 0;
-          }
-          .fa-search {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-
-          }
-      }
+.header {
+  &__top {
+    display: flex;
+    height: 40px;
+    padding-top: 14px;
+    &--logo {
+      height: 36px;
+      width: 134px;
+      margin-right: 40px;
     }
-    &__menu {
+    .header__top--text {
+      width: 82%;
       position: relative;
-      margin-top: 25px;
-      display: flex;
-      justify-content: space-between;
-      font-weight: 600;
-      font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
-      &-left {
-        display: flex;
-        &--category {
-          display: block;
-          margin-right: 30px;
-          cursor: pointer;
-        }
-        .fa-indent {
-          color: #EA352E;
-        }
-        &--brand {
-          display: block;
-          cursor: pointer;
-        }
-        .fa-tag {
-          color: #EA352E;
-        }
+      .search-form__input {
+        width: 100%;
+        height: 36px;
+        font-size: 1rem;
+        background-color: #f5f5f5;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #CCCCCC;
+        border-radius: 4px;
+        padding-left: 10px;
+        font-weight: 400;
+        outline: 0;
       }
-      &-right {
-        display: flex;
-        &--like {
-          display: block;
-          margin-right: 30px;
-          cursor: pointer;
-        }
-        &--news {
-          display: block;
-          margin-right: 30px;
-          cursor: pointer;
-        }
-        &--todo {
-          display: block;
-          margin-right: 30px;
-          cursor: pointer;
-        }
-        &--mypage {
-          display: block;
-          cursor: pointer;
-        }
-        }
+      .fa-search {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+
       }
+  }
+}
+&__menu {
+  position: relative;
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+  &-left {
+    display: flex;
+    &--category {
+      display: block;
+      margin-right: 30px;
+      cursor: pointer;
+    }
+    .fa-indent {
+      color: #EA352E;
+    }
+    &--brand {
+      display: block;
+      cursor: pointer;
+    }
+    .fa-tag {
+      color: #EA352E;
+    }
+  }
+  &-right {
+    display: flex;
+    &--like {
+      display: block;
+      margin-right: 30px;
+      cursor: pointer;
+    }
+    &--news {
+      display: block;
+      margin-right: 30px;
+      cursor: pointer;
+    }
+    &--todo {
+      display: block;
+      margin-right: 30px;
+      cursor: pointer;
+    }
+    &--mypage {
+      display: block;
+      cursor: pointer;
+    }
     }
   }
 }
@@ -182,7 +178,9 @@
     font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
   }
 }
-//------------------------ carousel ---------------------------//
+
+
+//------------------------ Carousel ---------------------------//
 .slider {
   position: relative;
 
@@ -232,7 +230,9 @@
     right: 80px;
   }
 }
-//----------------- item ----------------------//
+
+
+//----------------- Index ----------------------//
 .content{
   width: 100%;
   margin: 0 auto;
@@ -334,7 +334,8 @@
   }
 }
 
-@import "../../component/variables.scss";
+
+//------------------------ Footer ---------------------------//
 .footer-img {
   padding: 3rem 0;
   background: image-url('footer.png');
