@@ -2,7 +2,7 @@
   .container
     = link_to root_path do
       = image_tag '/assets/fmarket_logo_red.svg', class: "sell-wrap__logo"
-    %form
+    = form_with(model: @item) do |f|
       .sell-box
         %h2 商品の情報を入力
         .sell-box__img.sell-box__section
@@ -16,17 +16,17 @@
                 ドラッグアンドドロップ
                 %br
                 またはクリックしてファイルをアップロード
-              %input{type: "file", multiple: true, name: "image0[]", id: "sell-img"}
+                = f.file_field :image, multiple: true, id: "sell-img"
 
         .sell-box__info.sell-box__section
           %h3
             商品名
             %span 必須
-          %input{class: "sell-box__info--input sell-box__info--name", placeholder: "商品名（必須40文字まで）"}
+          = f.text_field :name, class:"sell-box__info--input sell-box__info--name", placeholder: "商品名（必須40文字まで）"
           %h3.sell-box__info--textarea
             商品の説明
             %span 必須
-          %textarea{class: "sell-box__info--input sell-box__info--description", rows: 6, placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"}
+          = f.text_area :description, class:"sell-box__info--input sell-box__info--description", rows: 6, placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
 
         .sell-box__details.sell-box__section.sell-box__section2
           .sell-box__details--left
@@ -36,19 +36,13 @@
               カテゴリー
               %span 必須
             .select-wrap
-              %select{class: "details", placeholder: "---"}
-                %option{value: 1} ---
-                %option{value: 2} レディース
-                %option{value: 3} メンズ
+              = f.select :category, ["レディース", "メンズ"], class: "details", prompt: "---"
               = icon 'fas', 'chevron-down'
             %h4
               商品の状態
               %span 必須
             .select-wrap
-              %select{class: "details", placeholder: "---"}
-                %option{value: 1} ---
-                %option{value: 2} 新品、未使用
-                %option{value: 3} 未使用に近い
+              = f.select :status, ["新品、未使用", "未使用に近い"], class: "details", prompt: "---"
               = icon 'fas', 'chevron-down'
 
         .sell-box__delivery.sell-box__section.sell-box__section2
@@ -59,28 +53,19 @@
               配送料の負担
               %span 必須
             .select-wrap
-              %select{class: "details", placeholder: "---"}
-                %option{value: 1} ---
-                %option{value: 2} レディース
-                %option{value: 3} メンズ
+              = f.select :burden, ["送料込み(出品者負担)", "着払い(購入者負担)"], class: "details", prompt: "---"
               = icon 'fas', 'chevron-down'
             %h4
               発送元の地域
               %span 必須
             .select-wrap
-              %select{class: "details", placeholder: "---"}
-                %option{value: 1} ---
-                %option{value: 2} 新品、未使用
-                %option{value: 3} 未使用に近い
+              = f.collection_select :prefecture, Prefecture.all, :id, :name, prompt: "---"
               = icon 'fas', 'chevron-down'
             %h4
               発送までの日数
               %span 必須
             .select-wrap
-              %select{class: "details", placeholder: "---"}
-                %option{value: 1} ---
-                %option{value: 2} 新品、未使用
-                %option{value: 3} 未使用に近い
+              = f.select :indication, ["1〜2日で発送", "2〜3日で発送", "4〜7日で発送"], class: "details", prompt: "---"
               = icon 'fas', 'chevron-down'
 
         .sell-box__price.sell-box__section.sell-box__section2
@@ -92,7 +77,7 @@
               %h4
                 価格
                 %span 必須
-              %input{class: "price-flex__input", placeholder: "例）300"}
+              = f.text_field :price, class:"price-flex__input", placeholder: "例）300"
             .price-flex
               %p.fee 販売手数料（10%）
               %p -

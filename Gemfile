@@ -77,6 +77,7 @@ gem 'pry-rails'
 gem 'kaminari', '~> 0.17.0'
 gem 'font-awesome-sass', '~> 5.4.1'
 gem 'fog-aws'
+gem 'active_hash'
 
 group :production do
   gem 'unicorn', '5.4.1'
