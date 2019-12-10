@@ -5,6 +5,7 @@ end
 # マイページ
 crumb :mypage do
   link "マイページ", users_path
+  parent :root
 end
 
 crumb :logout do
