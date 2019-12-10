@@ -55,6 +55,9 @@ $(function($){
       $('.h').addClass('is-show');
   });
 });
+
+
+
 $(function(){
   $('.slider').slick({
     prevArrow:'<i class="fa fa-angle-left arrow arrow-left"></i>',
