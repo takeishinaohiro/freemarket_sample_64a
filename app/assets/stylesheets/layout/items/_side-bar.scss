@@ -1,21 +1,21 @@
 @import "../../component/variables";
 .sidebar {
   background-color: $white;
-  width: 29%;
+  width: 27%;
   text-align: left;
   line-height: 50px;
   font-size: 0.9rem;
   li.sidebar__top--item {
     cursor: pointer;
-    list-style: none;
-    border-top: solid $lightgray;
+    border-bottom: 2px solid $lightgray;
     position: relative;
     padding-left: 16px;
     .fas.fa-chevron-right {
       transition: .3s;
       position: absolute;
       top: 50%;
-      right: 0;
+      transform: translateY(-50%);
+      right: 20px;
       color: lightgray;
     }
   }

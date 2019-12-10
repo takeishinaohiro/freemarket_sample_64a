@@ -1,13 +1,14 @@
 $(function() {
+
   $('.sidebar__top--item').hover(
     function() {
-      $(this).find('.fa-chevron-right').css({'color':'gray', 'transform':'translateX(5px)'});
+      $(this).find('.fa-chevron-right').css({'color':'gray', 'transform':'translate(5px, -50%)'});
     },
     function() {
-      $(this).find('.fa-chevron-right').css({'color':'lightgray', 'transform':'translateX(0)'});
+      $(this).find('.fa-chevron-right').css({'color':'lightgray', 'transform':'translate(0, -50%)'});
     }
-    );
-});
+  );
+
 $(function($){
   $('.a').click(function(){
       $('.b').removeClass('is-active');
@@ -57,7 +58,7 @@ $(function($){
 });
 
 
-
+// トップページのカルーセル
 $(function(){
   $('.slider').slick({
     prevArrow:'<i class="fa fa-angle-left arrow arrow-left"></i>',
@@ -73,6 +74,7 @@ $(function(){
   });
 });
 
+
 $(function() {
 $('.header__menu-right--mypage').hover(
   function() {
@@ -86,3 +88,4 @@ $('.header__menu-right--mypage').hover(
   );
 });
 
+});
