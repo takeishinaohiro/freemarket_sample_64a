@@ -1,11 +1,12 @@
 class UsersController < ApplicationController
 
-  def edit
-  
+  def index
+
   end
 
 
   def destroy
 
   end
+
 end

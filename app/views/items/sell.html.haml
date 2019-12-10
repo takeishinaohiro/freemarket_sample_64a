@@ -1,6 +1,7 @@
 .sell-wrap
   .container
-    = image_tag '/assets/fmarket_logo_red.svg', class: "sell-wrap__logo"
+    = link_to root_path do
+      = image_tag '/assets/fmarket_logo_red.svg', class: "sell-wrap__logo"
     %form
       .sell-box
         %h2 商品の情報を入力
@@ -84,7 +85,8 @@
 
         .sell-box__price.sell-box__section.sell-box__section2
           .sell-box__price--left
-            %h3.text-gray 販売価格(300〜9,999,999)
+            %h3.text-gray 販売価格(300〜9,999,99
+            9)
           .sell-box__price--right
             .price-flex
               %h4
@@ -103,8 +105,9 @@
           %p また、出品をもちまして加盟店規約に同意したことになります。
           .sell-box__confirmation--exhibit-btn
             出品する
-          .sell-box__confirmation--back-btn
-            もどる
+          = link_to users_path do
+            .sell-box__confirmation--back-btn
+              もどる
     %ul.sell-other
       %li プライバシーポリシー
       %li メルカリ利用規約

@@ -1,77 +1,83 @@
 .sidebar
   %ul.sidebar__top
-    %li.sidebar__top--item 
-      マイページ
-      %i.fas.fa-chevron-right
-    %li.sidebar__top--item 
+    =link_to "",class:"" do
+      %li.sidebar__top--item
+        マイページ
+        %i.fas.fa-chevron-right
+    %li.sidebar__top--item
       お知らせ
       %i.fas.fa-chevron-right
-    %li.sidebar__top--item 
+    %li.sidebar__top--item
       やることリスト
       %i.fas.fa-chevron-right
-    %li.sidebar__top--item 
+    %li.sidebar__top--item
       いいね！一覧
       %i.fas.fa-chevron-right
-    %li.sidebar__top--item 
-      出品する
-      %i.fas.fa-chevron-right
-    %li.sidebar__top--item 
+    =link_to sell_items_path do
+      %li.sidebar__top--item
+        出品する
+        %i.fas.fa-chevron-right
+    %li.sidebar__top--item
       出品した商品-出品中
       %i.fas.fa-chevron-right
-    %li.sidebar__top--item 
+    %li.sidebar__top--item
       出品した商品-取引中
       %i.fas.fa-chevron-right
-    %li.sidebar__top--item 
+    %li.sidebar__top--item
       出品した商品-売却済み
       %i.fas.fa-chevron-right
-    %li.sidebar__top--item 
+    %li.sidebar__top--item
       購入した商品-取引中
       %i.fas.fa-chevron-right
-    %li.sidebar__top--item 
+    %li.sidebar__top--item
       購入した商品-過去の取引
       %i.fas.fa-chevron-right
-    %li.sidebar__top--item 
+    %li.sidebar__top--item
       ニュース一覧
       %i.fas.fa-chevron-right
-    %li.sidebar__top--item 
+    %li.sidebar__top--item
       評価一覧
       %i.fas.fa-chevron-right
-    %li.sidebar__top--item 
+    %li.sidebar__top--item
       ガイド
       %i.fas.fa-chevron-right
-    %li.sidebar__top--item 
+    %li.sidebar__top--item
       お問い合わせ
       %i.fas.fa-chevron-right
   %ul.sidebar__middle
-    %li.sidebar__middle--item 
+    %li.sidebar__middle--item
       プリペイ
-    %li.sidebar__top--item 
+    %li.sidebar__top--item
       売上・振込申請
       %i.fas.fa-chevron-right
-    %li.sidebar__top--item 
+    %li.sidebar__top--item
       ポイント
       %i.fas.fa-chevron-right
   %ul.sidebar__bottom
-    %li.sidebar__bottom--item 
+    %li.sidebar__bottom--item
       設定
-    %li.sidebar__top--item  
-      プロフィール
-      %i.fas.fa-chevron-right
-    %li.sidebar__top--item 
+    =link_to "",class:"" do
+      %li.sidebar__top--item
+        プロフィール
+        %i.fas.fa-chevron-right
+    %li.sidebar__top--item
       発送元・お届け先住所住所変更
       %i.fas.fa-chevron-right
-    %li.sidebar__top--item 
-      支払い方法
-      %i.fas.fa-chevron-right
-    %li.sidebar__top--item 
+    =link_to "",class:"" do
+      %li.sidebar__top--item
+        支払い方法
+        %i.fas.fa-chevron-right
+    %li.sidebar__top--item
       メール/パスワード
       %i.fas.fa-chevron-right
-    %li.sidebar__top--item 
-      本人情報
-      %i.fas.fa-chevron-right
-    %li.sidebar__top--item 
+    =link_to "",class:"" do
+      %li.sidebar__top--item
+        本人情報
+        %i.fas.fa-chevron-right
+    %li.sidebar__top--item
       電話番号の確認
       %i.fas.fa-chevron-right
-    %li.sidebar__top--item 
-      ログアウト
-      %i.fas.fa-chevron-right
+    =link_to "/users/:id",method: :delete,class:"" do
+      %li.sidebar__top--item
+        ログアウト
+        %i.fas.fa-chevron-right

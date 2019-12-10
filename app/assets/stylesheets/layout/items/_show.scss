@@ -40,7 +40,6 @@
           .imagemain{
             width: 300px;
             height: 300px;
-            background-image: url("/assets/メルカリ商品.jpg");
             background-size: cover;
           }
           .imagesab{
@@ -50,31 +49,24 @@
             .imagesab-a{
               height: 60px;
               width: 60px;
-              background-image: url("/assets/メルカリ商品.jpg");
               background-size: cover;
 
             }
             .imagesab-b{
               height: 60px;
               width: 60px;
-              background-image: url("/assets/商品画像2.jpg");
               background-size: cover;
-              opacity: 0.5;
             }
             .imagesab-c{
               height: 60px;
               width: 60px;
-              background-image: url("/assets/商品画像3.jpg");
               background-size: cover;
-              opacity: 0.5;
 
             }
             .imagesab-d{
               height: 60px;
               width: 60px;
-              background-image: url("/assets/商品画像4.jpg");
               background-size: cover;
-              opacity: 0.5;
             }
           }
         }
@@ -402,7 +394,6 @@
         list-style: none;
         font-size: 18px;
         line-height: 1.5;
-        height: 162px;
         width: 620px;
         color: #333333;
       }
@@ -680,6 +671,7 @@
         display: block;
         background-color: #fff;
         margin: 0 20px 20px 0;
+        text-decoration: none;
 
 
         &--name{
@@ -719,4 +711,8 @@
 
     }
   }
+}
+
+.none{
+  opacity: 0.5;
 }
