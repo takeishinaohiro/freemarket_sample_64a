@@ -15,4 +15,12 @@ class UsersController < ApplicationController
   def destroy
   end
 
+  def todo
+
+  end
+
+  def past
+    
+  end
+
 end
