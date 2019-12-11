@@ -14,9 +14,11 @@ Rails.application.routes.draw do
   end
 
   resources :users do
+
     member do
       get 'todo'
       get 'past'
     end
   end
+
 end

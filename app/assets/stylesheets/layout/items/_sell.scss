@@ -110,7 +110,7 @@
     &--input {
       border: 1px solid lightgray;
       border-radius: 5px;
-      margin-top: 1rem;
+      margin-top: .5rem;
       padding: .8rem 1rem;
       width: 100%;
       font-size: 1rem;
@@ -179,23 +179,6 @@
       padding: 1rem;
     }
   }
-}
-
-.sell-other {
-  margin-top: 2rem;
-  font-size: .8rem;
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  li:not(:last-of-type) {
-    margin-right: 1rem;
-  }
-}
-
-.copyright {
-  font-size: .8rem;
-  text-align: center;
-  margin-top: 1rem;
 }
 
 .drop-zone {

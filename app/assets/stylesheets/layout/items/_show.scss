@@ -5,7 +5,6 @@
   .pp{
     background-color: #F5F5F5;
     height: 40px;
-    
   }
 
   .showpage{
@@ -41,6 +40,7 @@
           .imagemain{
             width: 300px;
             height: 300px;
+          }
             background-size: cover;
             position: relative;
           }
@@ -91,12 +91,10 @@
               height: 60px;
               width: 60px;
               background-size: cover;
-
             }
             .imagesab-d{
               height: 60px;
               width: 60px;
-              background-size: cover;
             }
           }
         }
@@ -622,6 +620,7 @@
       width: 700px;
       height: 80px;
 
+
       &__line{
         width: 160px;
         height: 50px;
@@ -742,7 +741,6 @@
     }
   }
 }
-
 .none{
   opacity: 0.5;
 }

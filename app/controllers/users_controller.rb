@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
 
+
   def index
   end
 
@@ -8,10 +9,12 @@ class UsersController < ApplicationController
 
   def edit
     @id = current_user.id
+
   end
 
   def destroy
   end
+
 
   def todo
 
@@ -21,4 +24,5 @@ class UsersController < ApplicationController
     
   end
 
+  
 end

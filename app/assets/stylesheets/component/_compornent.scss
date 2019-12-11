@@ -5,3 +5,20 @@
 .text-gray {
   color: gray;
 }
+
+.other-footer {
+  margin-top: 2rem;
+  font-size: .8rem;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  li:not(:last-of-type) {
+    margin-right: 1rem;
+  }
+}
+
+.copyright {
+  font-size: .8rem;
+  text-align: center;
+  margin-top: 1rem;
+}
