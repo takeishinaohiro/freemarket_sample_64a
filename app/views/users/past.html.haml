@@ -1,0 +1,21 @@
+=render '/shared/header'
+.bereadcrumb-body
+  - breadcrumb :mypage
+  = render "shared/breadcrumb"
+.mypage-wrap
+  .contents
+    =render '/shared/side-bar'
+    .mypage
+      .mypage__bottom
+        %li.mypage__bottom-text 購入した商品
+        .mypage__bottom--tabs
+          %li.mypage-tab.c.is-active 取引中
+          %li.mypage-tab.d 過去の取引
+        .mypage__bottom--contents
+          .mypage__bottom--content.g.is-show 
+            = image_tag '/assets/logo_gray.svg',height: '200', width: '200', class: 'logo_gray.svg'
+            %li.mypage__bottom--content-text 取引中の商品はありません
+          .mypage__bottom--content.h
+            = image_tag '/assets/logo_gray.svg',height: '200', width: '200', class: 'logo_gray.svg'
+            %li.mypage__bottom--content-text 過去に取引した商品がありません
+= render '/shared/footer'

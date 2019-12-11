@@ -4,12 +4,14 @@
       %li.sidebar__top--item
         マイページ
         %i.fas.fa-chevron-right
-    %li.sidebar__top--item
-      お知らせ
-      %i.fas.fa-chevron-right
-    %li.sidebar__top--item
-      やることリスト
-      %i.fas.fa-chevron-right
+    =link_to todo_user_path(current_user.id) do
+      %li.sidebar__top--item
+        お知らせ
+        %i.fas.fa-chevron-right
+    =link_to todo_user_path(current_user.id) do
+      %li.sidebar__top--item
+        やることリスト
+        %i.fas.fa-chevron-right
     %li.sidebar__top--item
       いいね！一覧
       %i.fas.fa-chevron-right
@@ -26,12 +28,14 @@
     %li.sidebar__top--item
       出品した商品-売却済み
       %i.fas.fa-chevron-right
-    %li.sidebar__top--item
-      購入した商品-取引中
-      %i.fas.fa-chevron-right
-    %li.sidebar__top--item
-      購入した商品-過去の取引
-      %i.fas.fa-chevron-right
+    =link_to past_user_path(current_user.id) do
+      %li.sidebar__top--item
+        購入した商品-取引中
+        %i.fas.fa-chevron-right
+    =link_to past_user_path(current_user.id) do
+      %li.sidebar__top--item
+        購入した商品-過去の取引
+        %i.fas.fa-chevron-right
     %li.sidebar__top--item
       ニュース一覧
       %i.fas.fa-chevron-right
