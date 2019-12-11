@@ -1,7 +1,10 @@
 -# # ---------------ログインページ---------------
 =render '/shared/header'
+.bereadcrumb-body
+  - breadcrumb :mypage
+  = render "shared/breadcrumb"
 .mypage-wrap
-  .contents
+  .index-contents
     =render '/shared/side-bar'
     .mypage
       .mypage__top

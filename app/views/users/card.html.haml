@@ -1,0 +1,76 @@
+.card-wrapper
+  = render "users/progress"
+  .card-wrapper__innuner
+    .card-top
+      %h2 支払い方法
+
+
+    .card-bottom
+      .card-number
+        %h2 
+          カード番号
+          %span 必須
+
+        %input{class: "card-number__input", placeholder: "半角数字のみ"}
+        %ul.card-campny
+          %li visa
+          %li visa
+          %li visa
+          %li visa
+          %li visa
+
+      .date
+        %h2 
+          有効期限
+          %span 必須
+
+        .year-and-month
+          .year-and-month__innuner
+            %select{class: "month", placeholder: "---"}
+              %option{value: 1} 1
+              %option{value: 2} 2
+              %option{value: 3} 3
+              %option{value: 4} 4
+              %option{value: 5} 5
+              %option{value: 6} 6
+              %option{value: 7} 7
+              %option{value: 8} 8
+              %option{value: 9} 9
+              %option{value: 10} 10
+              %option{value: 11} 11
+              %option{value: 12} 12
+            = icon 'fas', 'chevron-down'
+
+            %h3 月
+          .year-and-month__innuner
+            %select{class: "year"}
+              %option{value: 1} 19
+              %option{value: 2} 20
+              %option{value: 3} 21
+              %option{value: 4} 22
+              %option{value: 5} 23
+              %option{value: 6} 24
+              %option{value: 7} 25
+              %option{value: 8} 26
+              %option{value: 9} 27
+              %option{value: 10} 28
+              %option{value: 11} 29
+            = icon 'fas', 'chevron-down'
+
+            %h3 年
+
+      .security-code
+        %h2 
+          セキュリティーコード 
+          %span 必須
+        %input{class: "security-code__input", placeholder: "カード背面の４桁もしくわ３桁の番号"}
+        .pop
+          %i.fa.fa-question-circle 
+          %h4{class: "popup"}
+            カード裏面の番号とは？
+
+        .next--btn 次へ進む
+
+  = render "users/footer"
+
+

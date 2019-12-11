@@ -4,18 +4,26 @@
     .pp
     .top
       .top__tittle
-        =@id.name
+        =@item.name
       .top__news
-        「#{@id.name}」 は、19回の取引実績を持つすタップさんから出品されました。Tシャツ/カットソー(半袖/袖なし)/メンズの商品で、東京都から2~3日で発送されます。
+        「#{@item.name}」 は、19回の取引実績を持つすタップさんから出品されました。Tシャツ/カットソー(半袖/袖なし)/メンズの商品で、東京都から2~3日で発送されます。
       .top__explain
         .top__explain--image
-          %ul.slider-nav
-            %li= image_tag src= @id.image,class:"imagemain",size: "300x300" 
+          %ul.imagemain
+            %li= image_tag src= @item.image, class:"imagemain-a" ,size:'300x300'
+            %li= image_tag src= "商品画像4.jpg", class:"imagemain-b" ,size:'300x300'
+            %li= image_tag src= "商品画像3.jpg", class:"imagemain-c" ,size:'300x300'
+            %li= image_tag src= "購入確認image.jpg", class:"imagemain-d" ,size:'300x300'
+          - unless @sold == nil
+            .sold-mark-wrap
+              .sold-mark
+                .sold-mark__text
+                  SOLD
           %ul.imagesab
-            %li= image_tag src= "商品画像2.jpg", class:"imagesab-a"
-            %li= image_tag src= "商品画像4.jpg", class:"imagesab-b"
-            %li= image_tag src= "商品画像3.jpg", class:"imagesab-c"
-            %li= image_tag src= "購入確認image.jpg", class:"imagesab-d"
+            %li= image_tag src= @item.image, class:"imagesab-a none" ,size:'60x60'
+            %li= image_tag src= "商品画像4.jpg", class:"imagesab-b none",size:'60x60'
+            %li= image_tag src= "商品画像3.jpg", class:"imagesab-c none",size:'60x60'
+            %li= image_tag src= "購入確認image.jpg", class:"imagesab-d none",size:'60x60'
         .top__explain--status
           .status-a
             .left
@@ -72,7 +80,7 @@
       .top__plice
         .top__plice--nmuber
           ¥
-          =@id.plice
+          =@item.plice
         .top__plice--tax
           (税込) 
         .top__plice--send
@@ -81,7 +89,7 @@
       =link_to buy_item_path ,class:"top__buy" do
         購入画面に進む
       .top__text
-        =@id.text
+        =@item.text
       .top__bottom
         .top__bottom--iine
           %i.far.fa-heart
@@ -143,7 +151,7 @@
     .cc
       Tシャツ/カットソー(半袖/袖なし) （メンズ） その他の商品
     .bottom
-      -@items.first(6).each do |item|
+      -@items.each do |item|
         =link_to item_path([item.id]),class:"bottom__item-contents" do
           .bottom__item-contents--image
             = image_tag src=item.image, size: "220x220"

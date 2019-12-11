@@ -36,12 +36,42 @@
           width: 300px;
           height: 375px;
           background-color: #F5F5F5;
+          position: relative;
 
           .imagemain{
             width: 300px;
             height: 300px;
             background-size: cover;
+            position: relative;
           }
+          .sold-mark-wrap {
+            position: absolute;
+            top: 0;
+          }
+
+            .sold-mark{
+              width: 120px;
+              height: 120px;
+              position: relative;
+              
+              border-top: 60px solid #ea352d;
+              border-right: 60px solid transparent;
+              border-bottom: 60px solid transparent;
+              border-left: 60px solid #ea352d;
+
+              &__text{
+                position: absolute;
+                top: -33px;
+                left: -62px;
+                transform: rotate(-45deg);
+                color: #fff;
+                font-weight: 600;
+                font-size: 28px;
+
+              }
+            }
+
+          
           .imagesab{
             display: flex;
             height: 60px;
@@ -61,14 +91,12 @@
               height: 60px;
               width: 60px;
               background-size: cover;
-              opacity: 0.5;
 
             }
             .imagesab-d{
               height: 60px;
               width: 60px;
               background-size: cover;
-              opacity: 0.5;
             }
           }
         }
@@ -713,4 +741,8 @@
 
     }
   }
+}
+
+.none{
+  opacity: 0.5;
 }

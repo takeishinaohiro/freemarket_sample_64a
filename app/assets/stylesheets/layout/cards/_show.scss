@@ -1,0 +1,93 @@
+
+.contents-credit{
+  width: 100%;
+  background-color: #f5f5f5;
+  .content{
+    width: 1080px;
+    height: auto;
+    margin: 0 auto;
+    .credit-wrapper{
+      display: flex;
+      padding: 40px 0;
+      .credit{
+        width: 64.8%;
+        height: 364px;
+        margin-left: 40px;
+        .credit-header{
+          width: auto;
+          height: 50px;
+          background-color:#fff;
+          font-size: 24px;
+          text-align: center;
+          line-height: 50px;
+        }
+        .credit-main{
+          height: 314px;
+          width: 100%;
+          background-color: #fff;
+          border-top: 2px solid #F5F5F5;
+          .credit-detail{
+            width: 81.7%;
+            height: 129px;
+            margin: 64px 64px 0 64px;
+            border-bottom: 1px solid #eee;
+            .credit-list{
+              font-size: 16px;
+              font-weight: 700;
+              width: 55.9%;
+              margin: 0 auto;
+              font-family: Arial, Helvetica, sans-serif;
+            }
+            .credit-setting{
+              list-style: none;
+              width: 320px;
+              height: 64px;
+              margin: 0 auto;
+              padding: 24px;
+              justify-content: space-between;
+              position: relative;
+                .credit-number{
+                  margin-top:8px;
+                  font-family: Arial, Helvetica, sans-serif;
+                }
+                .credit-limit{
+                  margin-top:8px;
+                  color: #333333;
+                  font-family: Arial, Helvetica, sans-serif;
+                }
+                .delet-btn{
+                  width: 68px;
+                  height: 22px;
+                  border: 1px solid #EA352D;
+                  line-height: 22px;
+                  text-align: center;
+                  border-radius: 3px;
+                  position: absolute;
+                  right: 25px;
+                  bottom: 18px;
+                  color: #EA352D;
+                  font-size: 14px;
+                  font-family: Arial, Helvetica, sans-serif;
+                  cursor: pointer;
+                }
+            }
+          }
+            .about{
+              width: 572px;
+              height: 16px;
+              font-family: Arial, Helvetica, sans-serif;
+              margin: 40px 64px;
+              text-align: right;
+              color: #0099E8;
+              font-size: 14px;
+              cursor: pointer;
+              &:hover{
+                text-decoration: underline;
+                opacity: 0.7;
+              }
+            }
+        }
+      }
+    }
+  }
+}

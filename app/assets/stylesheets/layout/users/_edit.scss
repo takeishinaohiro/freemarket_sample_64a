@@ -1,4 +1,8 @@
-.contents {
+.mypage-conteiner {
+  width: 100%;
+  background-color: #f5f5f5;
+}
+.mypage-contents {
   list-style: none;
   width: 1080px;
   height: auto;
@@ -133,7 +137,6 @@
       &--registration {
         width: 90%;
         height: 50px;
-        border: 2px solid red;
         text-align: center;
         line-height: 50px;
         background-color: red;

@@ -5,6 +5,7 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.text    :description, null: false
       t.integer :price, null: false
       t.timestamps
+      t.string  :user_id
     end
   end
 end

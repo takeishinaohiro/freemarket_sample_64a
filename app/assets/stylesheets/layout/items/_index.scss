@@ -4,6 +4,7 @@
   position: relative;
   width: 100%;
   height: 100px;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .header {
@@ -303,6 +304,32 @@
                 height: 188px;
                 display: block;
                 object-fit: cover;
+                .sold-mark-wrap1{
+                  position: absolute;
+                  top: 0;
+
+                  .sold-mark1{
+                    width: 75px;
+                    height: 75px;
+                    position: relative;
+                    
+                    border-top: 37.5px solid #ea352d;
+                    border-right: 37.5px solid transparent;
+                    border-bottom: 37.5px solid transparent;
+                    border-left: 37.5px solid #ea352d;
+      
+                    &__text1{
+                      position: absolute;
+                      top: -22px;
+                      left: -39px;
+                      transform: rotate(-45deg);
+                      color: #fff;
+                      font-weight: 600;
+                      font-size: 19px;
+      
+                    }
+                  }
+                }
 
                 .item-1__image__price{
                 position: absolute;
@@ -420,5 +447,23 @@ footer {
     font-weight: normal;
     color: $gray!important;
     font-size: .8rem!important;
+  }
+}
+
+// --------パンくず--------------
+.bereadcrumb-body {
+  height: 50px;
+  width: 100%;
+  box-shadow: 0 3px 3px 0 rgba(63, 62, 62, 0.24);
+  border-bottom: 1px solid #eeeeee;
+  margin-bottom: 3px;
+  font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;;
+    .breadcrumbs {
+    width: 1080px;
+    margin: 0 auto;
+    line-height: 50px;
+    .breadcrumbs-list{
+      
+    }
   }
 }
