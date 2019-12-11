@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'items#index'
+
   resources :users, only:[:index, :destroy, :create, :edit, :show]
   resources :card, only: [:new, :show, :create, :edit] do
     collection do
@@ -11,6 +12,8 @@ Rails.application.routes.draw do
   end
 
   resources :items do
+    resources :images do
+    end
     collection do
       get 'sell'
     end
@@ -21,9 +24,11 @@ Rails.application.routes.draw do
   end
 
   resources :users do
+
     member do
       get 'todo'
       get 'past'
     end
   end
+
 end
