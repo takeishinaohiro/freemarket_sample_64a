@@ -1,23 +1,24 @@
 class CardController < ApplicationController
-  before_action : set_card, only: [:new, :destroy, :show]
+  before_action :set_card, only: [:new, :destroy, :show]
   
   require "payjp"
   def edit
   end
 
   def new
-    redirect_to action: "show" if @card.exists?
+    if @card
+      redirect_to action: "show" 
+    end  
   end
 
   def pay 
 
-    Payjp.api_key = "sk_test_91003e190358af26fd6a2f2c"
+    Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
     if params['payjp-token'].blank?
       redirect_to action: "new"
     else
       customer = Payjp::Customer.create(
       description: '登録テスト',
-      email: current_user.email,
       
       card: params['payjp-token'],
       metadata: {user_id: current_user.id}
@@ -44,9 +45,9 @@ class CardController < ApplicationController
     if @card.blank?
       redirect_to action: "new" 
     else
-      Payjp.api_key = "sk_test_91003e190358af26fd6a2f2c"
-      customer = Payjp::Customer.retrieve(card.customer_id)
-      @default_card_information = customer.cards.retrieve(card.card_id)
+      Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
+      customer = Payjp::Customer.retrieve(@card.customer_id)
+      @default_card_information = customer.cards.retrieve(@card.card_id)
     end
   end
 
