@@ -6,7 +6,6 @@ class CardController < ApplicationController
   end
 
   def new
-    card = Card.where(user_id: current_user.id)
     redirect_to action: "show" if card.exists?
   end
 
@@ -36,14 +35,12 @@ class CardController < ApplicationController
   end
 
   def delete
-    card = Card.where(user_id: current_user.id).first
     if card.blank?
     end
       redirect_to action: "new"
   end
 
   def show
-    card = Card.where(user_id: current_user.id).first
     if card.blank?
       redirect_to action: "new" 
     else
@@ -56,7 +53,7 @@ class CardController < ApplicationController
   private
 
   def set_card
-    card = Card.where(user_id: current_user.id).first
+    @card = Card.where(user_id: current_user.id).first
   end
 
 end
