@@ -1,12 +1,12 @@
 class CardController < ApplicationController
-  before_action :set_card
+  before_action : set_card, only: [:new, :destroy, :show]
   
   require "payjp"
   def edit
   end
 
   def new
-    redirect_to action: "show" if card.exists?
+    redirect_to action: "show" if @card.exists?
   end
 
   def pay 
@@ -34,14 +34,14 @@ class CardController < ApplicationController
     end
   end
 
-  def delete
-    if card.blank?
+  def destroy
+    if @card.blank?
     end
       redirect_to action: "new"
   end
 
   def show
-    if card.blank?
+    if @card.blank?
       redirect_to action: "new" 
     else
       Payjp.api_key = "sk_test_91003e190358af26fd6a2f2c"
