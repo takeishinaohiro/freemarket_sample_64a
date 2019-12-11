@@ -17,7 +17,13 @@
               .content
                 =link_to item_path([item.id]),class:"iteme-1" do
                   .item-1__image
-                    = image_tag src= item.image, size: "187x188" 
+                    = image_tag src= item.image, size: "187x188"
+                    - @sold = Buyer.find_by(item_id: item.id) 
+                    - unless @sold == nil
+                      .sold-mark-wrap1
+                        .sold-mark1
+                          .sold-mark1__text1
+                            SOLD 
                     .item-1__image__price
                       ¥
                       = item.plice
