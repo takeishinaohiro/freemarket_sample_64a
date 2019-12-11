@@ -2,7 +2,7 @@
   .container
     = link_to root_path do
       = image_tag '/assets/fmarket_logo_red.svg', class: "sell-wrap__logo"
-    = form_with(model: @item) do |f|
+    = form_with(model: Item, local: true) do |f|
       .sell-box
         %h2 商品の情報を入力
         .sell-box__img.sell-box__section
@@ -16,13 +16,14 @@
                 ドラッグアンドドロップ
                 %br
                 またはクリックしてファイルをアップロード
-                = f.file_field :image, multiple: true, id: "sell-img"
+                = f.fields_for :images do |i|
+                  = i.file_field :image, multiple: true, id: "sell-img", name: "images[image][]"
 
         .sell-box__info.sell-box__section
           %h3
             商品名
             %span 必須
-          = f.text_field :name, class:"sell-box__info--input sell-box__info--name", placeholder: "商品名（必須40文字まで）"
+          = f.text_field :name, class:"sell-box__info--input sell-box__info--name", placeholder: "商品名（必須40文字まで）", value: ""
           %h3.sell-box__info--textarea
             商品の説明
             %span 必須
@@ -88,8 +89,7 @@
           %p 禁止されている出品、行為を必ずご確認ください。
           %p またブランド品でシリアルナンバー等がある場合はご記載ください。偽ブランドの販売は犯罪であり処罰される可能性があります。
           %p また、出品をもちまして加盟店規約に同意したことになります。
-          .sell-box__confirmation--exhibit-btn
-            出品する
+          = f.submit "出品する", class: "sell-box__confirmation--exhibit-btn"
           = link_to users_path do
             .sell-box__confirmation--back-btn
               もどる

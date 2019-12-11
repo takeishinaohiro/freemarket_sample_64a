@@ -18,13 +18,27 @@ $(function() {
     $('.drop-zone').prepend(html);
   };
 
+  $('#sell-img').change(function(e) {
+    let files = e.target.files;
+    for (var i = 0, f; f = files[i]; i++) {
+      let reader = new FileReader();
+      reader.readAsDataURL(f);
+      reader.onload = function() {
+      let imgSrc = reader.result;
+      buildHTML(imgSrc);
+      images.push(imgSrc);
+      console.log(images);
+    }
+    }
+  });
+
   // 画像のドロップ時、ドロップした画像の数だけプレビューを追加する
   $('.sell-box__img--input').on('drop', function(e) {
     e.preventDefault();
     e.stopPropagation();
     let dropImages = e.originalEvent.dataTransfer.files;
-      for(var i = 0; i < dropImages.length; i++ ) {
-        var imgSrc = URL.createObjectURL(dropImages[i]);
+      for(let i = 0; i < dropImages.length; i++ ) {
+        let imgSrc = URL.createObjectURL(dropImages[i]);
         buildHTML(imgSrc);
         images.push(dropImages[i].name);
       }
