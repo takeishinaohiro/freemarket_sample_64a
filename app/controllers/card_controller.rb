@@ -1,6 +1,9 @@
 class CardController < ApplicationController
-
+  before_action :set_card
+  
   require "payjp"
+  def edit
+  end
 
   def new
     card = Card.where(user_id: current_user.id)
@@ -35,11 +38,6 @@ class CardController < ApplicationController
   def delete
     card = Card.where(user_id: current_user.id).first
     if card.blank?
-    else
-      Payjp.api_key = "sk_test_91003e190358af26fd6a2f2c"
-      customer = Payjp::Customer.retrieve(card.customer_id)
-      customer.delete
-      card.delete
     end
       redirect_to action: "new"
   end
@@ -54,4 +52,11 @@ class CardController < ApplicationController
       @default_card_information = customer.cards.retrieve(card.card_id)
     end
   end
+
+  private
+
+  def set_card
+    card = Card.where(user_id: current_user.id).first
+  end
+
 end

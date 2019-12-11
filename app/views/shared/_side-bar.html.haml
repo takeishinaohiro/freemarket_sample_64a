@@ -67,7 +67,7 @@
     %li.sidebar__top--item
       発送元・お届け先住所住所変更
       %i.fas.fa-chevron-right
-    = link_to card_path do
+    = link_to edit_card_path(current_user.id) do
       %li.sidebar__top--item
         支払い方法
         %i.fas.fa-chevron-right
