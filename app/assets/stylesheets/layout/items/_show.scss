@@ -35,13 +35,43 @@
           width: 300px;
           height: 375px;
           background-color: #F5F5F5;
+          position: relative;
 
           .imagemain{
             width: 300px;
             height: 300px;
-            background-image: url("/assets/メルカリ商品.jpg");
-            background-size: cover;
           }
+            background-size: cover;
+            position: relative;
+          }
+          .sold-mark-wrap {
+            position: absolute;
+            top: 0;
+          }
+
+            .sold-mark{
+              width: 120px;
+              height: 120px;
+              position: relative;
+              
+              border-top: 60px solid #ea352d;
+              border-right: 60px solid transparent;
+              border-bottom: 60px solid transparent;
+              border-left: 60px solid #ea352d;
+
+              &__text{
+                position: absolute;
+                top: -33px;
+                left: -62px;
+                transform: rotate(-45deg);
+                color: #fff;
+                font-weight: 600;
+                font-size: 28px;
+
+              }
+            }
+
+          
           .imagesab{
             display: flex;
             height: 60px;
@@ -49,31 +79,22 @@
             .imagesab-a{
               height: 60px;
               width: 60px;
-              background-image: url("/assets/メルカリ商品.jpg");
               background-size: cover;
 
             }
             .imagesab-b{
               height: 60px;
               width: 60px;
-              background-image: url("/assets/商品画像2.jpg");
               background-size: cover;
-              opacity: 0.5;
             }
             .imagesab-c{
               height: 60px;
               width: 60px;
-              background-image: url("/assets/商品画像3.jpg");
               background-size: cover;
-              opacity: 0.5;
-
             }
             .imagesab-d{
               height: 60px;
               width: 60px;
-              background-image: url("/assets/商品画像4.jpg");
-              background-size: cover;
-              opacity: 0.5;
             }
           }
         }
@@ -401,7 +422,6 @@
         list-style: none;
         font-size: 18px;
         line-height: 1.5;
-        height: 162px;
         width: 620px;
         color: #333333;
       }
@@ -598,35 +618,63 @@
     }
     .show-ad{
       width: 700px;
-      height: 114px;
+      height: 80px;
+
 
       &__line{
-        line-height: 114px;
-        margin: 16px auto;
+        width: 160px;
+        height: 50px;
+        margin: 50px auto;
         text-align: center;
+        display: flex;
 
-        .fa-facebook-square{
-          font-size: 44px;
+
+        .facebook{
+          width: 44px;
+          height: 44px;
           background: #385185;
-          color: #fff;
-          margin: 0 8px 8px 0;
-
-        }
-        .fa-twitter-square{
-          font-size: 44px;
-          background: #5d9dc9;
-          color: #fff;
-          margin: 0 8px 8px 0;
-
-        }
-        .fa-pinterest-square{
-          font-size: 44px;
-          background: #aa262a;
-          color: #fff;
+          line-height: 50px;
+          border-radius: 4px;
           margin: 0 8px 8px 0;
 
 
+          .fa-facebook-square{
+            font-size: 26px;
+            background: #385185;
+            color: #fff;
+            margin: 0 auto;
+
+          }
         }
+        .twitter{
+          width: 44px;
+          height: 44px;
+          background-color: #5d9dc9;
+          border-radius: 4px;
+          margin: 0 8px 8px 0;
+
+
+          .fa-twitter{
+            font-size: 24px;
+            color: #fff;
+            line-height: 45px;
+          }
+      }
+      .pinterest{
+        width: 44px;
+        height: 44px;
+        background-color: #aa262a;
+        border-radius: 4px;
+
+        .fa-pinterest{
+          font-size: 18px;
+          color: #fff;
+          line-height: 44px;
+
+
+
+        }
+      }
       }
     }
     .cc{
@@ -652,6 +700,7 @@
         display: block;
         background-color: #fff;
         margin: 0 20px 20px 0;
+        text-decoration: none;
 
 
         &--name{
@@ -691,4 +740,7 @@
 
     }
   }
+}
+.none{
+  opacity: 0.5;
 }

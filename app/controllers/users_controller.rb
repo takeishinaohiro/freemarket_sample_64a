@@ -1,15 +1,28 @@
 class UsersController < ApplicationController
 
-  def new
+
+  def index
+  end
+
+  def show
+  end
+
+  def edit
+    @id = current_user.id
+
   end
 
   def destroy
   end
 
-  def adress
+
+  def todo
+
   end
 
-  def card
+  def past
+    
   end
+
   
 end

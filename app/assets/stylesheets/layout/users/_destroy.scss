@@ -1,0 +1,37 @@
+.topof1{
+  height: 40px;
+  background-color: #F5F5F5;
+
+}
+.wrapper5{
+  background-color: #F5F5F5;
+  width: 100%;
+  height: 1500px;
+
+  .logout-main{
+    width: 1020px;
+    margin: 0 auto 0;
+    height: auto;
+    padding: 0 0 40px;
+    display: flex;
+
+    &__content{
+      width: 742px;
+      margin: 3px 0 0 40px;
+      height: 179px;
+      background-color: #ffffff;
+
+      &--btn{
+        width: 320px;
+        height: 50px;
+        background: #ea352d;
+        border: 1px solid #ea352d;
+        line-height: 50px;
+        margin: 10% auto;
+        color: #ffffff;
+        text-align: center;
+
+      }
+    }
+  }
+}

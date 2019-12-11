@@ -1,9 +1,13 @@
 = render 'shared/header'
+.bereadcrumb-body
+  - breadcrumb :logout
+  = render "shared/breadcrumb"
 = render 'shared/btn'
-.wrapper
+.topof1
+.wrapper5
   .logout-main
-    .a
+    = render 'shared/side-bar'
     .logout-main__content
       .logout-main__content--btn
         ログアウト
-    
+= render 'shared/footer'
