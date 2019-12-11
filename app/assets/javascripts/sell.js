@@ -65,6 +65,18 @@ $(function() {
     $(this).closest('.preview-box').remove();
   });
 
+  // 販売利益の計算
+  $('.price-flex__input').keyup(function() {
+    let price = $(this).val();
+    if(price > 300) {
+      let fee = price * 0.10;
+      let resultFee = Math.floor(fee)
+      $('.result-fee').text(`${resultFee}円`);
+
+      let profit = price - resultFee;
+      $('.result-profit').text(`${profit}円`);
+    }
+  });
 
 
 });

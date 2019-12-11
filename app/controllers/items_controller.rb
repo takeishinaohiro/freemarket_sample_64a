@@ -35,6 +35,6 @@ class ItemsController < ApplicationController
 
   # source ~/.zshrc
   def item_params
-    params.require(:item).permit(:name, :description, :price)
+    params.require(:item).permit(:name, :description, :price, :category, :status, :burden, :area, :days)
   end
 end
