@@ -8,4 +8,8 @@ class UsersController < ApplicationController
 
   def adress
   end
+
+  def card
+  end
+  
 end
