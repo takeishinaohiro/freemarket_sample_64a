@@ -2,7 +2,14 @@ class UsersController < ApplicationController
 
 
   def index
+    @user = User.new  #form forのため@contentの中身を無くす
   end
+
+  def create
+    @user = User.create(content_params) #privateのparamsに飛ばす
+
+  end
+
 
   def show
   end
@@ -21,8 +28,13 @@ class UsersController < ApplicationController
   end
 
   def past
-    
   end
+
+  private
+    def content_params
+      params.require(:user).permit(:name, :email, :encrypted_password, :nickname, :k_name, :birthday, :add_name, 
+                                    :add_k_name, :postal_code, :city, :city_address, :building, :phone_number)
+    end
 
   
 end

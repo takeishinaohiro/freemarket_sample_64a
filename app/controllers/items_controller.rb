@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
   def index
     @items = Item.all
   end
-  
+
   def buy
     @buyer = Buyer.new
     @seller = Seller.new
@@ -22,6 +22,7 @@ class ItemsController < ApplicationController
       render :buy
     end
   end
+
   def show
     @items = Item.all
     @item = Item.find(params[:id])
@@ -30,8 +31,28 @@ class ItemsController < ApplicationController
   end
 
   def sell
+    @item = Item.new
+    @item.images.build
   end
+
+  def create
+    @item  = Item.new(item_params)
+
+    if @item.save
+      params[:images][:image].each do |image|
+        @item.images.create!(image: image, item_id: @item.id)
+      end
+      redirect_to sell_items_path
+    else
+      redirect_to sell_items_path
+    end
+  end
+
+
   # source ~/.zshrc
+  def item_params
+    params.require(:item).permit(:name, :description, :price, :category, :status, :burden, :area, :days)
+  end
   private
 
     def buyer_params

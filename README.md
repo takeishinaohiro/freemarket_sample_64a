@@ -41,8 +41,6 @@ Things you may want to cover:
 
 <!-- 外部キー -->
 
-
-
 ### Association
 
 - has_many :cards
@@ -122,7 +120,7 @@ Things you may want to cover:
 | Column        | Type   | Options                        |
 | ------------- | ------ | ------------------------------ |
 | name          | string | null: false                    |
-| text          | string | null: false                    |
+| text          | text   | null: false                    |
 | price         | int    | null: false                    |
 | browse        | int    | null: false                    |
 | user_id       | int    | null: false, foreign_key: true |
@@ -149,7 +147,7 @@ Things you may want to cover:
 - has_many :addresss
 - has_many :sellers
 - has_many :buyers
-- has_many :comments  ,dependent: :destroy
+- has_many :comments ,dependent: :destroy
 - has_many :images ,dependent: :destroy
 - has_many :brands
 - has_many :categorys
@@ -198,14 +196,14 @@ Things you may want to cover:
 
 - belongs_to :item
 
+## brands テーブル
 
-
-## brands テーブル 
 <!-- ここから不明 -->
-| Column  | Type   | Options                        |
-| ------- | ------ | ------------------------------ |
-| brands  | string | null: true                    |
-| item.id | int    | null: false, foreign_key: true |
+
+| Column        | Type   | Options                        |
+| ------------- | ------ | ------------------------------ |
+| brands        | string | null: true                     |
+| item.id       | int    | null: false, foreign_key: true |
 | L-category.id | int    | null: false, foreign_key: true |
 
 ### Association
@@ -213,12 +211,12 @@ Things you may want to cover:
 - belongs_to :item
 - has_many :L-categorys
 
-## L-brands テーブル 
+## L-brands テーブル
 
-| Column  | Type   | Options                        |
-| ------- | ------ | ------------------------------ |
-| brands  | string | null: true                    |
-| item.id | int    | null: false, foreign_key: true |
+| Column        | Type   | Options                        |
+| ------------- | ------ | ------------------------------ |
+| brands        | string | null: true                     |
+| item.id       | int    | null: false, foreign_key: true |
 | L-category.id | int    | null: false, foreign_key: true |
 
 ### Association
@@ -228,10 +226,10 @@ Things you may want to cover:
 
 ## M-brands テーブル
 
-| Column  | Type   | Options                        |
-| ------- | ------ | ------------------------------ |
-| brands  | string | null: true                    |
-| item.id | int    | null: false, foreign_key: true |
+| Column        | Type   | Options                        |
+| ------------- | ------ | ------------------------------ |
+| brands        | string | null: true                     |
+| item.id       | int    | null: false, foreign_key: true |
 | L-category.id | int    | null: false, foreign_key: true |
 
 ### Association
@@ -241,22 +239,13 @@ Things you may want to cover:
 
 ## S-brands テーブル
 
-| Column  | Type   | Options                        |
-| ------- | ------ | ------------------------------ |
-| brands  | string | null: true                    |
-| item.id | int    | null: false, foreign_key: true |
+| Column        | Type   | Options                        |
+| ------------- | ------ | ------------------------------ |
+| brands        | string | null: true                     |
+| item.id       | int    | null: false, foreign_key: true |
 | L-category.id | int    | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :item
 - has_many :L-categorys
-
-
-
-
-
-
-
-
-
