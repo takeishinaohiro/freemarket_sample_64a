@@ -2,6 +2,9 @@ class CardController < ApplicationController
   before_action :set_card, only: [:new, :destroy, :show]
   
   require "payjp"
+
+  
+
   def edit
   end
 
@@ -12,7 +15,6 @@ class CardController < ApplicationController
   end
 
   def pay 
-
     Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
     if params['payjp-token'].blank?
       redirect_to action: "new"
@@ -25,7 +27,6 @@ class CardController < ApplicationController
       )
       @card = Card.new(user_id: current_user.id, customer_id: customer.id, card_id: customer.default_card)
       if @card.save
-        
         redirect_to action: "show"
       else
         

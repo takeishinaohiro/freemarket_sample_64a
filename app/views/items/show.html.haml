@@ -10,7 +10,7 @@
       .top__explain
         .top__explain--image
           %ul.imagemain
-            %li= image_tag src= @item.image, class:"imagemain-a" ,size:'300x300'
+            -# %li= image_tag src= @item.image, class:"imagemain-a" ,size:'300x300'
             %li= image_tag src= "商品画像4.jpg", class:"imagemain-b" ,size:'300x300'
             %li= image_tag src= "商品画像3.jpg", class:"imagemain-c" ,size:'300x300'
             %li= image_tag src= "購入確認image.jpg", class:"imagemain-d" ,size:'300x300'
@@ -20,7 +20,7 @@
                 .sold-mark__text
                   SOLD
           %ul.imagesab
-            %li= image_tag src= @item.image, class:"imagesab-a none" ,size:'60x60'
+            -# %li= image_tag src= @item.image, class:"imagesab-a none" ,size:'60x60'
             %li= image_tag src= "商品画像4.jpg", class:"imagesab-b none",size:'60x60'
             %li= image_tag src= "商品画像3.jpg", class:"imagesab-c none",size:'60x60'
             %li= image_tag src= "購入確認image.jpg", class:"imagesab-d none",size:'60x60'
@@ -80,7 +80,7 @@
       .top__plice
         .top__plice--nmuber
           ¥
-          =@item.plice
+          =@item.price
         .top__plice--tax
           (税込) 
         .top__plice--send
@@ -89,7 +89,7 @@
       =link_to buy_item_path ,class:"top__buy" do
         購入画面に進む
       .top__text
-        =@item.text
+        =@item.description
       .top__bottom
         .top__bottom--iine
           %i.far.fa-heart
@@ -154,14 +154,14 @@
       -@items.each do |item|
         =link_to item_path([item.id]),class:"bottom__item-contents" do
           .bottom__item-contents--image
-            = image_tag src=item.image, size: "220x220"
+            -# = image_tag src=item.image, size: "220x220"
           .bottom__item-contents--name
             .name
               =item.name
             .menu
               .price
                 ¥
-                =item.plice
+                =item.price
               .iine
                 %i.far.fa-heart
                 6
