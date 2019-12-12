@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
 
   def index
-    @items = Item.all
+    @items = Item.all.order(created_at:"desc").limit(10)
   end
 
   def buy
@@ -24,7 +24,7 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @items = Item.all
+    @items = Item.all.order(created_at:"desc").limit(6)
     @item = Item.find(params[:id])
     @sold = Buyer.find_by(item_id: @item.id)
 
