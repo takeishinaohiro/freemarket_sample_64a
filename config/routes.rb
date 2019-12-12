@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     collection do
       post 'show', to: 'card#show'
       post 'pay', to: 'card#pay'
-      post 'delete', to: 'card#delete'
+      post 'delete', to: 'card#destroy'
     end
   end
 
