@@ -31,9 +31,14 @@
  @import "./layout/users/index";
  @import "./layout/users/destroy";
  @import "./layout/users/edit";
- @import "./layout/users/_show";
+ @import "./layout/users/logout";
+ @import "./layout/users/new";
+ @import "./layout/users/progress";
+ @import "./layout/users/result";
+ @import "./layout/users/show";
 
-//  @import "./layout/cards/show";
+ @import "./layout/cards/edit";
+ @import "./layout/cards/new";
 
  @import "font-awesome-sprockets";
  @import "font-awesome";
