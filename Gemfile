@@ -81,6 +81,8 @@ gem 'fog-aws'
 gem 'active_hash'
 
 gem 'gretel'
+gem 'payjp'
+gem 'dotenv-rails'
 
 
 group :production do
