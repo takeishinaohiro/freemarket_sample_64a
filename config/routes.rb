@@ -3,7 +3,14 @@ Rails.application.routes.draw do
   root 'items#index'
 
   resources :users, only:[:index, :destroy, :create, :edit, :show]
-  resources :cards, only:[:show]
+  resources :card, only: [:new, :show, :create, :edit] do
+    collection do
+      post 'show', to: 'card#show'
+      post 'pay', to: 'card#pay'
+      post 'delete', to: 'card#destroy'
+    end
+  end
+
   resources :items do
     resources :images do
     end
