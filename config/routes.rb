@@ -12,11 +12,13 @@ Rails.application.routes.draw do
       post 'delete', to: 'card#destroy'
     end
   end
-  resources :purchase, only: [:index] do
+  resources :purchase, only: [] do
     collection do
-      get 'index', to: 'purchase#index'
       post 'pay', to: 'purchase#pay'
       get 'done', to: 'purchase#done'
+    end
+    member do 
+      get 'index', to: 'purchase#index'
     end
   end
 
@@ -29,6 +31,7 @@ Rails.application.routes.draw do
 
     member do
       get 'buy'
+      post 'buy_create'
     end
   end
 

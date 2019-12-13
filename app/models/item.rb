@@ -5,4 +5,5 @@ class Item < ApplicationRecord
   accepts_nested_attributes_for :buyer
   has_one :seller
   accepts_nested_attributes_for :seller
+  belongs_to :card
 end
