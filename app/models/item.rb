@@ -6,5 +6,4 @@ class Item < ApplicationRecord
   accepts_nested_attributes_for :images
   accepts_nested_attributes_for :buyer
   accepts_nested_attributes_for :seller
-  belongs_to :card
 end

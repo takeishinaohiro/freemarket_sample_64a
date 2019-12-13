@@ -13,12 +13,12 @@
               %i.fa.fa-angle-right
               
           .product-wrapper__item
-            -@images.each do |i|
+            -@items.each do |i|
               .content
-                =link_to item_path([i.item_id]),class:"iteme-1" do
+                =link_to item_path([i.id]),class:"iteme-1" do
                   .item-1__image
-                    = image_tag i.image.url
-                    - @sold = Buyer.find_by(item_id: i.item_id) 
+                    -# = image_tag i.image.url
+                    - @sold = Buyer.find_by(item_id: i.id) 
                     - unless @sold == nil
                       .sold-mark-wrap1
                         .sold-mark1
@@ -26,6 +26,6 @@
                             SOLD 
                     .item-1__image__price
                       ¥
-                      = i.item.price
+                      = i.price
                   %li.item-1__name 
-                    = i.item.name
+                    = i.name
