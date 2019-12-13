@@ -10,34 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_12_065022) do
+ActiveRecord::Schema.define(version: 2019_12_11_081906) do
 
   create_table "buyers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "item_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "user_id"
-    t.string "item_id"
+    t.index ["item_id"], name: "index_buyers_on_item_id"
+    t.index ["user_id"], name: "index_buyers_on_user_id"
   end
 
-  create_table "cards", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "user_id", null: false
+  create_table "cards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "customer_id", null: false
     t.string "card_id", null: false
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "controllers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.string "users"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_controllers_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_controllers_on_reset_password_token", unique: true
+    t.index ["user_id"], name: "index_cards_on_user_id"
   end
 
   create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -52,19 +42,22 @@ ActiveRecord::Schema.define(version: 2019_12_12_065022) do
     t.string "name", null: false
     t.text "description", null: false
     t.integer "price", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "user_id"
+    t.string "category", null: false
+    t.string "status", null: false
     t.string "burden", null: false
     t.string "area", null: false
     t.string "days", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "sellers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "item_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "user_id"
-    t.string "item_id"
+    t.index ["item_id"], name: "index_sellers_on_item_id"
+    t.index ["user_id"], name: "index_sellers_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -80,5 +73,10 @@ ActiveRecord::Schema.define(version: 2019_12_12_065022) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "images", "ff", column: "item_id"
+  add_foreign_key "buyers", "items"
+  add_foreign_key "buyers", "users"
+  add_foreign_key "cards", "users"
+  add_foreign_key "images", "items"
+  add_foreign_key "sellers", "items"
+  add_foreign_key "sellers", "users"
 end
