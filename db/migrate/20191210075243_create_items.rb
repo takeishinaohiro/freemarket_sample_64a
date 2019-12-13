@@ -4,8 +4,12 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.string  :name, null: false
       t.text    :description, null: false
       t.integer :price, null: false
+      t.string  :category, null: false
+      t.string  :status, null: false
+      t.string  :burden, null: false
+      t.string  :area, null: false
+      t.string  :days, null: false
       t.timestamps
-      t.string  :user_id
     end
   end
 end
