@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    
   end
 
   def edit
@@ -13,6 +14,11 @@ class UsersController < ApplicationController
   end
 
   def destroy
+
+  end
+
+  def result
+  
   end
 
 
@@ -23,6 +29,8 @@ class UsersController < ApplicationController
   def past
     
   end
+
+
 
   
 end

@@ -1,11 +1,16 @@
 class CardController < ApplicationController
-  before_action :set_card, only: [:new, :destroy, :show]
+  before_action :set_card, only: [:new, :destroy, :show, :edit]
   
   require "payjp"
 
-  
-
   def edit
+
+    unless @card ==nil
+      @user = @card.user_id
+      Payjp.api_key = 'sk_test_6c130d285ae2b7dd291fc04f'
+      customer = Payjp::Customer.retrieve(@card.customer_id)
+      @default_card_information = customer.cards.retrieve(@card.card_id)
+    end
   end
 
   def new
@@ -15,7 +20,8 @@ class CardController < ApplicationController
   end
 
   def pay 
-    Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
+    Payjp.api_key = 'sk_test_6c130d285ae2b7dd291fc04f'
+
     if params['payjp-token'].blank?
       redirect_to action: "new"
     else
@@ -27,7 +33,7 @@ class CardController < ApplicationController
       )
       @card = Card.new(user_id: current_user.id, customer_id: customer.id, card_id: customer.default_card)
       if @card.save
-        redirect_to action: "show"
+        redirect_to result_users_path
       else
         
         redirect_to action: "pay"
@@ -40,12 +46,12 @@ class CardController < ApplicationController
     if @card.blank?
     else
       
-      Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
+      Payjp.api_key = 'sk_test_6c130d285ae2b7dd291fc04f'
       customer = Payjp::Customer.retrieve(@card.customer_id)
       customer.delete
       @card.destroy
     end
-      redirect_to action: "new"
+      redirect_to edit_card_path(current_user.id)
   end
 
   def show
@@ -54,7 +60,7 @@ class CardController < ApplicationController
       redirect_to action: "new" 
     else
       
-      Payjp.api_key = 'sk_test_91003e190358af26fd6a2f2c'
+      Payjp.api_key = 'sk_test_6c130d285ae2b7dd291fc04f'
       customer = Payjp::Customer.retrieve(@card.customer_id)
       @default_card_information = customer.cards.retrieve(@card.card_id)
     end
