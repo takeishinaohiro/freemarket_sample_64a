@@ -2,20 +2,20 @@
   .log
     .log__main
       =link_to root_path,class:"" do
-        = image_tag '/assets/fmarket_logo_red.svg', height: '49', width: '185'
+        -# = image_tag '/assets/fmarket_logo_red.svg', height: '49', width: '185'
   .buy-page
     .buy-page__top
       購入内容の確認
     .buy-page__center
       .buy-page__center--into
         .left
-          = image_tag src=@item.image, height: '80', width: '80'
+          -# = image_tag src=@item.image, height: '80', width: '80'
         .right
           .name
             =@item.name
           .plice
             ¥
-            =@item.plice
+            =@item.price
             (税込）着払い
     .buy-page__bottom
       .buy-page__bottom--into
@@ -25,7 +25,7 @@
               支払い金額
             .right
               ¥
-              =@item.plice
+              =@item.price
           .buy-page__bottom--point
             %input{checked: "checked", class: "check", type: "checkbox"}
             ポイントを使用 (所持ポイント: P0)

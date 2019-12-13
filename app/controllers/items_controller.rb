@@ -7,7 +7,6 @@ class ItemsController < ApplicationController
   def buy
     @buyer = Buyer.new
     @seller = Seller.new
-    @items = Item.all
     @item    = Item.find(params[:id])
   end
 
