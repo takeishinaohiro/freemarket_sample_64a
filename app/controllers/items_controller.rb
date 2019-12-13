@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.all.order(created_at:"desc").limit(10)
+    @images = Image.all.order(created_at:"desc").limit(10)
   end
 
   def buy
@@ -39,7 +40,7 @@ class ItemsController < ApplicationController
 
     if @item.save
       params[:images][:image].each do |image|
-        @item.images.create!(image: image, item_id: @item.id)
+        @item.images.create!(images: image, item_id: @item.id)
       end
       redirect_to sell_items_path
     else
@@ -50,7 +51,7 @@ class ItemsController < ApplicationController
 
   # source ~/.zshrc
   def item_params
-    params.require(:item).permit(:name, :description, :price, :category, :status, :burden, :area, :days)
+    params.require(:item).permit(:name, :description, :price,  :burden, :area, :days)
   end
   private
 
