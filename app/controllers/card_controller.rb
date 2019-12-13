@@ -45,7 +45,6 @@ class CardController < ApplicationController
   def destroy
     if @card.blank?
     else
-      
       Payjp.api_key = 'sk_test_6c130d285ae2b7dd291fc04f'
       customer = Payjp::Customer.retrieve(@card.customer_id)
       customer.delete
