@@ -12,7 +12,7 @@ Rails.application.routes.draw do
       post 'delete', to: 'card#destroy'
     end
   end
-  resources :purchase, only: [] do
+  resources :purchase, only: [:index] do
     collection do
       post 'pay', to: 'purchase#pay'
       get 'done', to: 'purchase#done'

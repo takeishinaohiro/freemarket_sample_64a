@@ -10,7 +10,7 @@
       .top__explain
         .top__explain--image
           %ul.imagemain
-            %li= image_tag @image.image.url, class:"imagemain-a" ,size:'300x300'
+            -# %li= image_tag @image.image.url, class:"imagemain-a" ,size:'300x300'
             %li= image_tag src= "商品画像4.jpg", class:"imagemain-b" ,size:'300x300'
             %li= image_tag src= "商品画像3.jpg", class:"imagemain-c" ,size:'300x300'
             %li= image_tag src= "購入確認image.jpg", class:"imagemain-d" ,size:'300x300'
@@ -20,7 +20,7 @@
                 .sold-mark__text
                   SOLD
           %ul.imagesab
-            %li= image_tag @image.image.url, class:"imagesab-a none" ,size:'60x60'
+            -# %li= image_tag @image.image.url, class:"imagesab-a none" ,size:'60x60'
             %li= image_tag src= "商品画像4.jpg", class:"imagesab-b none",size:'60x60'
             %li= image_tag src= "商品画像3.jpg", class:"imagesab-c none",size:'60x60'
             %li= image_tag src= "購入確認image.jpg", class:"imagesab-d none",size:'60x60'
@@ -154,7 +154,7 @@
       -@items.each do |item|
         =link_to item_path([item.id]),class:"bottom__item-contents" do
           .bottom__item-contents--image
-            = image_tag @image.image.url, size: "220x220"
+            -# = image_tag @image.image.url, size: "220x220"
           .bottom__item-contents--name
             .name
               =item.name
