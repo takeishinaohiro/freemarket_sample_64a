@@ -155,7 +155,7 @@
       }
     }
   }
-
+  
   &__confirmation {
     p {
       font-size: .9rem;
@@ -178,6 +178,18 @@
       color: #fff;
       padding: 1rem;
     }
+  }
+}
+.sell-other {
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
+  margin: 0 auto;
+  margin-top: 40px;
+  li {
+    display: block;
+    font-size: .9rem;
+
   }
 }
 
