@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
   root 'items#index'
 
-  
+
   resources :card, only: [:new, :show, :create, :edit] do
     collection do
       post 'show', to: 'card#show'
@@ -17,7 +17,7 @@ Rails.application.routes.draw do
       post 'pay', to: 'purchase#pay'
       get 'done', to: 'purchase#done'
     end
-    member do 
+    member do
       get 'index', to: 'purchase#index'
     end
   end

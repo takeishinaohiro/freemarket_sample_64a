@@ -32,8 +32,9 @@
                 マイページ
         -else
           .header__menu-right2
-            .header__menu-right2--registration
-              新規会員登録
+            = link_to new_user_registration_path do
+              .header__menu-right2--registration
+                新規会員登録
             = link_to new_user_session_path do
               .header__menu-right2--login
                 ログイン
