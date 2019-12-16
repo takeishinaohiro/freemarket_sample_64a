@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
   root 'items#index'
 
-  
+  resources :addresses, only: [:new,:create]
   resources :card, only: [:new, :show, :create, :edit] do
     collection do
       post 'show', to: 'card#show'
@@ -35,7 +35,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :users,only:[:index, :destroy, :create, :edit, :show] do
+  resources :users,only:[:index, :destroy, :create, :edit, :show, :new] do
     collection do
       get 'result'
     end
