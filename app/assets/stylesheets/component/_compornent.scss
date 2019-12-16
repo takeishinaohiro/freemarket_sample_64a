@@ -1,3 +1,8 @@
+* {
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Courier Prime", monospace;
+}
+
 .container {
   max-width: 1080px;
   margin: 0 auto;
@@ -8,7 +13,7 @@
 
 .other-footer {
   margin-top: 2rem;
-  font-size: .8rem;
+  font-size: 0.8rem;
   list-style: none;
   display: flex;
   justify-content: center;
@@ -18,7 +23,7 @@
 }
 
 .copyright {
-  font-size: .8rem;
+  font-size: 0.8rem;
   text-align: center;
   margin-top: 1rem;
 }

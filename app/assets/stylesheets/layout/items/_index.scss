@@ -1,4 +1,4 @@
-@import "../../component/variables.scss";
+@import '../../component/variables.scss';
 //------------------------ Header ---------------------------//
 .index-top {
   position: relative;
@@ -7,19 +7,20 @@
 }
 
 .header {
-  height: 100%;
   padding: 15px 0;
+  height: 100%;
   &__top {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: 40px;
     &--logo {
       margin-right: 40px;
-      width: 134px;
-      height: 36px;
+      width: 160px;
+      height: auto;
     }
     .header__top--text {
       position: relative;
-      left: 20px;
       width: 82%;
       .search-form__input {
         padding-left: 10px;
@@ -46,45 +47,57 @@
     display: flex;
     justify-content: space-between;
     margin-top: 25px;
-    font-weight: 600;
-    font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+    font-size: .96rem;
     &-left {
       display: flex;
+      align-items: center;
+      font-weight: bold;
       &--category {
         display: block;
         margin-right: 30px;
         cursor: pointer;
       }
       .fa-indent {
-        color: #ea352e;
+        color: $orange;
       }
       &--brand {
         display: block;
         cursor: pointer;
       }
       .fa-tag {
-        color: #ea352e;
+        color: $orange;
       }
     }
     &-right {
       display: flex;
+      .far, .fas {
+        color: gray;
+      }
       &--like {
         display: block;
         margin-right: 30px;
+        color: gray;
+        font-weight: lighter;
         cursor: pointer;
       }
       &--news {
         display: block;
         margin-right: 30px;
+        color: gray;
+        font-weight: lighter;
         cursor: pointer;
       }
       &--todo {
         display: block;
         margin-right: 30px;
+        color: gray;
+        font-weight: lighter;
         cursor: pointer;
       }
       &--mypage {
         display: block;
+        color: gray;
+        font-weight: lighter;
         cursor: pointer;
       }
     }
@@ -121,10 +134,10 @@
   &__money {
     margin: 1rem auto 0;
     width: 95%;
-    border: 0.5px solid #333;
+    border: .5px solid #333;
     background: #f5f5f5;
     .money-list {
-      padding: 0.6rem 0.2rem;
+      padding: .6rem .2rem;
       &:last-of-type {
         border-top: 1px solid #333 !important;
       }
@@ -135,16 +148,16 @@
     width: 100%;
   }
   &__list--item {
-    padding: 0.8rem 0.5rem;
+    padding: .8rem .5rem;
     list-style: none;
   }
   &__list > .my-menu__list--item {
-    border-top: 0.5px solid #333;
+    border-top: .5px solid #333;
     cursor: pointer;
-    transition: 0.1s;
+    transition: .1s;
     &:hover {
       background: gray;
-      transition: 0.1s;
+      transition: .1s;
     }
   }
 }
@@ -190,19 +203,20 @@
       position: absolute;
       top: 3rem;
       left: 14.5rem;
-      font-size: 4rem;
+      font-size: 3.5rem;
+      line-height: 4.3rem;
     }
     > p {
       position: absolute;
       top: 13rem;
       left: 15rem;
       font-size: 1.2rem;
+      line-height: 1.8rem;
     }
     &--img {
       position: relative;
       width: 100%;
       height: 390px;
-
       object-fit: cover;
     }
   }
@@ -212,11 +226,10 @@
     left: 15rem;
     display: flex;
     &--apple {
-      margin-top: 0.75rem;
+      margin-top: .75rem;
     }
   }
-  .arrow-left,
-  .arrow-right {
+  .arrow-left, .arrow-right {
     position: absolute;
     top: 50%;
     z-index: 1;
@@ -339,7 +352,7 @@
                 font-weight: 400;
                 font-size: 16px;
                 line-height: 28px;
-                opacity: 0.8;
+                opacity: .8;
               }
             }
             .item-1__name {
@@ -360,7 +373,7 @@
   padding: 3rem 0;
   width: 100%;
   height: 260px;
-  background: image-url("footer.png");
+  background: image-url('footer.png');
   background-position: bottom;
   background-size: cover;
 
@@ -378,10 +391,10 @@
   &__icon-box {
     margin: 1rem 0 0 10rem;
     &--apple {
-      margin: 0 0 0.66rem 2rem;
+      margin: 0 0 .66rem 2rem;
     }
     &--google {
-      margin: 0 0 0 0.4rem;
+      margin: 0 0 0 .4rem;
     }
   }
 }
@@ -393,13 +406,13 @@ footer {
 }
 
 .footer {
-  padding: 0.5rem 0 2rem;
+  padding: .5rem 0 2rem;
   height: 390px;
   background: #212121;
   &__top {
     width: 100px;
     height: 260px;
-    background-image: url("footer.jpg");
+    background-image: url('footer.jpg');
   }
   &__copyright {
     color: white;
@@ -422,9 +435,9 @@ footer {
       font-size: 1.8rem;
     }
     &--item {
-      margin-top: 0.7rem;
+      margin-top: .7rem;
       color: $gray;
-      font-size: 0.75rem;
+      font-size: .75rem;
       line-height: 1.2rem;
       &:first-of-type {
         color: $white;
@@ -436,7 +449,7 @@ footer {
   .divid > &__list--item {
     color: $gray !important;
     font-weight: normal;
-    font-size: 0.8rem !important;
+    font-size: .8rem !important;
     &:first-of-type {
       margin-top: 2.5rem;
     }
@@ -449,7 +462,7 @@ footer {
   width: 100%;
   height: 50px;
   border-bottom: 1px solid #eeeeee;
-  box-shadow: 0 3px 3px 0 rgba(63, 62, 62, 0.24);
+  box-shadow: 0 3px 3px 0 rgba(63, 62, 62, .24);
   font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
   .breadcrumbs {
     margin: 0 auto;
