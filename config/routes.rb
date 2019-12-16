@@ -35,7 +35,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :users,only:[:index, :destroy, :create, :edit, :show] do
+  resources :users,only:[:index, :destroy, :create, :edit, :show, :new] do
     collection do
       get 'result'
     end
