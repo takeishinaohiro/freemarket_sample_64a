@@ -61,8 +61,10 @@ ActiveRecord::Schema.define(version: 2019_12_13_084420) do
     t.string "burden", null: false
     t.string "area", null: false
     t.string "days", null: false
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_items_on_user_id"
   end
 
   create_table "sellers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -91,6 +93,7 @@ ActiveRecord::Schema.define(version: 2019_12_13_084420) do
   add_foreign_key "buyers", "users"
   add_foreign_key "cards", "users"
   add_foreign_key "images", "items"
+  add_foreign_key "items", "users"
   add_foreign_key "sellers", "items"
   add_foreign_key "sellers", "users"
 end
