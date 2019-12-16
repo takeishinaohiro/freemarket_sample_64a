@@ -1,0 +1,142 @@
+.wrapper6{
+  background-color: #F5F5F5;
+  width: 100%;
+  height: auto;
+  padding: 40px;
+
+  .login-top{
+    margin: 0 auto;
+    width: 200px;
+
+    .login-top__logo{
+      width: 180px;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+  .log-in-main{
+    width: 456px;
+    margin: 40px auto;
+    background-color: #fff;
+    height: 631px;
+
+    &__top{
+      padding: 40px 64px;
+      border-bottom: 1px solid #eee;
+      text-align: center;
+
+      &--btn{
+        width: 328px;
+        height: 42px;
+        border: 1px solid #0099e8;
+        background-color: #0099e8;
+        line-height: 40px;
+        color: #fff;
+        display: block;
+        text-align: center;
+        margin-top: 8px;
+        font-size: 14px;
+      }
+    }
+    &__center{
+      padding: 32px 64px;
+
+
+      &--facebook{
+        width: 328px;
+        height: 50px;
+        background: #385185;
+        display: flex;
+        line-height: 50px;
+        color: #000;
+
+        .fa-facebook-square{
+          font-size: 26px;
+          font-weight: 400px;
+          color: white;
+          margin: 13px 0 0 17px;
+        }
+        .facebook-name{
+          color: white;
+          width: 127px;
+          margin: 0 auto;
+          font-size: 12px;
+        }
+      }
+      &--google{
+        margin: 16px 0 0;
+        width: 328px;
+        height: 50px;
+        border: #979797 solid 1px;
+        background: #fff url(/jp/assets/img/common/common/google.svg) no-repeat 3px top;
+        display: flex;
+        line-height: 50px;
+
+        .fa-google{
+          font-size: 18px;
+          font-weight: 400px;
+          color: orangered;
+          margin: 16px 0 0 17px;
+        }
+        .google-name{
+          color: #333;
+          width: 127px;
+          margin: 0 auto;
+          font-size: 12px;
+        }
+
+      }
+    }
+    &__bottom{
+      padding: 24px 64px 32px;
+
+
+      .mail{
+        width: 328px;
+        height: 48px;
+        padding: 10px 16px 8px;
+        display: block;
+        font-size: 16px;
+        border-color: #0099e8;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+
+
+      }
+      .pass{
+        width: 328px;
+        height: 48px;
+        padding: 10px 16px 8px;
+        display: block;
+        font-size: 16px;
+        border-color: #0099e8;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        margin: 24px 0 0;
+      }
+      &--btn{
+        background: #ea352d;
+        width: 328px;
+        height: 50px;
+        margin: 24px 0 0;
+        color: white;
+        display: block;
+        font-size: 14px;
+        text-align: center;
+        line-height: 50px;
+      }
+      .pass-forget{
+        color: #0099e8;
+        margin: 40px 0 0;
+        font-size: 14px;
+        display: block;
+
+        &:hover{
+          border-bottom: 1px solid #0099e8;
+          width: 160px;
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.wrapper6
+  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    .login-top
+      =link_to "",class:"" do
+        = image_tag '/assets/fmarket_logo_red.svg', class: "login-top__logo"
+    .log-in-main
+      .log-in-main__top
+        %li アカウントをお持ちでない方はこちら
+        =link_to "",class:"log-in-main__top--btn" do
+          新規会員登録
+      .log-in-main__center
+        =link_to"",class:"" do
+          .log-in-main__center--facebook
+            %i.fab.fa-facebook-square
+            .facebook-name
+              Facebookでログイン
+        =link_to"",class:"" do
+          .log-in-main__center--google
+            %i.fab.fa-google
+            .google-name
+              Googleでログイン
+      .log-in-main__bottom
+        .log-in-main__bottom--mail
+          = f.email_field :email, name:"",autofocus: true, placeholder:"メールアドレス",class:"mail"
+        .log-in-main__bottom--pass
+          %input{class:"pass", type:"text",placeholder: "パスワード"}
+          = f.password_field :password, autocomplete: "current-password"
+        =link_to"", class:"log-in-main__bottom--btn" do
+          ログイン
+        =link_to"", class:"pass-forget" do
+          パスワードをお忘れの方
+  = render 'users/footer'
+
+
+-#   - if devise_mapping.rememberable?
+-#     .field
+-#       = f.check_box :remember_me
+-#       = f.label :remember_me
+-#   .actions
+-#     = f.submit "Log in"
+-# = render "devise/shared/links"
+  
