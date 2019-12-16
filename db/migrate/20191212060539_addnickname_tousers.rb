@@ -3,6 +3,7 @@ class AddnicknameTousers < ActiveRecord::Migration[5.2]
     add_column :users, :nickname, :string, null: false
     add_column :users, :k_name,   :string, null: false
     add_column :users, :birthday, :string, null: false
+    
     add_column :users, :add_name,     :string, null: false
     add_column :users, :add_k_name,   :string, null: false
     add_column :users, :postal_code,  :string, null: false
