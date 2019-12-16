@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'purchase/index'
   get 'purchase/done'
-  devise_for :users
+  devise_for :users, controllers: {registrations: 'users/registrations',sessions: 'users/sessions' }
   root 'items#index'
 
   resources :addresses, only: [:new,:create]
