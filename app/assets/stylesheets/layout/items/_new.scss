@@ -1,0 +1,89 @@
+@import "../../component/variables.scss";
+
+.sign-up-wapper {
+  background-color: $lightgray;
+}
+  .sign-up {
+    &__header {
+      width: 180px;
+      height: auto;
+      margin: 0 auto;
+      padding-top: 40px;
+      background-color: $lightgray;
+    }
+    &__middle {
+      background-color: #fff;
+      width: 700px;
+      height: auto;
+      margin: 0 auto;
+      margin-top: 40px;
+      &--top {
+        background-color: #fff;
+        line-height: 100px;
+        font-size: 1.4rem;
+        text-align: center;
+        border-bottom: $sellPageBorder;
+      }
+      &--bottom {
+        background-color: #fff;
+        height: 300px;
+        li:first-of-type {
+          margin-top: 40px;
+          margin-bottom: 20px;
+        }
+        li {
+          height: 50px;
+          width: 350px;
+          text-align: center;
+          line-height: 50px;
+          margin: 0 auto;
+          border-radius: 3px;
+          color: #fff;
+        }
+        li:last-of-type {
+          color: black;
+          border: 1px solid black;
+          margin-top: 20px;
+          margin-bottom: 65px;
+        }
+        i:first-of-type {
+          font-size: 1.3rem;
+        }
+        .fa-facebook-square {
+          font-size: 2.5rem;
+          line-height: 50px;
+          color: #fff;
+          padding-left: 10px;
+          padding-right: 70px;
+        }
+        .fa-envelope {
+          font-size: 2.5rem;
+          line-height: 50px;
+          color: #fff;
+          padding-left: 10px;
+          padding-right: 60px;
+        }
+        .fab.fa-google {
+          font-size: 1rem;
+          line-height: 50px;
+          color: orangered;
+          padding-left: 10px;
+          padding-right: 80px;
+        }
+        &-1 {
+          background-color: #EA352D;
+          margin-top: 40px;
+          display: flex;
+        }
+        &-2 {
+          background-color: #385185;
+          display: flex;
+        }
+        &-3 {
+          color: black;
+          display: flex;
+        }
+        
+      }
+    }
+  }

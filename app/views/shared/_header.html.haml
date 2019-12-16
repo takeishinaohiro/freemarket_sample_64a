@@ -14,8 +14,10 @@
           %i.fas.fa-tag
           %li.header__menu-left--brand ブランドから探す
         .header__menu-right
-          %i.far.fa-heart
-          %li.header__menu-right--like いいね！一覧
+          = link_to new_item_path do
+            %li.header__menu-right--like
+              %i.far.fa-heart
+              いいね！一覧
           %i.far.fa-bell
           %li.header__menu-right--news お知らせ
           %i.fas.fa-check
