@@ -29,7 +29,7 @@
             .left
               出品者
             =link_to"",class:"right" do
-              すタップ
+              = @item.user_id
               .face
                 %i.fas.fa-smile-beam
                 19
@@ -41,7 +41,7 @@
             .left
               カテゴリー
             =link_to"",class:"right" do
-              メンズ
+              =@item.category
           .status-c
             .left
               ブランド
@@ -56,12 +56,12 @@
             .left
               商品の状態
             .right
-              未使用に近い
+              =@item.status
           .status-f
             .left
               配送料の負担
             .right
-              着払い(購入者負担)
+              =@item.burden
           .status-g
             .left
               配送の方法
@@ -71,12 +71,12 @@
             .left
               配送元地域
             =link_to"",class:"right" do
-              東京都
+              =@item.area
           .status-i
             .left
               発送日の目安
             .right
-              2~3日で発送
+              =@item.days
       .top__plice
         .top__plice--nmuber
           ¥

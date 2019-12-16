@@ -24,8 +24,9 @@ class ItemsController < ApplicationController
     @seller = Seller.new(seller_params)
     @seller.save!
     if @buyer.save && @seller.save
+
       @card = Card.where(user_id: current_user.id).first
-      Payjp.api_key = 'sk_test_91003e190358af26fd6a2f2c'
+      Payjp.api_key = 'sk_test_6c130d285ae2b7dd291fc04f'
       Payjp::Charge.create(
       amount: @item.price, #支払金額を入力（itemテーブル等に紐づけても良い）
       customer: @card.customer_id, #顧客ID
