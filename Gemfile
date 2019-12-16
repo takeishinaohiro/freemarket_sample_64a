@@ -84,6 +84,9 @@ gem 'gretel'
 gem 'payjp'
 gem 'dotenv-rails'
 
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+
 
 group :production do
   gem 'unicorn', '5.4.1'

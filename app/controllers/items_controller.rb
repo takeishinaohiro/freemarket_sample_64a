@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
 
   def new
   end
-  
+
   def index
     @items = Item.all.order(created_at:"desc").limit(10)
     @images = Image.all
