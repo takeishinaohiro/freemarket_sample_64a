@@ -1,14 +1,12 @@
 .card-wrapper{
   background-color: #F5F5F5;
-
   .card-wrapper__innuner{
     height: 600px;
     width: 700px;
     background-color: #ffffff;
     margin: 0 auto;
   }
-
-
+  
   .card-top{
     height: 100px;
     width: 100%;
@@ -18,9 +16,7 @@
     font-size: 24px;
     border-bottom: 2px solid #F5F5F5;
   }
-
-
-
+  
   .card-bottom{
     display: inline-block;
     height: 600px;
@@ -29,12 +25,14 @@
     margin: 0, auto;
   }
 
+  
   .card-number{
     height: 90px;
     width: 340px;
     margin-bottom: 30px;
   }
 
+  
   h2 span{
     display: inline-block;
     transform: translateY(-.2rem);
@@ -50,7 +48,7 @@
     width: 340px;
     font-size: 18px;
   }
-
+  
   .card-campny{
     display: flex;
     li{
@@ -60,12 +58,16 @@
 
 
 
+  
+  
+  
   .date{
     height: 70px;
     width: 340px;
     margin-bottom: 30px;
   }
 
+  
   h2 span{
     display: inline-block;
     transform: translateY(-.2rem);
@@ -80,12 +82,14 @@
     display: flex;
   }
 
+  
   .year-and-month__innuner{
     width: 100%;
     display: flex;
     position: relative;
   }
 
+  
   select {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -101,7 +105,7 @@
     margin-right: 400px;
     position: absolute;
   }
-
+  
   h3 {
     display: inline-block;
     position: absolute;
@@ -109,6 +113,7 @@
     right: 10px;
   }
 
+￥  
   .fa-chevron-down {
     position: absolute;
     font-size: 1.3rem;
@@ -117,14 +122,14 @@
     right: 50px;
   }
 
-
-
+  
   .security-code{
     height: 90px;
     width: 340px;
     margin-bottom: 30px;
   }
 
+  
   h2 span{
     display: inline-block;
     transform: translateY(-.2rem);
@@ -135,19 +140,21 @@
     color: #fff;
   }
 
+  
   .cvc{
     display: inline-block;
     height: 50px;
     width: 340px;
     font-size: 18px;
   }
-
+  
   .pop{
     display: flex;
     justify-content: flex-end;
     right: 0;
   }
 
+  
   h4{
     display: inline-block;
     font-size: 12px;
@@ -155,11 +162,13 @@
     cursor: pointer;
   }
 
+  
   .fa-question-circle{
     color: #0099e8;
     cursor: pointer;
   }
 
+  
   .next--btn{
     width: 320px;
     height: 50px;
@@ -175,3 +184,4 @@
     margin-bottom: 60px;
   }
 }
+

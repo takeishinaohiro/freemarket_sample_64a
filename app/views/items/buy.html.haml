@@ -50,7 +50,7 @@
             %li 〒930-2242
             %li 青森県 弘前市 四方北窪2434-6
             %li 藤倉 幸広
-      = form_with url: buy_create_item_path(@item) ,method: :post do |f|
+      = form_with url: buy_create_item_path(@item) ,method: :post, local: true do |f|
         %input{name: "buyer[user_id]", type: "hidden", value: current_user.id}
         %input{name: "buyer[item_id]", type: "hidden", value: @item.id}
         = f.fields_for @seller do |u|
