@@ -21,22 +21,15 @@
               Googleでログイン
       .log-in-main__bottom
         .log-in-main__bottom--mail
-          = f.email_field :email, name:"",autofocus: true, placeholder:"メールアドレス",class:"mail"
+          = f.email_field :email, autofocus: true, autocomplete: "email",class:"mail",placeholder: "メールアドレス"
         .log-in-main__bottom--pass
-          %input{class:"pass", type:"text",placeholder: "パスワード"}
-          = f.password_field :password, autocomplete: "current-password"
-        =link_to"", class:"log-in-main__bottom--btn" do
-          ログイン
+          = f.password_field :password, autocomplete: "current-password",class:"pass",placeholder: "パスワード"
+        = f.submit "ログイン",class:"log-in-main__bottom--btn"
         =link_to"", class:"pass-forget" do
           パスワードをお忘れの方
   = render 'users/footer'
 
 
 -#   - if devise_mapping.rememberable?
--#     .field
--#       = f.check_box :remember_me
--#       = f.label :remember_me
--#   .actions
--#     = f.submit "Log in"
 -# = render "devise/shared/links"
   
