@@ -1,0 +1,81 @@
+.new-user-wrap
+  = render 'users/progress'
+  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    .container
+      .registration-box
+        %h2 会員情報入力
+        .registration-box__inner
+          .registration-box__section
+            %h3
+              ニックネーム
+              %span 必須
+            = f.text_field :name, autofocus: true,class: "sell-box__info--input sell-box__info--name", placeholder: "例）フリマ太郎"
+
+          .registration-box__section
+            %h3
+              メールアドレス
+              %span 必須
+            = f.email_field :email, autofocus: true, autocomplete: "email", class: "sell-box__info--input sell-box__info--name", placeholder: "PC・携帯どちらでも可"
+
+          .registration-box__section
+            %h3
+              パスワード
+              %span 必須
+            = f.password_field :password, autocomplete: "new-password", class: "sell-box__info--input sell-box__info--name", placeholder: "7文字以上の半角英数字"
+            %p.caution ※ 英字と数字の両方を含めて設定してください
+
+          %h3.identification 本人確認
+          %p.identification-p 安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
+
+          .registration-box__section
+            %h3
+              お名前(全角)
+              %span 必須
+            .registration-box__section--flex
+              %input{type: "text", class: "sell-box__info--input sell-box__info--name", placeholder: "例）山田"}
+              %input{type: "text", class: "sell-box__info--input sell-box__info--name", placeholder: "例）太郎"}
+
+          .registration-box__section
+            %h3
+              お名前カナ(全角)
+              %span 必須
+            .registration-box__section--flex
+              %input{type: "text", class: "sell-box__info--input sell-box__info--name", placeholder: "例）ヤマダ"}
+              %input{type: "text", class: "sell-box__info--input sell-box__info--name", placeholder: "例）タロウ"}
+
+          .registration-box__section
+            %h3
+              生年月日
+              %span 必須
+            .registration-box__section--flex
+              .select-wrap
+                %select{class: "details", placeholder: "---"}
+                  %option{value: 1} ---
+                  %option{value: 2} 1
+                  %option{value: 3} 2
+                = icon 'fas', 'chevron-down'
+              %p 年
+              .select-wrap
+                %select{class: "details", placeholder: "---"}
+                  %option{value: 1} ---
+                  %option{value: 2} 1
+                  %option{value: 3} 2
+                = icon 'fas', 'chevron-down'
+              %p 月
+              .select-wrap
+                %select{class: "details", placeholder: "---"}
+                  %option{value: 1} ---
+                  %option{value: 2} 1
+                  %option{value: 3} 2
+                = icon 'fas', 'chevron-down'
+              %p 日
+            %p.caution ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
+
+          %p.last-message 「次へ進む」のボタンを押すことにより、利用規約に同意したものとみなします
+          = f.submit "次へ進む",class:"registration-box__inner--next-btn"
+    = render "users/footer"
+
+
+
+
+-# = render "devise/shared/links"

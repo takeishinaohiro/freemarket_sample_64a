@@ -4,7 +4,13 @@ class UsersController < ApplicationController
   def index
   end
 
+  def new
+  end
+
   def show
+
+  end
+  def new
     
   end
 
@@ -18,7 +24,7 @@ class UsersController < ApplicationController
   end
 
   def result
-  
+
   end
 
 
@@ -27,10 +33,12 @@ class UsersController < ApplicationController
   end
 
   def past
-    
+
   end
 
-
-
   
+
+
+
+
 end
