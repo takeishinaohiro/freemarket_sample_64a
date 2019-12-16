@@ -47,9 +47,9 @@
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    margin-top: 25px;
     font-size: .96rem;
     &-left {
+      padding-bottom: 15px;
       display: flex;
       align-items: center;
       font-weight: bold;
@@ -70,7 +70,9 @@
       }
     }
     &-right {
+      margin-top: 25px;
       display: flex;
+      align-items:  ba;
       .far, .fas {
         color: gray;
       }
@@ -99,8 +101,29 @@
         display: block;
         color: gray;
         font-weight: lighter;
-        cursor: pointer;
         padding-bottom: 15px;
+        cursor: pointer;
+      }
+    }
+    &-right2 {
+      width: 210px;
+      margin: 15px 0;
+      display: flex;
+      justify-content: space-between;
+      .far, .fas {
+        color: gray;
+      }
+      &--registration {
+        color: $white;
+        background: $orange;
+        padding: 8px 10px;
+        border-radius: 5px;
+      }
+      &--login {
+        color: $linkblue;
+        border: 1px solid $linkblue;
+        padding: 7px 9px;
+        border-radius: 5px;
       }
     }
   }
