@@ -1,8 +1,11 @@
 class ItemsController < ApplicationController
 
+  def new
+  end
+  
   def index
     @items = Item.all.order(created_at:"desc").limit(10)
-    # @images = Image.all.order(created_at:"desc").limit(10)
+    @images = Image.all
   end
 
   def buy
@@ -10,7 +13,7 @@ class ItemsController < ApplicationController
     @seller = Seller.new
     @items = Item.all
     @item = Item.find(params[:id])
-    # @images = Image.all
+    @images = Image.all
   end
 
   def buy_create
@@ -29,7 +32,7 @@ class ItemsController < ApplicationController
       customer: @card.customer_id, #顧客ID
       currency: 'jpy' #日本円
     )
-    
+    redirect_to root_path 
     else
       render :buy
     end
@@ -52,8 +55,6 @@ class ItemsController < ApplicationController
   def create
     @item  = Item.new(item_params)
     if @item.save
-      
-
       params[:images][:image].each do |image|
         @item.images.create!(image: image, item_id: @item.id)
       end

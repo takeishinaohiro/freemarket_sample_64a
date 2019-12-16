@@ -12,6 +12,7 @@ $(function() {
     }
   );
 
+
   $(function($) {
     $(".a").click(function() {
       $(".b").removeClass("is-active");
@@ -88,7 +89,4 @@ $(function() {
       }
     );
   });
-
-
-
 });
