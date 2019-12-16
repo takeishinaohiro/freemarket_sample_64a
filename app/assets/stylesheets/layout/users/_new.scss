@@ -25,12 +25,12 @@
       margin-top: 2rem;
     }
     .identification-p {
-      margin-top: .5rem;
-      font-size: .9rem;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
       line-height: 1.3rem;
     }
     .last-message {
-      font-size: .9rem;
+      font-size: 0.9rem;
       text-align: center;
       margin-top: 3rem;
     }
@@ -44,35 +44,36 @@
       margin-top: 2rem;
     }
     .any {
-      background: gray!important;
+      background: gray !important;
       color: #fff;
     }
   }
   &__section {
     margin-top: 1rem;
     h3 {
-      font-size: .9rem;
+      font-size: 0.9rem;
     }
     h4 {
-      font-size: .9rem;
+      font-size: 0.9rem;
       margin-top: 2rem;
       &:first-of-type {
-        margin-top: 0!important;
+        margin-top: 0 !important;
       }
     }
-    h3 span, h4 span {
+    h3 span,
+    h4 span {
       display: inline-block;
-      transform: translateY(-.2rem);
-      padding: .15rem .2rem;
+      transform: translateY(-0.2rem);
+      padding: 0.15rem 0.2rem;
       border-radius: 2px;
-      font-size: .8rem;
+      font-size: 0.8rem;
       background: red;
       color: #fff;
     }
     .caution {
-      font-size: .85rem;
+      font-size: 0.85rem;
       color: gray;
-      margin-top: .8rem;
+      margin-top: 0.8rem;
       line-height: 1.3rem;
     }
     select {
@@ -83,7 +84,7 @@
       padding: 0 1rem;
       border: 1px solid lightgray;
       border-radius: 5px;
-      margin-top: .5rem;
+      margin-top: 0.5rem;
       height: 50px;
       width: 80px;
       font-size: 1rem;
@@ -106,7 +107,7 @@
       justify-content: space-between;
       align-items: center;
       input {
-        margin-right: .7rem;
+        margin-right: 0.7rem;
       }
     }
   }
