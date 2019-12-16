@@ -10,7 +10,7 @@
       .top__explain
         .top__explain--image
           %ul.imagemain
-            %li= image_tag src= @item.image, class:"imagemain-a" ,size:'300x300'
+            -# %li= image_tag @image.image.url, class:"imagemain-a" ,size:'300x300'
             %li= image_tag src= "商品画像4.jpg", class:"imagemain-b" ,size:'300x300'
             %li= image_tag src= "商品画像3.jpg", class:"imagemain-c" ,size:'300x300'
             %li= image_tag src= "購入確認image.jpg", class:"imagemain-d" ,size:'300x300'
@@ -20,7 +20,7 @@
                 .sold-mark__text
                   SOLD
           %ul.imagesab
-            %li= image_tag src= @item.image, class:"imagesab-a none" ,size:'60x60'
+            -# %li= image_tag @image.image.url, class:"imagesab-a none" ,size:'60x60'
             %li= image_tag src= "商品画像4.jpg", class:"imagesab-b none",size:'60x60'
             %li= image_tag src= "商品画像3.jpg", class:"imagesab-c none",size:'60x60'
             %li= image_tag src= "購入確認image.jpg", class:"imagesab-d none",size:'60x60'
@@ -29,7 +29,7 @@
             .left
               出品者
             =link_to"",class:"right" do
-              すタップ
+              = @item.user_id
               .face
                 %i.fas.fa-smile-beam
                 19
@@ -41,7 +41,7 @@
             .left
               カテゴリー
             =link_to"",class:"right" do
-              メンズ
+              =@item.category
           .status-c
             .left
               ブランド
@@ -56,12 +56,12 @@
             .left
               商品の状態
             .right
-              未使用に近い
+              =@item.status
           .status-f
             .left
               配送料の負担
             .right
-              着払い(購入者負担)
+              =@item.burden
           .status-g
             .left
               配送の方法
@@ -71,16 +71,16 @@
             .left
               配送元地域
             =link_to"",class:"right" do
-              東京都
+              =@item.area
           .status-i
             .left
               発送日の目安
             .right
-              2~3日で発送
+              =@item.days
       .top__plice
         .top__plice--nmuber
           ¥
-          =@item.plice
+          =@item.price
         .top__plice--tax
           (税込) 
         .top__plice--send
@@ -89,7 +89,7 @@
       =link_to buy_item_path ,class:"top__buy" do
         購入画面に進む
       .top__text
-        =@item.text
+        =@item.description
       .top__bottom
         .top__bottom--iine
           %i.far.fa-heart
@@ -154,14 +154,14 @@
       -@items.each do |item|
         =link_to item_path([item.id]),class:"bottom__item-contents" do
           .bottom__item-contents--image
-            = image_tag src=item.image, size: "220x220"
+            -# = image_tag @image.image.url, size: "220x220"
           .bottom__item-contents--name
             .name
               =item.name
             .menu
               .price
                 ¥
-                =item.plice
+                =item.price
               .iine
                 %i.far.fa-heart
                 6

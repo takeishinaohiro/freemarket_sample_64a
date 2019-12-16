@@ -1,4 +1,4 @@
-.top-top
+.index-top
   .container
     .header
       .header__top
@@ -9,17 +9,22 @@
           %i.fa.fa-search
       .header__menu
         .header__menu-left
-          %i.fas.fa-indent
-          %li.header__menu-left--category メルカリについて
-          %i.fas.fa-tag
-          %li.header__menu-left--brand ブランドから探す
+          %li.header__menu-left--category
+            %i.fas.fa-indent
+            Fmarketについて
+          %li.header__menu-left--brand
+            %i.fas.fa-tag
+            ブランドから探す
         .header__menu-right
-          %i.far.fa-heart
-          %li.header__menu-right--like いいね！一覧
-          %i.far.fa-bell
-          %li.header__menu-right--news お知らせ
-          %i.fas.fa-check
-          %li.header__menu-right--todo やることリスト
+          %li.header__menu-right--like
+            %i.far.fa-heart
+            いいね！一覧
+          %li.header__menu-right--news
+            %i.far.fa-bell
+            お知らせ
+          %li.header__menu-right--todo
+            %i.fas.fa-check
+            やることリスト
           = link_to users_path do
             %li.header__menu-right--mypage
               %i.far.fa-user

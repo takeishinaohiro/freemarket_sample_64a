@@ -1,0 +1,36 @@
+= render 'shared/header'
+.contents-credit
+  .content
+    .credit-wrapper
+      = render 'shared/side-bar'
+      .credit
+        .credit-header
+          支払い方法
+        .credit-main
+          .credit-detail
+          
+            -@card = Card.find_by(user_id: current_user.id)
+              -unless @card == nil
+              .credit-list
+                クレジットカード一覧
+              .credit-setting
+                %li.card-logo 
+                  VISA
+                %li.credit-number
+                = "**** **** **** " + @default_card_information.last4
+                - exp_month = @default_card_information.exp_month.to_s
+                - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
+                %li.credit-limit
+                = exp_month + " / " + exp_year
+                = form_tag(delete_card_index_path, method: :post, id: 'charge-form',  name: "inputForm") do
+                  %input{ type: "hidden", name: "card_id", value: "",class:"delet-btn" }
+                    %button.delet-btn 削除する
+
+            -@card = Card.find_by(user_id: current_user.id)
+              -if @card == nil
+              =link_to new_card_path,class: "credit-btn" do
+                クレジットカードを追加する
+          .about
+            支払い方法について
+            %i.fa.fa-angle-right
+= render 'shared/footer'

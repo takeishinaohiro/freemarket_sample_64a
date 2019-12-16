@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'purchase/done'
   devise_for :users
   # root 'items#index'
-  root 'users#new'
+  root 'items#index'
 
   
   resources :card, only: [:new, :show, :create, :edit] do
@@ -46,4 +46,5 @@ Rails.application.routes.draw do
       get 'past'
     end
   end
+
 end

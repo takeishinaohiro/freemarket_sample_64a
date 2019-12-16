@@ -29,5 +29,5 @@ config/credentials.yml.enc
 /config/master.key
 
 public/uploads/*
-
 .env
+

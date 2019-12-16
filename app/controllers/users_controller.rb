@@ -15,6 +15,7 @@ class UsersController < ApplicationController
 
 
   def show
+
   end
 
 
@@ -24,6 +25,11 @@ class UsersController < ApplicationController
 
   
   def destroy
+
+  end
+
+  def result
+
   end
 
 

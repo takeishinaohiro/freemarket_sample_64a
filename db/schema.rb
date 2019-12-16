@@ -56,6 +56,11 @@ ActiveRecord::Schema.define(version: 2019_12_13_084420) do
     t.string "name", null: false
     t.text "description", null: false
     t.integer "price", null: false
+    t.string "category", null: false
+    t.string "status", null: false
+    t.string "burden", null: false
+    t.string "area", null: false
+    t.string "days", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "user_id"
