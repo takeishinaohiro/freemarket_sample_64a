@@ -13,7 +13,7 @@
     width: 700px;
     margin: 0 auto ;
 
-    .top{
+    .show-top{
       padding: 24px 40px 40px;
 
       &__tittle{
@@ -412,26 +412,28 @@
         height: 60px;
         background-color: #ea352d;
         display: block;
-        margin-top: 30px;
         text-align: center;
         line-height: 60px;
         color: #ffffff;
         text-decoration: none;
         font-size: 24px;
+        margin: 0 auto;
       }
+     
       &__text{
-        padding-top: 32px;
+        padding: 32px;
         list-style: none;
         font-size: 18px;
         line-height: 1.5;
         width: 620px;
         color: #333333;
+
       }
       &__bottom{
         display: flex;
         justify-content: space-between;
         width: 620px;
-        height: 33px;
+        height: 70px;
         margin-top: 45px;
 
         &--iine{
@@ -446,6 +448,7 @@
           line-height: 14px;
           vertical-align: middle;
           display: flex;
+          margin-left: 20px;
           .iine{
             display: flex;
             height: 33px;
@@ -466,7 +469,7 @@
 
           }
         }
-        &--report{
+        .top__bottom--report{
           margin-left: 15px;
           width: 183px;
           height: 33px;
@@ -484,7 +487,7 @@
             margin-left: 8px;
           }
         }
-        &--rock{
+        .top__bottom--rock{
           color: #0099e8;
           font-size: 14px;
           width: 227px;
@@ -745,4 +748,18 @@
 
 .none{
   opacity: 0.5;
+}
+.show-top__buy-sold-btn{
+  width: 620px;
+  height: 60px;
+  background-color: #888;
+  display: block;
+  text-align: center;
+  line-height: 60px;
+  color: #ffffff;
+  font-size: 24px;
+  margin: 0 auto;
+  font-weight: 600;
+  cursor: not-allowed;
+
 }

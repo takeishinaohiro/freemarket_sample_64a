@@ -6,7 +6,7 @@ class CardController < ApplicationController
   def edit
     unless @card ==nil
       @user = @card.user_id
-      Payjp.api_key = 'sk_test_91003e190358af26fd6a2f2c'
+      Payjp.api_key = 'sk_test_6c130d285ae2b7dd291fc04f'
       customer = Payjp::Customer.retrieve(@card.customer_id)
       @default_card_information = customer.cards.retrieve(@card.card_id)
     end
@@ -19,7 +19,7 @@ class CardController < ApplicationController
   end
 
   def pay 
-    Payjp.api_key = 'sk_test_91003e190358af26fd6a2f2c'
+    Payjp.api_key = 'sk_test_6c130d285ae2b7dd291fc04f'
 
     if params['payjp-token'].blank?
       redirect_to action: "new"
@@ -42,7 +42,7 @@ class CardController < ApplicationController
   def destroy
     if @card.blank?
     else
-      Payjp.api_key = 'sk_test_91003e190358af26fd6a2f2c'
+      Payjp.api_key = 'sk_test_6c130d285ae2b7dd291fc04f'
       customer = Payjp::Customer.retrieve(@card.customer_id)
       customer.delete
       @card.destroy
@@ -56,7 +56,7 @@ class CardController < ApplicationController
       redirect_to action: "new" 
     else
       
-      Payjp.api_key = 'sk_test_91003e190358af26fd6a2f2c'
+      Payjp.api_key = 'sk_test_6c130d285ae2b7dd291fc04f'
       customer = Payjp::Customer.retrieve(@card.customer_id)
       @default_card_information = customer.cards.retrieve(@card.card_id)
     end
