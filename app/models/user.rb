@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  devise :trackable, :omniauthable, omniauth_providers: %i(google)
+  # devise :trackable, :omniauthable, omniauth_providers: %i(google)
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   has_many :cards
@@ -17,6 +17,8 @@ class User < ApplicationRecord
         email:    auth.info.email,
         password: Devise.friendly_token[0, 20]
       )
+    end
+  end
 
 
   protected
