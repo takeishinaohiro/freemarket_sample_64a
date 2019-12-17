@@ -4,7 +4,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   #   callback_from :facebook
   # end
 
-  private
+  
   def callback_from(provider)
     provider = provider.to_s
 
@@ -21,9 +21,6 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
-end
-
-class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def google
     @user = User.find_for_google(request.env['omniauth.auth'])
 
