@@ -83,6 +83,8 @@ gem 'active_hash'
 gem 'gretel'
 gem 'payjp'
 gem 'dotenv-rails'
+gem "omniauth"
+gem 'omniauth-facebook'
 
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
