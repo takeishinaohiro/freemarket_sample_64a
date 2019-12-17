@@ -85,7 +85,7 @@
           (税込) 
         .top__plice--send
           着払い
-
+    -if user_signed_in?
       =link_to buy_item_path ,class:"top__buy" do
         購入画面に進む
       .top__text
