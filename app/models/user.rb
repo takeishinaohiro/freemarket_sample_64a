@@ -17,7 +17,8 @@ class User < ApplicationRecord
         email:    auth.info.email,
         password: Devise.friendly_token[0, 20]
       )
-
+    end
+  end
 
   protected
   def self.find_for_google(auth)
