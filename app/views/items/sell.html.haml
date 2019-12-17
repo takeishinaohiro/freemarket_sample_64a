@@ -2,101 +2,101 @@
   .container
     = link_to root_path do
       = image_tag '/assets/fmarket_logo_red.svg', class: "sell-wrap__logo"
-      = form_with(model: Item, local: true) do |f|
-        .sell-box
-          %h2 商品の情報を入力
-          .sell-box__img.sell-box__section
-            %h3
-              出品画像
+    = form_with(model: Item, local: true) do |f|
+      .sell-box
+        %h2 商品の情報を入力
+        .sell-box__img.sell-box__section
+          %h3
+            出品画像
+            %span 必須
+          %p 最大10枚までアップロードできます
+          .drop-zone
+            %label.sell-box__img--input
+              %p
+                ドラッグアンドドロップ
+                %br
+                またはクリックしてファイルをアップロード
+                = f.fields_for :images do |i|
+                  = i.file_field :image, multiple: true, id: "sell-img", name: "images[image][]"
+
+        .sell-box__info.sell-box__section
+          %h3
+            商品名
+            %span 必須
+          = f.text_field :name, class:"sell-box__info--input sell-box__info--name", placeholder: "商品名（必須40文字まで）", value: ""
+          %h3.sell-box__info--textarea
+            商品の説明
+            %span 必須
+          = f.text_area :description, class:"sell-box__info--input sell-box__info--description", rows: 6, placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
+
+        .sell-box__details.sell-box__section.sell-box__section2
+          .sell-box__details--left
+            %h3.text-gray 商品の詳細
+          .sell-box__details--right
+            %h4
+              カテゴリー
               %span 必須
-            %p 最大10枚までアップロードできます
-            .drop-zone
-              %label.sell-box__img--input
-                %p
-                  ドラッグアンドドロップ
-                  %br
-                  またはクリックしてファイルをアップロード
-                  = f.fields_for :images do |i|
-                    = i.file_field :image, multiple: true, id: "sell-img", name: "images[image][]"
-
-          .sell-box__info.sell-box__section
-            %h3
-              商品名
+            .select-wrap
+              = f.select :category, ["レディース", "メンズ"], class: "details", prompt: "---"
+              = icon 'fas', 'chevron-down'
+            %h4
+              商品の状態
               %span 必須
-            = f.text_field :name, class:"sell-box__info--input sell-box__info--name", placeholder: "商品名（必須40文字まで）", value: ""
-            %h3.sell-box__info--textarea
-              商品の説明
+            .select-wrap
+              = f.select :status, ["新品、未使用", "未使用に近い"], class: "details", prompt: "---"
+              = icon 'fas', 'chevron-down'
+
+        .sell-box__delivery.sell-box__section.sell-box__section2
+          .sell-box__delivery--left
+            %h3.text-gray 配送について
+          .sell-box__delivery--right
+            %h4
+              配送料の負担
               %span 必須
-            = f.text_area :description, class:"sell-box__info--input sell-box__info--description", rows: 6, placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
+            .select-wrap
+              = f.select :burden, ["送料込み(出品者負担)", "着払い(購入者負担)"], class: "details", prompt: "---"
+              = icon 'fas', 'chevron-down'
+            %h4
+              発送元の地域
+              %span 必須
+            .select-wrap
+              = f.collection_select :area, Prefecture.all, :id, :name, prompt: "---"
+              = icon 'fas', 'chevron-down'
+            %h4
+              発送までの日数
+              %span 必須
+            .select-wrap
+              = f.select :days, ["1〜2日で発送", "2〜3日で発送", "4〜7日で発送"], class: "details", prompt: "---"
+              = icon 'fas', 'chevron-down'
 
-          .sell-box__details.sell-box__section.sell-box__section2
-            .sell-box__details--left
-              %h3.text-gray 商品の詳細
-            .sell-box__details--right
+        .sell-box__price.sell-box__section.sell-box__section2
+          .sell-box__price--left
+            %h3.text-gray 販売価格(300〜9,999,99
+          .sell-box__price--right
+            .price-flex
               %h4
-                カテゴリー
+                価格
                 %span 必須
-              .select-wrap
-                = f.select :category, ["レディース", "メンズ"], class: "details", prompt: "---"
-                = icon 'fas', 'chevron-down'
-              %h4
-                商品の状態
-                %span 必須
-              .select-wrap
-                = f.select :status, ["新品、未使用", "未使用に近い"], class: "details", prompt: "---"
-                = icon 'fas', 'chevron-down'
+              = f.number_field :price, class:"price-flex__input", placeholder: "例）300"
+            .price-flex
+              %p.fee 販売手数料（10%）
+              %p.result-fee -
+            .price-flex
+              %p.profit 販売利益
+              %p.result-profit -
+        .sell-box__confirmation.sell-box__section
+          %p 禁止されている出品、行為を必ずご確認ください。
+          %p またブランド品でシリアルナンバー等がある場合はご記載ください。偽ブランドの販売は犯罪であり処罰される可能性があります。
+          %p また、出品をもちまして加盟店規約に同意したことになります。
+          = f.submit "出品する", class: "sell-box__confirmation--exhibit-btn"
 
-          .sell-box__delivery.sell-box__section.sell-box__section2
-            .sell-box__delivery--left
-              %h3.text-gray 配送について
-            .sell-box__delivery--right
-              %h4
-                配送料の負担
-                %span 必須
-              .select-wrap
-                = f.select :burden, ["送料込み(出品者負担)", "着払い(購入者負担)"], class: "details", prompt: "---"
-                = icon 'fas', 'chevron-down'
-              %h4
-                発送元の地域
-                %span 必須
-              .select-wrap
-                = f.collection_select :area, Prefecture.all, :id, :name, prompt: "---"
-                = icon 'fas', 'chevron-down'
-              %h4
-                発送までの日数
-                %span 必須
-              .select-wrap
-                = f.select :days, ["1〜2日で発送", "2〜3日で発送", "4〜7日で発送"], class: "details", prompt: "---"
-                = icon 'fas', 'chevron-down'
-
-          .sell-box__price.sell-box__section.sell-box__section2
-            .sell-box__price--left
-              %h3.text-gray 販売価格(300〜9,999,99
-            .sell-box__price--right
-              .price-flex
-                %h4
-                  価格
-                  %span 必須
-                = f.number_field :price, class:"price-flex__input", placeholder: "例）300"
-              .price-flex
-                %p.fee 販売手数料（10%）
-                %p.result-fee -
-              .price-flex
-                %p.profit 販売利益
-                %p.result-profit -
-          .sell-box__confirmation.sell-box__section
-            %p 禁止されている出品、行為を必ずご確認ください。
-            %p またブランド品でシリアルナンバー等がある場合はご記載ください。偽ブランドの販売は犯罪であり処罰される可能性があります。
-            %p また、出品をもちまして加盟店規約に同意したことになります。
-            = f.submit "出品する", class: "sell-box__confirmation--exhibit-btn"
-
-            = link_to users_path do
-              .sell-box__confirmation--back-btn
-                もどる
-        %ul.sell-other
-          %li プライバシーポリシー
-          %li メルカリ利用規約
-          %li 特定商取引による表記
-      = image_tag '/assets/logo_gray.svg', width: "80px", height: "auto", class: "sell-wrap__logo-bottom"
-      %p.copyright &copy; Freemarket_sample_64a
+          = link_to users_path do
+            .sell-box__confirmation--back-btn
+              もどる
+      %ul.sell-other
+        %li プライバシーポリシー
+        %li メルカリ利用規約
+        %li 特定商取引による表記
+    = image_tag '/assets/logo_gray.svg', width: "80px", height: "auto", class: "sell-wrap__logo-bottom"
+    %p.copyright &copy; Freemarket_sample_64a
 
