@@ -1,12 +1,16 @@
 .wrapper6
   = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
     .login-top
-      =link_to "",class:"" do
+      =link_to root_path, class:"" do
         = image_tag '/assets/fmarket_logo_red.svg', class: "login-top__logo"
     .log-in-main
       .log-in-main__top
         %li アカウントをお持ちでない方はこちら
+
+        =link_to new_user_registration_path,class:"log-in-main__top--btn" do
+
         =link_to new_user_registration_path ,class:"log-in-main__top--btn" do
+
           新規会員登録
       .log-in-main__center
         =link_to"",class:"" do
@@ -17,8 +21,7 @@
         =link_to"",class:"" do
           .log-in-main__center--google
             %i.fab.fa-google
-            .google-name
-              Googleでログイン
+            = link_to 'Googleログイン', user_google_omniauth_authorize_path, class: "google-name"
       .log-in-main__bottom
         .log-in-main__bottom--mail
           = f.email_field :email, autofocus: true, autocomplete: "email",class:"mail",placeholder: "メールアドレス"

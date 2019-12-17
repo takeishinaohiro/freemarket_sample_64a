@@ -1,10 +1,23 @@
 Rails.application.routes.draw do
-  get 'purchase/index'
-  get 'purchase/done'
-  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+
+  # devise_for :users
+  devise_for :users, controllers: {
+    omniauth_callbacks: "users/omniauth_callbacks"
+  }
+  get  '/auth/:provider/callback', to: "items#new"
   root 'items#index'
 
-  
+
+
+  get 'purchase/index'
+  get 'purchase/done'
+
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+
+  root 'items#index'
+
+  resources :addresses, only: [:new,:create]
+
   resources :card, only: [:new, :show, :create, :edit] do
     collection do
       post 'show', to: 'card#show'
@@ -17,7 +30,7 @@ Rails.application.routes.draw do
       post 'pay', to: 'purchase#pay'
       get 'done', to: 'purchase#done'
     end
-    member do 
+    member do
       get 'index', to: 'purchase#index'
     end
   end
