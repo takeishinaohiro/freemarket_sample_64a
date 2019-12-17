@@ -304,4 +304,5 @@ Devise.setup do |config|
   config.omniauth :facebook, 
   ENV['GOOGLE_APP_ID'],
   ENV['GOOGLE_APP_SECRET']
+
 end
