@@ -5,10 +5,13 @@ class ItemsController < ApplicationController
   
   def index
     @items = Item.all.order(created_at:"desc").limit(10)
-    @images = Image.all
+    
   end
 
   def buy
+    unless user_signed_in?
+      redirect_to new_user_session_path
+    end
     @buyer = Buyer.new
     @seller = Seller.new
     @items = Item.all
@@ -44,10 +47,13 @@ class ItemsController < ApplicationController
     # @images = Image.all.order(created_at:"desc").limit(6)
     @item = Item.find(params[:id])
     @sold = Buyer.find_by(item_id: @item.id)
-
+  
   end
 
   def sell
+    unless user_signed_in?
+      redirect_to new_user_session_path
+    end
     @item = Item.new
     @item.images.build
   end
