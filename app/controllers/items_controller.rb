@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
 
   def new
   end
-
+  
   def index
     @items = Item.all.order(created_at:"desc").limit(10)
     
@@ -21,7 +21,6 @@ class ItemsController < ApplicationController
 
   def buy_create
     @item = Item.find(params[:id])
-    # @image = Image.find(params[:id])
     @buyer = Buyer.new(buyer_params)
     @buyer.save!
     @seller = Seller.new(seller_params)
