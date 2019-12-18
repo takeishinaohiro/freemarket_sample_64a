@@ -1,8 +1,8 @@
 
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
-  # def facebook
-  #   callback_from :facebook
-  # end
+  def facebook
+    callback_from :facebook
+  end
 
   
   def callback_from(provider)
