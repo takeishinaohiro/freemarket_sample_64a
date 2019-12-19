@@ -19,7 +19,6 @@
                   .item-1__image
                     = image_tag "#{item.images[0].image}", size:"186x186"
                     - @sold = Buyer.find_by(item_id: item) 
-
                     - unless @sold == nil
                       .sold-mark-wrap1
                         .sold-mark1
@@ -27,6 +26,7 @@
                             SOLD 
                     .item-1__image__price
                       ¥
-                      = item.price
-                  %li.item-1__name 
-                    = item.name
+                      = i.price
+                  %li.item-1__name
+                    = i.name
+

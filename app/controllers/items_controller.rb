@@ -51,8 +51,7 @@ class ItemsController < ApplicationController
     # @images = Image.all.order(created_at:"desc").limit(6)
     @item = Item.find(params[:id])
     @sold = Buyer.find_by(item_id: @item.id)
-    @prefecture = Prefecture.find(params[:id])
-  
+    @prefecture = Prefecture.find(@item.area)
   end
 
   def sell
@@ -78,7 +77,7 @@ class ItemsController < ApplicationController
 
   # source ~/.zshrc
   def item_params
-    params.require(:item).permit(:name, :description, :category, :status, :price, :burden, :area, :days)
+    params.require(:item).permit(:name, :description, :category, :status, :price, :burden, :area, :days, :user_id)
   end
   private
 

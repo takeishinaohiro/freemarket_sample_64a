@@ -706,6 +706,11 @@
         margin: 0 20px 20px 0;
         text-decoration: none;
 
+        &--image{
+          width: 220px;
+          height: 220px;
+        }
+
 
         &--name{
           width: 220px;
@@ -762,4 +767,43 @@
   font-weight: 600;
   cursor: not-allowed;
 
+}
+.show-top__buy--create{
+  margin: 24px 0 24px 0;
+  background: #fff;
+  padding: 8px 16px 8px 16px;
+  width: 700px;
+  height: 262px;
+  text-align: center;
+
+  .show-edit{
+    margin: 16px 0 16px 0;
+    background-color: #ea352d;
+    color: #fff;
+    border: 1px solid #ea352d;
+    display: block;
+    width: 668px;
+    height: 50px;
+    line-height: 50px;
+  }
+  .show-stop{
+    margin: 16px 0 16px 0;
+    background: #aaa;
+    color: #fff;
+    border: 1px solid #aaa;
+    display: block;
+    width: 668px;
+    height: 50px;
+    line-height: 50px;
+  }
+  .show-destroy{
+    margin: 16px 0 16px 0;
+    background: #aaa;
+    color: #fff;
+    border: 1px solid #aaa;
+    display: block;
+    width: 668px;
+    height: 50px;
+    line-height: 50px;
+  }
 }
