@@ -2,10 +2,9 @@ class ItemsController < ApplicationController
 
   def new
   end
-  
+
   def index
-    @items = Item.all.order(created_at:"desc").limit(10)
-    
+    @items = Item.includes(:images).order(created_at:"desc")
   end
 
   def buy
@@ -41,7 +40,7 @@ class ItemsController < ApplicationController
       customer: @card.customer_id, #顧客ID
       currency: 'jpy' #日本円
     )
-    redirect_to root_path 
+    redirect_to root_path
     else
       render :buy
     end

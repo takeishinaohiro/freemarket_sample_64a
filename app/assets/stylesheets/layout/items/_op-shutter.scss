@@ -60,7 +60,7 @@
     }
     .topToBottom {
       animation: topToBottom 2s forwards;
-      transform: translateY(-105%);
+      transform: translateY(-120%);
       &:nth-of-type(1) {
         animation-delay: .2s;
       }
@@ -79,7 +79,7 @@
     }
     .bottomToTop {
       animation: bottomToTop 2s forwards;
-      transform: translateY(105%);
+      transform: translateY(120%);
       &:nth-of-type(2) {
         animation-delay: .2s;
       }
@@ -126,10 +126,10 @@
 
 @keyframes topToBottom {
   0% {
-    transform: translateY(-105%);
+    transform: translateY(-120%);
   }
   10% {
-    transform: translateY(-105%);
+    transform: translateY(-120%);
   }
   100% {
     transform: translateY(0);
@@ -138,10 +138,10 @@
 
 @keyframes bottomToTop {
   0% {
-    transform: translateY(105%);
+    transform: translateY(120%);
   }
   10% {
-    transform: translateY(105%);
+    transform: translateY(120%);
   }
   100% {
     transform: translateY(0);

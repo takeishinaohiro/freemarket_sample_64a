@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: {
     omniauth_callbacks: "users/omniauth_callbacks",registrations: 'users/registrations'
-  } 
+  }
 
   get  '/auth/:provider/callback', to: "items#new"
   root 'items#index'
@@ -34,9 +34,9 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :images 
+  
   resources :items do
-    resources :images do
-    end
     collection do
       get 'sell'
     end
