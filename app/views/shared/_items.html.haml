@@ -11,19 +11,20 @@
             .heading-option
               もっと見る
               %i.fa.fa-angle-right
-              
+
           .product-wrapper__item
             - @items.each do |i|
               .content
                 =link_to item_path(i),class:"iteme-1" do
                   .item-1__image
-                    = image_tag "#{item.images[0].image}", size:"186x186"
-                    - @sold = Buyer.find_by(item_id: item) 
+                    = image_tag i.images.image, size:"186x186"
+
+                    - @sold = Buyer.find_by(item_id: i)
                     - unless @sold == nil
                       .sold-mark-wrap1
                         .sold-mark1
                           .sold-mark1__text1
-                            SOLD 
+                            SOLD
                     .item-1__image__price
                       ¥
                       = i.price

@@ -14,9 +14,7 @@ ActiveRecord::Schema.define(version: 2019_12_19_023623) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
-    t.string "name2", null: false
     t.string "katakana", null: false
-    t.string "katakana2", null: false
     t.string "postal_code", null: false
     t.string "prefucture", null: false
     t.string "city", null: false
@@ -97,9 +95,9 @@ ActiveRecord::Schema.define(version: 2019_12_19_023623) do
     t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "token"
     t.string "last_name"
     t.string "real_name"
-    t.string "token"
     t.string "real_name_read"
     t.string "last_name_read"
     t.string "birthday"
