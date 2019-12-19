@@ -17,7 +17,7 @@
                 %br
                 またはクリックしてファイルをアップロード
                 = f.fields_for :images do |i|
-                  = i.file_field :image, multiple: true, id: "sell-img", name: "images[image]"
+                  = i.file_field :image, multiple: true, id: "sell-img", name: "images[image][]"
 
         .sell-box__info.sell-box__section
           %h3
