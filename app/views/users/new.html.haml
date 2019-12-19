@@ -9,9 +9,10 @@
         %li.sign-up__middle--bottom-1
           %i.far.fa-envelope
           メールアドレスで登録
-        %li.sign-up__middle--bottom-2
-          %i.fab.fa-facebook-square
-          Facebookで登録する
+        = link_to user_facebook_omniauth_authorize_path do
+          %li.sign-up__middle--bottom-2
+            %i.fab.fa-facebook-square
+            Facebookで登録する
         %li.sign-up__middle--bottom-3
           %i.fab.fa-google
           googleで登録する
