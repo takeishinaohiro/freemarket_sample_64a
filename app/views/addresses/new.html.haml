@@ -10,14 +10,14 @@
               お名前
               %span 必須
             = f.text_field :name, class: "sell-box__info--input sell-box__info--name", placeholder: "例 フリマ"
-            = f.text_field :name, class: "sell-box__info--input sell-box__info--name", placeholder: "例 太郎"
+            = f.text_field :name2, class: "sell-box__info--input sell-box__info--name", placeholder: "例 太郎"
 
           .registration-box__section
             %h3
               お名前カナ
               %span 必須
-            = f.text_field :kstakana, class: "sell-box__info--input sell-box__info--name", placeholder: "例 フリマ"
-            = f.text_field :katakana, class: "sell-box__info--input sell-box__info--name", placeholder: "例 タロウ"
+            = f.text_field :katakana, class: "sell-box__info--input sell-box__info--name", placeholder: "例 フリマ"
+            = f.text_field :katakana2, class: "sell-box__info--input sell-box__info--name", placeholder: "例 タロウ"
 
           .registration-box__section
             %h3
@@ -54,7 +54,7 @@
               電話
               %span.any 任意
             = f.text_field :phone_number,class: "sell-box__info--input sell-box__info--name", placeholder: "例 123-4567-8901"
-            %input{name:"addresses[user_id]",type: "hidden",value:current_user.id}
+            = f.hidden_field :user_id ,value:current_user.id
             = f.submit "次へ進む" , class: "registration-box__inner--next-btn"
     %ul.other-footer
       %li プライバシーポリシー

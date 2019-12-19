@@ -2,13 +2,19 @@ class ItemsController < ApplicationController
 
   def new
   end
-  
+
   def index
-    @items = Item.all.order(created_at:"desc").limit(10)
-    
+    @items = Item.includes(:images).order(created_at:"desc")
   end
 
   def buy
+    @card = Card.where(user_id: current_user.id).first
+    unless @card ==nil
+      @user = @card.user_id
+      Payjp.api_key = 'sk_test_6c130d285ae2b7dd291fc04f'
+      customer = Payjp::Customer.retrieve(@card.customer_id)
+      @default_card_information = customer.cards.retrieve(@card.card_id)
+    end
     unless user_signed_in?
       redirect_to new_user_session_path
     end
@@ -33,7 +39,7 @@ class ItemsController < ApplicationController
       customer: @card.customer_id, #顧客ID
       currency: 'jpy' #日本円
     )
-    redirect_to root_path 
+    redirect_to root_path
     else
       render :buy
     end
@@ -45,6 +51,7 @@ class ItemsController < ApplicationController
     # @images = Image.all.order(created_at:"desc").limit(6)
     @item = Item.find(params[:id])
     @sold = Buyer.find_by(item_id: @item.id)
+    @prefecture = Prefecture.find(params[:id])
   
   end
 
