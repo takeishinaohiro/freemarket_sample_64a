@@ -2,7 +2,7 @@
   .log
     .log__main
       =link_to root_path,class:"" do
-        -# = image_tag '/assets/fmarket_logo_red.svg', height: '49', width: '185'
+        = image_tag '/assets/fmarket_logo_red.svg', height: '49', width: '185'
   .buy-page
     .buy-page__top
       購入内容の確認
@@ -36,20 +36,28 @@
             =link_to "",class:"card__right" do
               変更する
           .center
-            %li クレジットカード
-            %li ************1934
-            %li 有効期限 06 / 24
+            = "**** **** **** " + @default_card_information.last4
+            - exp_month = @default_card_information.exp_month.to_s
+            - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
+            %li.credit-limit
+            = exp_month + " / " + exp_year
             %li visa
         .bottom
           .addres
             .addres__left
               支払い方法
-            =link_to "",class:"addres__right" do
+            =link_to new_address_path,class:"addres__right" do
               変更する
           .news
-            %li 〒930-2242
-            %li 青森県 弘前市 四方北窪2434-6
-            %li 藤倉 幸広
+            = current_user.address.postal_code
+          .xx
+            = current_user.address.prefucture
+            = current_user.address.city
+            = current_user.address.city_address
+          .yy
+            %li 　　　
+            = current_user.address.name
+            = current_user.address.name2
       = form_with url: buy_create_item_path(@item) ,method: :post, local: true do |f|
         %input{name: "buyer[user_id]", type: "hidden", value: current_user.id}
         %input{name: "buyer[item_id]", type: "hidden", value: @item.id}
@@ -57,8 +65,6 @@
           %input{name: "seller[user_id]", type: "hidden", value: @item.user_id}
           %input{name: "seller[item_id]", type: "hidden", value: @item.id}
         = f.submit '購入する', class: "buy-btn"
-      -# =link_to "",class:"buy-btn" do
-      -#   購入する
   .buy-footer
     .buy-footer__top
       =link_to "",class:"buy-footer__top--1" do
@@ -71,6 +77,3 @@
       = image_tag '/assets/logo_gray.svg', height: '65', width: '80'
     .buy-footer__fin
       © Mercari, Inc.
-
-
-
