@@ -17,8 +17,8 @@
               .content
                 =link_to item_path(i),class:"iteme-1" do
                   .item-1__image
-                    = image_tag "#{item.images[0].image}", size:"186x186"
-                    - @sold = Buyer.find_by(item_id: item) 
+                    = image_tag"#{item.images[0].image}", size:"186x186"
+                    -# - @sold = Buyer.find_by(item_id: item) 
                     - unless @sold == nil
                       .sold-mark-wrap1
                         .sold-mark1
