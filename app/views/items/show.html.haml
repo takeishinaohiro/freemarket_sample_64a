@@ -85,9 +85,18 @@
           (税込) 
         .show-top__plice--send
           =@item.burden
-    - unless @sold == nil
+    - if @sold != nil
       .show-top__buy-sold-btn
         売り切れました
+    - elsif @item.user_id == current_user.id
+      .show-top__buy--create
+        =link_to "",class:"show-edit" do
+          商品の編集
+        or
+        =link_to "",class:"show-stop" do
+          出品を一旦停止する
+        =link_to "",class:"show-destroy" do
+          この商品を削除する
     - else
       =link_to buy_item_path ,class:"show-top__buy" do
         購入画面に進む
@@ -154,19 +163,20 @@
       Tシャツ/カットソー(半袖/袖なし) （メンズ） その他の商品
     .bottom
       -@items.each do |item|
-        =link_to item_path([item.id]),class:"bottom__item-contents" do
-          .bottom__item-contents--image
-            -# = image_tag @image.image.url, size: "220x220"
-          .bottom__item-contents--name
-            .name
-              =item.name
-            .menu
-              .price
-                ¥
-                =item.price
-              .iine
-                %i.far.fa-heart
-                6
+        =link_to item_path(item.id),class:"" do
+          .bottom__item-contents
+            .bottom__item-contents--image
+              -# = image_tag @item.images.image,class:"" size: "220x220"
+            .bottom__item-contents--name
+              .name
+                =item.name
+              .menu
+                .price
+                  ¥
+                  =item.price
+                .iine
+                  %i.far.fa-heart
+                  6
 
     .dd
   = render 'shared/footer'
