@@ -17,8 +17,10 @@
               .content
                 =link_to item_path(i),class:"iteme-1" do
                   .item-1__image
-                    = i.image.url
-                    - @sold = Buyer.find_by(item_id: i.id)
+                    -# = image_tag i.image.url
+                    - @sold = Buyer.find_by(item_id: item.id)
+                    -# = image_tag "#{item.images[1].image}"
+                    - @sold = Buyer.find_by(item_id: item)
                     - unless @sold == nil
                       .sold-mark-wrap1
                         .sold-mark1
@@ -26,7 +28,6 @@
                             SOLD
                     .item-1__image__price
                       ¥
-                      = i.price
-                    %li.item-1__name
-                      = i.name
-                      = i.price
+                      = item.price
+                  %li.item-1__name
+                    = item.name
