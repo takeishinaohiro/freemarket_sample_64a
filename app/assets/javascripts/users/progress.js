@@ -1,6 +1,18 @@
 $(function() {
+  //プログレスバー
   let path = location.pathname;
-  if(path == '/users/sign_up') {
-    $('.progress__status1').addClass('active');
+  switch(path) {
+    case '/addresses/new':
+      $('.progress__status2').addClass('active');
+    break;
+    case '/card/new':
+      $('.progress__status2').addClass('active');
+      $('.progress__status3').addClass('active');
+    break;
+    case '/users/result':
+      $('.progress__status2').addClass('active');
+      $('.progress__status3').addClass('active');
+      $('.progress__status4').addClass('active');
+    break;
   }
 });
