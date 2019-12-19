@@ -10,3 +10,4 @@ class Item < ApplicationRecord
   accepts_nested_attributes_for :buyer
   accepts_nested_attributes_for :seller
 end
+

@@ -89,3 +89,4 @@ class ItemsController < ApplicationController
       params.require(:seller).permit(:user_id, :item_id)
     end
 end
+
