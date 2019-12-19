@@ -31,43 +31,23 @@
               お名前(全角)
               %span 必須
             .registration-box__section--flex
-              %input{type: "text", class: "sell-box__info--input sell-box__info--name", placeholder: "例）山田"}
-              %input{type: "text", class: "sell-box__info--input sell-box__info--name", placeholder: "例）太郎"}
+              = f.text_field :last_name, autofocus: true,class: "sell-box__info--input sell-box__info--name", placeholder: "例）山田", value: flash[:last_name]
+              = f.text_field :real_name, autofocus: true,class: "sell-box__info--input sell-box__info--name", placeholder: "例）太郎", value: flash[:real_name]
 
           .registration-box__section
             %h3
               お名前カナ(全角)
               %span 必須
             .registration-box__section--flex
-              %input{type: "text", class: "sell-box__info--input sell-box__info--name", placeholder: "例）ヤマダ"}
-              %input{type: "text", class: "sell-box__info--input sell-box__info--name", placeholder: "例）タロウ"}
-
+              = f.text_field :last_name_read, autofocus: true,class: "sell-box__info--input sell-box__info--name", placeholder: "例）山田", value: flash[:last_name_read]
+              = f.text_field :real_name_read, autofocus: true,class: "sell-box__info--input sell-box__info--name", placeholder: "例）太郎", value: flash[:real_name_read]
           .registration-box__section
             %h3
               生年月日
               %span 必須
             .registration-box__section--flex
               .select-wrap
-                %select{class: "details", placeholder: "---"}
-                  %option{value: 1} ---
-                  %option{value: 2} 1
-                  %option{value: 3} 2
-                = icon 'fas', 'chevron-down'
-              %p 年
-              .select-wrap
-                %select{class: "details", placeholder: "---"}
-                  %option{value: 1} ---
-                  %option{value: 2} 1
-                  %option{value: 3} 2
-                = icon 'fas', 'chevron-down'
-              %p 月
-              .select-wrap
-                %select{class: "details", placeholder: "---"}
-                  %option{value: 1} ---
-                  %option{value: 2} 1
-                  %option{value: 3} 2
-                = icon 'fas', 'chevron-down'
-              %p 日
+                = f.date_select :birthday, start_year: 2000, end_year: Time.current.year, use_month_numbers: true,placeholder: "---"
             %p.caution ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
 
           %p.last-message 「次へ進む」のボタンを押すことにより、利用規約に同意したものとみなします

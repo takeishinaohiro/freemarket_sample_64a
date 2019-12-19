@@ -91,12 +91,14 @@
     }
     .select-wrap {
       position: relative;
+      margin-left: 50px;
       > .fa-chevron-down {
         font-size: 1.3rem;
         color: gray;
         position: absolute;
         top: 25px;
         right: 12px;
+
       }
     }
     &:not(:first-of-type) {
