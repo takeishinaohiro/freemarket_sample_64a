@@ -2,13 +2,13 @@
 .wrapper3
   .showpage
     .pp
-    .top
-      .top__tittle
+    .show-top
+      .show-top__tittle
         =@item.name
-      .top__news
+      .show-top__news
         「#{@item.name}」 は、19回の取引実績を持つすタップさんから出品されました。Tシャツ/カットソー(半袖/袖なし)/メンズの商品で、東京都から2~3日で発送されます。
-      .top__explain
-        .top__explain--image
+      .show-top__explain
+        .show-top__explain--image
           %ul.imagemain
             -# %li= image_tag @image.image.url, class:"imagemain-a" ,size:'300x300'
             %li= image_tag src= "商品画像4.jpg", class:"imagemain-b" ,size:'300x300'
@@ -24,7 +24,7 @@
             %li= image_tag src= "商品画像4.jpg", class:"imagesab-b none",size:'60x60'
             %li= image_tag src= "商品画像3.jpg", class:"imagesab-c none",size:'60x60'
             %li= image_tag src= "購入確認image.jpg", class:"imagesab-d none",size:'60x60'
-        .top__explain--status
+        .show-top__explain--status
           .status-a
             .left
               出品者
@@ -77,34 +77,36 @@
               発送日の目安
             .right
               =@item.days
-      .top__plice
-        .top__plice--nmuber
+      .show-top__plice
+        .show-top__plice--nmuber
           ¥
           =@item.price
-        .top__plice--tax
+        .show-top__plice--tax
           (税込) 
-        .top__plice--send
+        .show-top__plice--send
           着払い
-    -if user_signed_in?
-      =link_to buy_item_path ,class:"top__buy" do
+    - unless @sold == nil
+      .show-top__buy-sold-btn
+        売り切れました
+    - else
+      =link_to buy_item_path ,class:"show-top__buy" do
         購入画面に進む
-      .top__text
-        =@item.description
-      .top__bottom
-        .top__bottom--iine
-          %i.far.fa-heart
-          .iine
-            いいね!
-          .iine-num
-            3
-          -# %i.fas.fa-heart
-        .top__bottom--report
-          %i.fa.fa-flag
-          .report-text
-          不適切な商品の報告
-        .top__bottom--rock
-          %i.fa.fa-lock
-          あんしん・あんぜんへの取り組み
+    .show-top__text
+      =@item.description
+    .show-top__bottom
+      .show-top__bottom--iine
+        %i.far.fa-heart
+        .iine
+          いいね!
+        .iine-num
+          3
+      .top__bottom--report
+        %i.fa.fa-flag
+        .report-text
+        不適切な商品の報告
+      .top__bottom--rock
+        %i.fa.fa-lock
+        あんしん・あんぜんへの取り組み
     .aa
     .show-messages
       .messages-left
