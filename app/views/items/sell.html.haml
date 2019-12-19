@@ -88,6 +88,7 @@
           %p 禁止されている出品、行為を必ずご確認ください。
           %p またブランド品でシリアルナンバー等がある場合はご記載ください。偽ブランドの販売は犯罪であり処罰される可能性があります。
           %p また、出品をもちまして加盟店規約に同意したことになります。
+          = f.hidden_field :user_id ,value:current_user.id
           = f.submit "出品する", class: "sell-box__confirmation--exhibit-btn"
 
           = link_to users_path do
