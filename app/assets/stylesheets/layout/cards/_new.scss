@@ -51,8 +51,9 @@
   
   .card-campny{
     display: flex;
-    li{
-      margin-right: 10px;
+    img{
+      height: 30px;
+      width: auto;
     }
   }
 
@@ -113,7 +114,6 @@
     right: 10px;
   }
 
-￥  
   .fa-chevron-down {
     position: absolute;
     font-size: 1.3rem;
