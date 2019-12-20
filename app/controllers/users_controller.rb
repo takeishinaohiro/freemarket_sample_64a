@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
 
   def index
+    @items = Buyer.where(params[:id]).limit(3)
   end
 
   def new

@@ -41,8 +41,7 @@
           color: #fff;
         }
         li:last-of-type {
-          color: black;
-          border: 1px solid black;
+          color: white;
           margin-top: 20px;
           margin-bottom: 65px;
         }
@@ -87,3 +86,11 @@
       }
     }
   }
+.sign-up__middle--bottom-3{
+  border: solid 1px black;
+  color: black;
+  .google-color{
+    color: black;
+
+  }
+}
