@@ -3,7 +3,7 @@
     .header
       .header__top
         = link_to root_path, class:"header__top--logo" do
-          %img{src: "/assets/fmarket_logo_red.svg"}
+          = image_tag '/assets/fmarket_logo_red .png'
         .header__top--text
           %input.search-form__input{placeholder: "何をお探しですか？", type: "text", value: ""}
           %i.fa.fa-search
@@ -43,7 +43,8 @@
         .my-menu__img
           = image_tag '/assets/マイページ背景.jpeg'
         .my-menu__name
-          #{current_user.name}
+          -if user_signed_in?
+            #{current_user.name}
         .my-menu__status
           %sapn 評価: 0
           %span 出品数: 0
