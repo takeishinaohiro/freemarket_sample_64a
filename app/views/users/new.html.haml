@@ -6,16 +6,19 @@
       .sign-up__middle--top
         新規会員登録
       .sign-up__middle--bottom
-        %li.sign-up__middle--bottom-1
-          %i.far.fa-envelope
-          メールアドレスで登録
+        = link_to new_user_registration_path do
+          %li.sign-up__middle--bottom-1
+            %i.far.fa-envelope
+            メールアドレスで登録
         = link_to user_facebook_omniauth_authorize_path do
           %li.sign-up__middle--bottom-2
             %i.fab.fa-facebook-square
             Facebookで登録する
-        %li.sign-up__middle--bottom-3
-          %i.fab.fa-google
-          googleで登録する
+        = link_to "/users/auth/google" do
+          %li.sign-up__middle--bottom-3
+            %i.fab.fa-google
+            .google-color
+              googleで登録する
   .wapper1
     .buy-footer
       .buy-footer__top
