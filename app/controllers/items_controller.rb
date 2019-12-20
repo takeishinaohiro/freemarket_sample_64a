@@ -7,6 +7,11 @@ class ItemsController < ApplicationController
     @items = Item.all.includes(:images).order(created_at:"desc").limit(10)
   end
 
+  def edit
+    @item = Item.find(params[:id])
+    @images = @item.images
+  end
+
   def buy
     @card = Card.where(user_id: current_user.id).first
     unless @card ==nil

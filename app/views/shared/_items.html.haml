@@ -15,7 +15,7 @@
           .product-wrapper__item
             - @items.each do |item|
               .content
-                =link_to item_path(item),class:"iteme-1" do
+                =link_to item_path(item.id),class:"iteme-1" do
                   .item-1__image
                     - @images = item.images
                     - image = @images[0]

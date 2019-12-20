@@ -46,7 +46,7 @@
             .left
               ブランド
             .right
-              
+
           .status-d
             .left
               商品のサイズ
@@ -82,7 +82,7 @@
           ¥
           =@item.price
         .show-top__plice--tax
-          (税込) 
+          (税込)
         .show-top__plice--send
           =@item.burden
     - if @sold != nil
@@ -90,7 +90,7 @@
         売り切れました
     - elsif @item.user_id == current_user.id
       .show-top__buy--create
-        =link_to "",class:"show-edit" do
+        =link_to edit_item_path(@item.id), class:"show-edit" do
           商品の編集
         or
         =link_to "",class:"show-stop" do
