@@ -4,7 +4,9 @@ class ItemsController < ApplicationController
   end
 
   def index
-    @items = Item.includes(:images).order(created_at:"desc").limit(10)
+
+    @items = Item.all.includes(:images).order(created_at:"desc").limit(10)
+    
   end
 
   def buy
@@ -47,6 +49,10 @@ class ItemsController < ApplicationController
   end
 
   def show
+    unless user_signed_in?
+      redirect_to new_user_path
+    end
+    @image = Image.where(params[:id])
     @items = Item.all.order(created_at:"desc").limit(6)
     # @images = Image.all.order(created_at:"desc").limit(6)
     @item = Item.find(params[:id])
