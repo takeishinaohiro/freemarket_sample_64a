@@ -20,7 +20,6 @@
                     - @images = item.images
                     - image = @images[0]
                     = image_tag image.image.url, size: "187x187"
-
                     - @sold = Buyer.find_by(item_id: item)
                     - unless @sold == nil
                       .sold-mark-wrap1

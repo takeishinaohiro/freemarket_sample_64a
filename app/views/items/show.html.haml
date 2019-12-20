@@ -10,26 +10,22 @@
       .show-top__explain
         .show-top__explain--image
           %ul.imagemain
-            -# %li= image_tag @image.image.url, class:"imagemain-a" ,size:'300x300'
-            -# %li= image_tag src= "商品画像4.jpg", class:"imagemain-b" ,size:'300x300'
-            -# %li= image_tag src= "商品画像3.jpg", class:"imagemain-c" ,size:'300x300'
-            -# %li= image_tag src= "購入確認image.jpg", class:"imagemain-d" ,size:'300x300'
+            - @image.each do |i|
+              %li= image_tag i.image.url, class:"imagemain-a" ,size:'300x300'
           - unless @sold == nil
             .sold-mark-wrap
               .sold-mark
                 .sold-mark__text
                   SOLD
           %ul.imagesab
-            -# %li= image_tag @image.image.url, class:"imagesab-a none" ,size:'60x60'
-            -# %li= image_tag src= "商品画像4.jpg", class:"imagesab-b none",size:'60x60'
-            -# %li= image_tag src= "商品画像3.jpg", class:"imagesab-c none",size:'60x60'
-            -# %li= image_tag src= "購入確認image.jpg", class:"imagesab-d none",size:'60x60'
+            - @image.each do |i|
+              %li= image_tag i.image.url, class:"imagesab-a none" ,size:'60x60'
         .show-top__explain--status
           .status-a
             .left
               出品者
             =link_to"",class:"right" do
-              = @item.user_id
+              = @item.user.name
               .face
                 %i.fas.fa-smile-beam
                 19
