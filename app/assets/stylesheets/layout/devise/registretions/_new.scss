@@ -50,6 +50,14 @@
   }
   &__section {
     margin-top: 1rem;
+    position: relative;
+    .fas.fa-chevron-down {
+      font-size: 1.3rem;
+      color: gray;
+      position: absolute;
+      top: 60px;
+      right: 300px;
+    }
     h3 {
       font-size: 0.9rem;
     }
@@ -86,19 +94,23 @@
       border-radius: 5px;
       margin-top: 0.5rem;
       height: 50px;
-      width: 80px;
+      width: 95px;
       font-size: 1rem;
     }
     .select-wrap {
       position: relative;
-      margin-left: 50px;
       > .fa-chevron-down {
         font-size: 1.3rem;
         color: gray;
         position: absolute;
         top: 25px;
-        right: 12px;
-
+        right: 30px;
+      }
+      > .list2 {
+        right: 145px;
+      }
+      > .list3 {
+        right: 260px;
       }
     }
     &:not(:first-of-type) {
