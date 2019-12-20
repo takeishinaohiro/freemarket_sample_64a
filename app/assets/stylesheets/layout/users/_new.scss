@@ -30,6 +30,7 @@
         li:first-of-type {
           margin-top: 40px;
           margin-bottom: 20px;
+
         }
         li {
           height: 50px;
@@ -41,10 +42,8 @@
           color: #fff;
         }
         li:last-of-type {
-          color: black;
-          border: 1px solid black;
+
           margin-top: 20px;
-          margin-bottom: 65px;
         }
         i:first-of-type {
           font-size: 1.3rem;
@@ -74,6 +73,7 @@
           background-color: #EA352D;
           margin-top: 40px;
           display: flex;
+          border: #EA352D 1px solid;
         }
         &-2 {
           background-color: #385185;

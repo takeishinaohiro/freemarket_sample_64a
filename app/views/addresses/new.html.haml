@@ -29,7 +29,8 @@
             %h3
               都道府県
               %span 必須
-            = f.text_field :prefucture, class: "sell-box__info--input sell-box__info--name", placeholder: "例 北海道"
+            = f.collection_select :prefucture, Prefecture.all, :id, :name, prompt: "---"
+            %i.fas.fa-chevron-down
 
           .registration-box__section
             %h3

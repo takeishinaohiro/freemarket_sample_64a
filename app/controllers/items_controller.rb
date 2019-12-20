@@ -47,6 +47,9 @@ class ItemsController < ApplicationController
   end
 
   def show
+    unless user_signed_in?
+      redirect_to new_user_path
+    end
     @items = Item.all.order(created_at:"desc").limit(6)
     # @images = Image.all.order(created_at:"desc").limit(6)
     @item = Item.find(params[:id])
