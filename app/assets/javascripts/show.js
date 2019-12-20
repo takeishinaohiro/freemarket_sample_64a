@@ -5,7 +5,7 @@ $(function() {
     slidesToScroll: 1,
     arrows: false,
     fade: true,
-    asNavFor: '.imagesab'
+  asNavFor: '.imagesab'
   });
 
     // 詳細ページのslick下

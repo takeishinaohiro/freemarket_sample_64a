@@ -91,7 +91,7 @@
         or
         =link_to "",class:"show-stop" do
           出品を一旦停止する
-        =link_to "",class:"show-destroy" do
+        =link_to item_path,class:"show-destroy", method: "DELETE" do
           この商品を削除する
     - else
       =link_to buy_item_path ,class:"show-top__buy" do
