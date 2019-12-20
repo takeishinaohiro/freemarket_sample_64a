@@ -17,8 +17,9 @@
               .content
                 =link_to item_path(item),class:"iteme-1" do
                   .item-1__image
-                    - item.images.each do |image|
-                      = image_tag image.image.url
+                    - @images = item.images
+                    - image = @images[0]
+                    = image_tag image.image.url, size: "187x187"
 
                     - @sold = Buyer.find_by(item_id: item)
                     - unless @sold == nil
