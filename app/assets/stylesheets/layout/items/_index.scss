@@ -141,6 +141,16 @@
   background: #fff;
   box-shadow: 0 5px 3px gray;
   font-weight: normal;
+  &__img {
+    > img {
+      height: 15%;
+      width: 270px;
+      position: absolute;
+      left: 0;
+      top: 2px;
+      z-index: -1;
+    }
+  }
   &__name {
     margin-top: 1rem;
     text-align: center;

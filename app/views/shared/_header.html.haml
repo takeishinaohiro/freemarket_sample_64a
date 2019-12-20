@@ -41,8 +41,9 @@
 
       .my-menu
         .my-menu__img
+          = image_tag '/assets/マイページ背景.jpeg'
         .my-menu__name
-          テスト
+          #{current_user.name}
         .my-menu__status
           %sapn 評価: 0
           %span 出品数: 0
