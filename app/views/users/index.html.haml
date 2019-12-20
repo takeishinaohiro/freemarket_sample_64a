@@ -9,7 +9,7 @@
     .mypage
       .mypage__top
         %i.fas.fa-user-circle
-        %li.mypage__top--name ウッディー
+        %li.mypage__top--name #{current_user.name}
         %ul.mypage__top--my-items
           %li.mypage__top--my-item 評価  ０
           %li.mypage__top--my-item 出品数  ０
@@ -44,6 +44,21 @@
             = image_tag '/assets/logo_gray.svg',height: '200', width: '200', class: 'logo_gray.svg'
             %li.mypage__bottom--content-text 取引中の商品はありません
           .mypage__bottom--content.h
-            = image_tag '/assets/logo_gray.svg',height: '200', width: '200', class: 'logo_gray.svg'
-            %li.mypage__bottom--content-text 過去に取引した商品がありません
+            - @items.each do |item|
+              .contentxx
+                .image-xxx
+                .center-xx
+                  .center-xx__ue
+                    = "「#{item.item.name}」を購入しました。取引が完了しました。"
+                  .center-xx__sita
+                    取引完了
+                .right-xx
+                  =link_to item_path(item.item_id),class:"" do
+                    %i.fas.fa-chevron-right
+                  
+
+
+
+            -#   = image_tag '/assets/logo_gray.svg',height: '200', width: '200', class: 'logo_gray.svg'
+            -# %li.mypage__bottom--content-text 過去に取引した商品がありません
 = render '/shared/footer'
