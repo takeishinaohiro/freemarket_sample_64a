@@ -19,13 +19,13 @@
           %li.mypage-tab.b やることリスト
         .mypage__middle--contents
           .mypage__middle--content.e.is-show
-            = image_tag '/assets/logo_red.svg', height: '35px', width: '35px', class: 'logo_red'
+            = image_tag 'logo_red.svg', height: '35px', width: '35px', class: 'logo_red'
             %li.mypage__middle--content-topic 事務局から個別メッセージ
             %i.fas.fa-chevron-right
             %i.far.fa-clock
             %li.mypage__middle--content-agetime 15時間前
           .mypage__middle--content.f
-            = image_tag '/assets/logo_red.svg', height: '35px', width: '35px', class: 'logo_red'
+            = image_tag 'logo_red.svg', height: '35px', width: '35px', class: 'logo_red'
             %li.mypage__middle--content-topic 事務局から個別メッセージ
             %i.fas.fa-chevron-right
             %i.far.fa-clock
@@ -41,7 +41,7 @@
           %li.mypage-tab.d 過去の取引
         .mypage__bottom--contents
           .mypage__bottom--content.g.is-show 
-            = image_tag '/assets/logo_gray.svg',height: '200', width: '200', class: 'logo_gray.svg'
+            = image_tag 'logo_gray.svg',height: '200', width: '200', class: 'logo_gray.svg'
             %li.mypage__bottom--content-text 取引中の商品はありません
           .mypage__bottom--content.h
             - @items.each do |item|
