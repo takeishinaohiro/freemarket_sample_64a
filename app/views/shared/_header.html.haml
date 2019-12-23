@@ -17,15 +17,18 @@
             ブランドから探す
         -if user_signed_in?
           .header__menu-right
-            %li.header__menu-right--like
-              %i.far.fa-heart
-              いいね！一覧
-            %li.header__menu-right--news
-              %i.far.fa-bell
-              お知らせ
-            %li.header__menu-right--todo
-              %i.fas.fa-check
-              やることリスト
+            = link_to todo_user_path(current_user.id), class: 'header__menu-right--link' do
+              %li.header__menu-right--like
+                %i.far.fa-heart
+                いいね！一覧
+            = link_to todo_user_path(current_user.id), class: 'header__menu-right--link' do
+              %li.header__menu-right--news
+                %i.far.fa-bell
+                お知らせ
+            = link_to todo_user_path(current_user.id), class: 'header__menu-right--link' do
+              %li.header__menu-right--todo
+                %i.fas.fa-check
+                やることリスト
             = link_to users_path do
               %li.header__menu-right--mypage
                 %i.far.fa-user

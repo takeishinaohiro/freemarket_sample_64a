@@ -293,6 +293,7 @@
     display: flex;
     justify-content: center;
     li {
+      cursor: pointer;
       background: $lightgray;
       margin-right: 1rem;
       padding: .5rem 1rem;
