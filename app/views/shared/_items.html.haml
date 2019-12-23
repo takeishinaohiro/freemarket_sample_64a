@@ -1,33 +1,39 @@
-.content
-  .product
-    .product-tag
+.product
+  .container
+    %h2.product__heading
       商品一覧
-    .product-list
-      .product-list__list
-        .product-wrapper
-          .product-wrapper__heading
-            .heading-text
-              新着アイテム
-            .heading-option
-              もっと見る
-              %i.fa.fa-angle-right
+    %ul.product__tag-wrap
+      %li レディース
+      %li メンズ
+      %li 家電・スマホ・カメラ
+      %li おもちゃ・ホビー・グッズ
 
-          .product-wrapper__item
-            - @items.each do |item|
-              .content
-                =link_to item_path(item.id),class:"iteme-1" do
-                  .item-1__image
-                    - @images = item.images
-                    - image = @images[0]
-                    = image_tag image.image.url, size: "187x187"
-                    - @sold = Buyer.find_by(item_id: item)
-                    - unless @sold == nil
-                      .sold-mark-wrap1
-                        .sold-mark1
-                          .sold-mark1__text1
-                            SOLD
-                    .item-1__image__price
-                      ¥
-                      = item.price
-                  %li.item-1__name
-                    = item.name
+
+.product-list
+  .container
+    .product-list__inner
+      .product-list__inner--heading
+        %h3 新着アイテム
+        .see-more
+          もっと見る
+          %i.fa.fa-angle-right
+
+      .item-list
+        - @items.each do |item|
+
+          =link_to item_path(item.id),class:"item-list__card" do
+            .item-list__card--img
+              - @images = item.images
+              - image = @images[0]
+              = image_tag image.image.url, size: "187x187"
+              - @sold = Buyer.find_by(item_id: item)
+              - unless @sold == nil
+                .sold-mark-wrap1
+                  .sold-mark1
+                    .sold-mark1__text1
+                      SOLD
+              .item-1__image__price
+                ¥
+                = item.price
+            %li.item-1__name
+              = item.name
