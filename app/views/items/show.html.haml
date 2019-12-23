@@ -10,16 +10,18 @@
       .show-top__explain
         .show-top__explain--image
           %ul.imagemain
+            - @image = Image.where(item_id: params[:id])
             - @image.each do |i|
-              %li= image_tag i.image.url, class:"imagemain-a" ,size:'300x300'
+              %li=image_tag i.image.url, class:"imagemain-a" ,size:'300x300'
           - unless @sold == nil
             .sold-mark-wrap
               .sold-mark
                 .sold-mark__text
                   SOLD
           %ul.imagesab
+            - @image = Image.where(item_id: params[:id])
             - @image.each do |i|
-              %li= image_tag i.image.url, class:"imagesab-a none" ,size:'60x60'
+              %li=image_tag i.image.url, class:"imagesab-a none" ,size:'60x60'
         .show-top__explain--status
           .status-a
             .left
