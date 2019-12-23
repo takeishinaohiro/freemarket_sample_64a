@@ -91,6 +91,7 @@ $(function() {
   });
 
 
+  // ヘッダーのリンクの色を変更
   $(".header__menu-right--link").hover(
     function() {
       $(this).find('li, i').css('color', '#0099e8');
@@ -99,9 +100,4 @@ $(function() {
       $(this).find('li, i').css('color', '#808080');
     }
   );
-
-
-
-
-
 });
