@@ -76,6 +76,9 @@ class ItemsController < ApplicationController
   def update
     @item  = Item.find(params[:id])
     @item.update(item_params)
+    params[:images][:image].each do |image|
+      @item.images.create!(image: image, item_id: @item.id)
+    end
     redirect_to root_path
   end
 
